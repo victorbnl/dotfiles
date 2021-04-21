@@ -58,7 +58,7 @@ font-1 = Material Icons:size=16;4.5
 
 modules-left = i3
 modules-center = xwindow
-modules-right = taskcount pulseaudio backlight-acpi wlan battery date
+modules-right = pulseaudio backlight-acpi wlan battery date
 
 ;tray-position = right
 ;tray-padding = 0
