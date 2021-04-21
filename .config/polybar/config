@@ -213,11 +213,11 @@ battery = BAT0
 adapter = AC
 full-at = 98
 
-label-charging = " %percentage%%"
+label-charging = "%percentage%%"
 
-label-discharging = " %percentage%%"
+label-discharging = "%percentage%%"
 
-label-full = " %percentage%%"
+label-full = "%percentage%%"
 
 [settings]
 screenchange-reload = true
