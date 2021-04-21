@@ -13,6 +13,7 @@ My personal dotfiles
 ### Utilities
 
 - xbacklight
+- light
 - pulseaudio
 
 ### Fonts
