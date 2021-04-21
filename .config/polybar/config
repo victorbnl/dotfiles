@@ -30,12 +30,8 @@
 
 [colors]
 background = #00000000
-background-alt = #444
 foreground = #dfdfdf
-foreground-alt = #555
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+alert = #ff0000
 
 [bar/top]
 monitor = eDP-1-1
@@ -75,7 +71,7 @@ cursor-scroll = ns-resize
 [module/playing]
 interval = 5
 type = custom/script
-exec = playerctl metadata title
+exec = bash /home/victor/.config/polybar/scripts/playing.sh
 
 format = <label>
 label = " %output:0:20:...%"
@@ -107,12 +103,13 @@ format = <label-state> <label-mode>
 index-sort = true
 
 label-mode-padding = 3
-label-mode-foreground = #000
-label-mode-background = ${colors.primary}
+label-mode-foreground = ${colors.foreground}
+label-mode-background = ${colors.background}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%%icon%
-label-focused-background = #22000000
+label-focused-foreground = ${colors.foreground}
+label-focused-background = ${colors.background}
 label-focused-padding = 3
 
 ; unfocused = Inactive workspace on any monitor
@@ -121,12 +118,14 @@ label-unfocused-padding = 3
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%%icon%
-label-visible-background = ${self.label-focused-background}
-label-visible-padding = ${self.label-focused-padding}
+label-visible-foreground = ${colors.foreground}
+label-visible-background = ${colors.background}
+label-visible-padding = 3
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%%icon%
-label-urgent-background = ${colors.alert}
+label-urgent-foreground = ${colors.alert}
+label-urgent-background = ${colors.background}
 label-urgent-padding = 3
 
 ws-icon-0 = 1;  
