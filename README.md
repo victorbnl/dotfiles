@@ -15,6 +15,7 @@ My personal dotfiles
 - xbacklight
 - light
 - pulseaudio
+- playerctl
 
 ### Fonts
 
