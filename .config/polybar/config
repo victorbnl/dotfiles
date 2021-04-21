@@ -99,23 +99,27 @@ label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
-label-focused = %index%
+label-focused = %index%%icon%
 label-focused-background = #22000000
 label-focused-padding = 3
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
+label-unfocused = %index%%icon%
 label-unfocused-padding = 3
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %index%
+label-visible = %index%%icon%
 label-visible-background = ${self.label-focused-background}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%
+label-urgent = %index%%icon%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 3
+
+ws-icon-0 = 1;  
+ws-icon-1 = 2;  
+ws-icon-2 = 3;  
 
 [module/xbacklight]
 type = internal/xbacklight
