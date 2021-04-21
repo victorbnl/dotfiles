@@ -19,6 +19,15 @@ font pango:monospace 8
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 
+# polybar
+exec --no-startup-id polybar top
+
+# compton
+exec --no-startup-id compton
+
+# nitrogen
+exec --no-startup-id nitrogen --restore
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -178,3 +187,6 @@ bindsym $mod+r mode "resize"
 # borders
 default_border none
 default_floating_border none
+
+# gaps
+gaps inner 20
