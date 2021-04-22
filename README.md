@@ -9,6 +9,8 @@ My personal dotfiles
 - i3-gaps
 - polybar
 - urxvt
+- zsh
+- oh-my-zsh
 
 ### Utilities
 
