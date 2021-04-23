@@ -2,7 +2,7 @@
 
 My personal dotfiles
 
-## Dependencies
+## Dependencies list
 
 ### Main
 
