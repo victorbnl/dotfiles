@@ -1,7 +1,7 @@
 #!/bin/bash
 
-output=$(playerctl metadata title 2>&1)
+zscroll -l 30 \
+	--delay 0.5 \
+	--update-check true "playerctl metadata title" &
 
-if [ "$output" != "No players found" ]; then
-	echo "$output"
-fi
+wait

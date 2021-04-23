@@ -68,14 +68,19 @@ wm-restack = i3
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-[module/playing]
-interval = 5
+[module/spotify]
 type = custom/script
-exec = bash /home/victor/.config/polybar/scripts/playing.sh
-
+tail = true
+format-prefix = "S "
 format = <label>
-label = " %output:0:20:...%"
+exec = ~/.config/polybar/scripts/scroll_spotify_status.sh
 
+[module/playing]
+type = custom/script
+tail = true
+exec = ~/.config/polybar/scripts/playing.sh
+format-prefix = " "
+format = <label>
 click-left = playerctl play-pause
 
 [module/xwindow]
