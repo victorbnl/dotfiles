@@ -1,6 +1,8 @@
-# Dotfiles
+<h1 align="center">Dotfiles</h1>
 
-My personal dotfiles
+<p align="center">
+    <img src=".screenshots/1.png">
+</p>
 
 ## Dependencies list
 
