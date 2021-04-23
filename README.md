@@ -8,20 +8,19 @@
 
 ### Main
 
-- i3-gaps
-- polybar
-- urxvt
-- zsh
-- oh-my-zsh
+- **i3-gaps:** the wm
+- **polybar:** the status bar
+- **urxvt:** the terminal
+- **zsh:** the shell
+- **oh-my-zsh:** the shell theme
 
 ### Utilities
 
-- xbacklight
-- light
-- pulseaudio
-- playerctl
+- **xbacklight:** get brightness value
+- **light:** control brightness (for brightness keys)
+- **pulseaudio:** get and set volume
+- **playerctl:** get playing music title and music control keys
 
 ### Fonts
 
-- Material Icons
-
+- **Material Icons:** status bar icons
