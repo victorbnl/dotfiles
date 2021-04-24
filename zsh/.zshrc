@@ -19,3 +19,6 @@ export EDITOR='vim'
 # Oh My Zsh
 export ZSH="/home/victor/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
+
+# Tasks
+alias t="task"
