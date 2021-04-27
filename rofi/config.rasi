@@ -3,7 +3,7 @@ configuration {
 /*	width: 50;*/
 /*	lines: 15;*/
 /*	columns: 1;*/
-	font: "DejaVu Sans 16";
+	font: "DejaVu Sans Nerd Font 16";
 /*	bw: 1;*/
 /*	location: 0;*/
 /*	padding: 5;*/

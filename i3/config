@@ -1,8 +1,7 @@
-# Meta
-set $mod Mod4
+### Autostart ###
 
-# Font
-font pango:DejaVu Sans Mono 8
+# Wallpaper
+exec --no-startup-id nitrogen --restore
 
 # Polybar
 exec --no-startup-id polybar top
@@ -13,20 +12,42 @@ exec --no-startup-id compton
 # Dunst
 exec --no-startup-id dunst
 
-# Wallpaper
-exec --no-startup-id nitrogen --restore
+### Appearance ###
 
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# Borders
+default_border none
+default_floating_border none
+
+# Gaps
+gaps inner 20
+
+### Keyboard shortcuts ###
+
+# Meta
+set $mod Mod4
+
+# Kill window
+bindsym $mod+Shift+q kill
+
+# Start terminal
+bindsym $mod+Return exec urxvt
+
+# Rofi
+bindsym $mod+d exec --no-startup-id rofi -show drun
 
 # Screenshot
-bindsym --release $mod+s exec --no-startup-id scrot -e 'mv $f ~/Pictures/Screenshots'
-bindsym --release $mod+Shift+s exec --no-startup-id scrot -s -e 'mv $f ~/Pictures/Screenshots'
+bindsym --release $mod+s exec --no-startup-id "scrot /tmp/screenshot_%Y-%m-%d.png -e 'xclip -selection c -t image/png < $f'"
+bindsym --release $mod+Shift+s exec --no-startup-id "scrot -s /tmp/screenshot_%Y-%m-%d.png -e 'xclip -selection c -t image/png < $f'"
+
+# Power menu
+bindsym $mod+p exec --no-startup-id ~/.config/rofi/scripts/power.sh
+
+# Lock
+bindsym $mod+l exec i3lock -c 000000
 
 # Brightness
-bindsym XF86MonBrightnessUp exec light -A 10
-bindsym XF86MonBrightnessDown exec light -U 10
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
 
 # Volume
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
@@ -39,20 +60,14 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 bindsym XF86AudioPause exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 
-# Use Mouse+$mod to drag floating windows to their wanted position
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+# screen before suspend. Use loginctl lock-session to lock your screen.
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+## i3 shortcuts ##
+
+# $mod+Mouse to move windows
 floating_modifier $mod
-
-# Start terminal
-bindsym $mod+Return exec urxvt
-
-# Kill focused window
-bindsym $mod+Shift+q kill
-
-# Rofi
-bindsym $mod+d exec --no-startup-id rofi -show drun
-
-# Lock
-bindsym $mod+l exec i3lock -c 000000
 
 # Move focus
 bindsym $mod+Left focus left
@@ -144,11 +159,7 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
+# Enter resize mode
 bindsym $mod+r mode "resize"
 
-# Borders
-default_border none
-default_floating_border none
 
-# Gaps
-gaps inner 20
