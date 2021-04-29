@@ -1,6 +1,9 @@
 # Theme
 ZSH_THEME="gentoo"
 
+# Path
+export PATH="$PATH:~/.local/bin"
+
 # Uncomment the following line to automatically update without prompting.
 DISABLE_UPDATE_PROMPT="true"
 
