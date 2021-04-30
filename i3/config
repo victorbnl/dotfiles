@@ -12,6 +12,9 @@ exec --no-startup-id compton
 # Dunst
 exec --no-startup-id dunst
 
+# Polkit agent
+exec --no-startup-id polkit-dumb-agent
+
 ### Appearance ###
 
 # Borders
