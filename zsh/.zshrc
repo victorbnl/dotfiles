@@ -1,8 +1,8 @@
-# Theme
-ZSH_THEME="gentoo"
-
 # Path
 export PATH="$PATH:~/.local/bin"
+
+# Prompt
+export PS1=$'%B\033[32m%n@%M \033[34m%~ $\033[0m%b '
 
 # Uncomment the following line to automatically update without prompting.
 DISABLE_UPDATE_PROMPT="true"
@@ -18,10 +18,6 @@ export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
-
-# Oh My Zsh
-export ZSH="/home/victor/.oh-my-zsh"
-source $ZSH/oh-my-zsh.sh
 
 # Tasks
 alias t="task"
