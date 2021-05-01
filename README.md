@@ -19,6 +19,7 @@
 - **xbacklight:** get brightness value
 - **light:** control brightness (for brightness keys)
 - **maim:** screenshots
+- **picom:** compositor
 - **pulseaudio:** get and set volume
 - **playerctl:** get playing music title and music control keys
 
