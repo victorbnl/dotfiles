@@ -4,8 +4,6 @@ foreground = #dfdfdf
 alert = #ff0000
 
 [bar/top]
-monitor = eDP-1
-
 width = 100%
 height = 40
 fixed-center = true
@@ -95,6 +93,7 @@ label = " %percentage%%"
 inherit = module/xbacklight
 type = internal/backlight
 card = intel_backlight
+scroll-up = light -A 10
 
 [module/wlan]
 type = internal/network
