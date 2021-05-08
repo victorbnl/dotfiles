@@ -12,6 +12,9 @@ exec --no-startup-id picom
 # Dunst
 exec --no-startup-id dunst
 
+# Redshift
+exec --no-startup-id redshift
+
 # Polkit agent
 exec --no-startup-id polkit-dumb-agent
 
