@@ -42,8 +42,8 @@ bindsym $mod+Return exec urxvt
 bindsym $mod+d exec --no-startup-id rofi -show drun
 
 # Screenshot
-bindsym --release $mod+s exec --no-startup-id "maim | xclip -selection clipboard -t image/png"
-bindsym --release $mod+Shift+s exec --no-startup-id "maim -s | xclip -selection clipboard -t image/png"
+bindsym --release $mod+s exec --no-startup-id "maim --hidecursor | xclip -selection clipboard -t image/png"
+bindsym --release $mod+Shift+s exec --no-startup-id "maim -s --hidecursor | xclip -selection clipboard -t image/png"
 
 # Power menu
 bindsym $mod+p exec --no-startup-id ~/.config/rofi/scripts/power.sh
