@@ -18,6 +18,9 @@ exec --no-startup-id redshift
 # Polkit agent
 exec --no-startup-id polkit-dumb-agent
 
+# Enable numpad
+numlockx on
+
 ### Appearance ###
 
 # Borders
