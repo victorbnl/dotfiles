@@ -19,7 +19,7 @@ exec --no-startup-id redshift
 exec --no-startup-id polkit-dumb-agent
 
 # Enable numpad
-numlockx on
+exec --no-startup-id numlockx on
 
 ### Appearance ###
 
