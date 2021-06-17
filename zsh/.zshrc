@@ -2,9 +2,6 @@
 export PATH="$PATH:~/.local/bin:/home/victor/.local/share/gem/ruby/3.0.0/bin"
 
 # Prompt
-
-# Uncomment the following line to automatically update without prompting.
-DISABLE_UPDATE_PROMPT="true"
 export PS1=$'%{%B\033[32m%n@%M \033[34m%~ $\033[0m%b%} '
 
 # Uncomment the following line to enable command auto-correction.
