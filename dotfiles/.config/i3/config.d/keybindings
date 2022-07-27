@@ -1,0 +1,53 @@
+floating_modifier $mod
+
+# Kill focused window
+bindsym $mod+Shift+q kill
+
+# Reload config
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+
+# Start a terminal
+bindsym $mod+Return exec i3-sensible-terminal
+
+# Start the launcher
+bindsym $mod+d exec rofi -show drun
+
+# Power
+set $power ""
+mode $power {
+    bindsym p exec systemctl poweroff
+    bindsym r exec systemctl reboot
+    bindsym s exec systemctl suspend
+    bindsym e exit
+
+    bindsym Escape mode "default"
+}
+bindsym $mod+p mode $power
+
+# Brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
+
+# Volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+# Music controls
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+bindsym XF86AudioPause exec --no-startup-id playerctl play-pause
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+
+# Notifications
+bindsym $mod+n exec dunstctl set-paused toggle
+
+# Screenshot
+bindsym $mod+s exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
+
+# File manager
+bindsym $mod+e exec --no-startup-id pcmanfm
+
+# Network settings
+bindsym $mod+w exec --no-startup-id ~/.config/i3/scripts/nmtui.sh

@@ -1,0 +1,66 @@
+* {
+	background-color: transparent;
+	font: "Ubuntu 14";
+	color: white;
+}
+
+window {
+	background-color: #212121;
+}
+
+mainbox {
+	children: [inputbar, message, listview];
+	spacing: 20px;
+	padding: 30px 0;
+}
+
+inputbar {
+	padding: 0 30px;
+	children: [textbox-prompt-colon, entry, case-indicator];
+}
+
+prompt {
+	text-color: #282828;
+}
+
+textbox-prompt-colon {
+	expand: false;
+	str: "Run :";
+	margin: 0 1ch 0 0;
+}
+
+entry {
+	text-color: #ffffff;
+}
+
+button, textbox {
+	background-color: #383838;
+	text-color: #ffffff;
+	padding: 5px;
+}
+
+button selected {
+	background-color: #282828;
+}
+
+listview {
+	scrollbar: true;
+	margin: 0 10px 0 30px;
+}
+
+element {
+	padding: 5px;
+}
+
+element-icon {
+	size: 2.1ch;
+	margin: 0 10px;
+}
+
+element normal {
+	background-color: transparent;
+}
+
+element selected {
+	background-color: #282828;
+}

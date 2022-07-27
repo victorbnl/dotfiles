@@ -1,0 +1,9 @@
+keycode 87 = parenright bracketright
+keycode 88 = equal braceright
+
+keycode 89 = degree
+
+keycode 83 = guillemotleft
+keycode 84 = guillemotright
+
+keycode 79 = ntilde Ntilde
