@@ -2,6 +2,8 @@
 
 My personal dotfiles
 
+![](.readme/screenshot.jpg)
+
 ## Installation
 
 ### One-time installation (copy)
