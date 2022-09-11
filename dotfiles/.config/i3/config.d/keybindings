@@ -44,7 +44,7 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym $mod+n exec dunstctl set-paused toggle
 
 # Screenshot
-bindsym $mod+s exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
+bindsym $mod+s exec --no-startup-id maim -u -s | xclip -selection clipboard -t image/png
 
 # File manager
 bindsym $mod+e exec --no-startup-id pcmanfm
