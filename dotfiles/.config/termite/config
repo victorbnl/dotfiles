@@ -1,5 +1,5 @@
 [options]
-font = DejaVu Sans Mono 11
+font = Monocraft 11
 word_char_exceptions = -=&#:/.?@+~_%;
 scrollback_lines = 10000
 

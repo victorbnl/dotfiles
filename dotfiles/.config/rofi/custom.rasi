@@ -1,11 +1,11 @@
 * {
 	background-color: transparent;
-	font: "Ubuntu 14";
+	font: "Minecraft 14";
 	color: white;
 }
 
 window {
-	background-color: #212121;
+	background-color: #111111;
 }
 
 mainbox {
