@@ -1,5 +1,8 @@
 ## Layout
 
+# Select parent container
+bindsym $mod+a focus parent
+
 # Move your focus around
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
