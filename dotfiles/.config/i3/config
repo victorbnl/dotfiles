@@ -3,6 +3,9 @@ set $mod Mod4
 default_border none
 default_floating_border none
 
+# Workaround for title bar showing with Motif hints
+for_window [all] border pixel 0
+
 font pango:DejaVu Sans Mono 0
 
 client.focused #2046c7 #2046c7 #2046c7 #2046c7 #2046c7
