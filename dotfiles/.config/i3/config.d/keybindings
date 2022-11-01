@@ -25,6 +25,9 @@ mode $power {
 }
 bindsym $mod+p mode $power
 
+# Lock
+bindsym $mod+l exec --no-startup-id i3lock
+
 # Brightness
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
