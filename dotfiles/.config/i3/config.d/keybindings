@@ -44,7 +44,7 @@ bindsym XF86AudioPause exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 
 # Notifications
-bindsym $mod+n exec dunstctl set-paused toggle
+bindsym $mod+n exec --no-startup-id dunstctl set-paused toggle
 
 # Screenshot
 bindsym $mod+s exec --no-startup-id maim -u -s | xclip -selection clipboard -t image/png
