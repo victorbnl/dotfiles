@@ -6,6 +6,8 @@ My personal dotfiles
 
 ## Installation
 
+*Run commands in this directory*
+
 ### One-time installation (copy)
 
 ```
