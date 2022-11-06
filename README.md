@@ -11,11 +11,11 @@ My personal dotfiles
 ### One-time installation (copy)
 
 ```
-cp -ar dotfiles/* $HOME/
+cp -ar home/* $HOME/
 ```
 
 ### Keep files in sync (symlink)
 
 ```
-stow -t $HOME dotfiles
+stow -t $HOME home
 ```
