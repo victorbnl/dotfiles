@@ -8,6 +8,8 @@ My personal dotfiles
 
 *Run commands in this directory*
 
+Install the [requirements](REQUIREMENTS.md)
+
 ### One-time installation (copy)
 
 ```
