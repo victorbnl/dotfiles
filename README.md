@@ -12,10 +12,12 @@ My personal dotfiles
 
 ```
 cp -ar home/* $HOME/
+cp -ar root/* /
 ```
 
 ### Keep files in sync (symlink)
 
 ```
 stow -t $HOME home
+stow -t / root
 ```
