@@ -3,9 +3,25 @@
 These are notes about customisations that can't be done with simple files, i.e.
 software that require interacting with the GUI.
 
+## Appearance
+
+### GTK, icons, cursor
+
+GTK theme, icon theme and cursor can be set using `lxappearance`.
+
+**Theme**: Adapta-Nokto  
+**Icon theme**: Papirus-Dark  
+**Cursor**: Breeze Light
+
+### Qt
+
+Qt style is configured through `kvantum`.
+
+**Theme**: KvAdaptaDark
+
 ## Firefox
 
-Theme: Default Dark
+**Theme**: Default Dark
 
 ### Extensions
 
