@@ -1,0 +1,14 @@
+=== Desktop core ===
+
+i3: window manager
+picom: compositor (transparency)
+polybar: status bar
+alacritty: terminal emulator
+rofi: application launcher
+dunst: notification daemon
+
+=== Applications ===
+
+vim: text editor
+xmodmap: key mapper (for my broken keys + useful extra characters)
+redshift: night light
