@@ -10,6 +10,7 @@ The softwares are named after their package in the Arch and AUR repositories.
 - `i3`: window manager
 - `picom`: compositor (transparency)
 - `polybar`: status bar
+  - `ttf-ubuntu-font-family`: Ubuntu font
   - `otf-material-icons-git`: Material Icons font
 - `alacritty`: terminal emulator
 - `rofi`: application launcher
