@@ -21,7 +21,6 @@ The softwares are named after their package in the Arch and AUR repositories.
 
 **Keybindings**
 
-- `xorg-xkill`: kill a window ($mod+Shift+q)
 - `maim`: take a screenshot ($mod+s)
 - `pcmanfm`: file manager ($mod+e)
 - `i3lock`: lock screen ($mod+l)
