@@ -5,16 +5,30 @@ The softwares are named after their package in the Arch and AUR repositories.
 
 ## Desktop core
 
+**Components**
+
 - `sddm`: session manager
   - `chili-sddm-theme`: Chili theme
 - `i3`: window manager
-- `picom`: compositor (transparency)
+- `rofi`: app launcher
 - `polybar`: status bar
   - `ttf-ubuntu-font-family`: font
   - `otf-material-icons-git`: icon font
 - `alacritty`: terminal emulator
 - `rofi`: application launcher
 - `dunst`: notification daemon
+- `picom`: compositor (transparency)
+
+**Keybindings**
+
+- `xorg-xkill`: kill a window ($mod+Shift+q)
+- `maim`: take a screenshot ($mod+s)
+- `pcmanfm`: file manager ($mod+e)
+- `i3lock`: lock screen ($mod+l)
+- `light`: brightness controls
+- `playerctl`: music controls
+
+**Theme**
 
 - `adapta-gtk-theme`: GTK theme
 - `kvantum`: Qt style
