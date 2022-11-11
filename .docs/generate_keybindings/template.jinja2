@@ -1,0 +1,12 @@
+# Keybindings
+
+{% for section in sections %}
+{% if section[0] %}
+
+**{{ section[0] }}**
+
+{% endif %}
+{% for keybinding in section[1] %}
+- `{{ keybinding[0] }}`: {{ keybinding[1] }}
+{% endfor %}
+{% endfor %}

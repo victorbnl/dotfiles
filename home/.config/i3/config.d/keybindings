@@ -1,17 +1,25 @@
 floating_modifier $mod
 
-# Kill focused window
-bindsym $mod+Shift+q kill
-
-# Reload config
-bindsym $mod+Shift+c reload
-bindsym $mod+Shift+r restart
-
 # Start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
 # Start the launcher
 bindsym $mod+d exec rofi -show drun
+
+# Lock screen
+bindsym $mod+l exec --no-startup-id i3lock
+
+# Toggle notifications
+bindsym $mod+n exec --no-startup-id dunstctl set-paused toggle
+
+# Take a screenshot
+bindsym $mod+s exec --no-startup-id maim -u -s | xclip -selection clipboard -t image/png
+
+# Start the file manager
+bindsym $mod+e exec --no-startup-id pcmanfm
+
+# Network settings
+bindsym $mod+w exec --no-startup-id gnmtui
 
 # Power
 set $power ""
@@ -23,34 +31,43 @@ mode $power {
 
     bindsym Escape mode "default"
 }
+
+# Enter power mode
 bindsym $mod+p mode $power
 
-# Lock
-bindsym $mod+l exec --no-startup-id i3lock
+## i3
 
-# Brightness
+# Kill focused window
+bindsym $mod+Shift+q kill
+
+# Reload configuration
+bindsym $mod+Shift+c reload
+# Restart i3 inplace
+bindsym $mod+Shift+r restart
+
+## Brightness
+
+# Raise brightness
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10
+# Lower brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
 
-# Volume
+## Volume
+
+# Raise volume
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+# Lower volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+# Mute audio
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+# Mute microphone
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
-# Music controls
+## Music controls
+
+# Previous song
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+# Play/pause music
 bindsym XF86AudioPause exec --no-startup-id playerctl play-pause
+# Next song
 bindsym XF86AudioNext exec --no-startup-id playerctl next
-
-# Notifications
-bindsym $mod+n exec --no-startup-id dunstctl set-paused toggle
-
-# Screenshot
-bindsym $mod+s exec --no-startup-id maim -u -s | xclip -selection clipboard -t image/png
-
-# File manager
-bindsym $mod+e exec --no-startup-id pcmanfm
-
-# Network settings
-bindsym $mod+w exec --no-startup-id gnmtui

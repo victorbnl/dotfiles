@@ -2,7 +2,7 @@
 
 My personal dotfiles
 
-![](.readme/screenshot.jpg)
+![](.docs/screenshot.jpg)
 
 ## Installation
 
