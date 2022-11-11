@@ -53,4 +53,4 @@ bindsym $mod+s exec --no-startup-id maim -u -s | xclip -selection clipboard -t i
 bindsym $mod+e exec --no-startup-id pcmanfm
 
 # Network settings
-bindsym $mod+w exec --no-startup-id ~/.config/i3/scripts/nmtui.sh
+bindsym $mod+w exec --no-startup-id gnmtui
