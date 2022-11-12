@@ -38,3 +38,8 @@ Qt style is configured through `kvantum`.
 - Install [WaveFox](https://github.com/QNetITQ/WaveFox)
 - Choose tab style
   - `userChrome.PhotonTabs-Enabled`: `true`
+
+## Visual Studio Code
+
+**Theme:** One Dark Pro  
+**Extensions:** Material Icon Theme
