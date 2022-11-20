@@ -15,6 +15,7 @@ The softwares are named after their package in the Arch and AUR repositories.
   - `ttf-ubuntu-font-family`: font
   - `otf-material-icons-git`: icon font
 - `alacritty`: terminal emulator
+- `zsh`: shell
 - `rofi`: application launcher
 - `dunst`: notification daemon
 - `picom`: compositor (transparency)
