@@ -12,14 +12,5 @@ client.focused #2046c7 #2046c7 #2046c7 #2046c7 #2046c7
 client.unfocused #262626 #262626 #262626 #262626 #262626
 client.urgent #ff0000 #ff0000 #ff0000 #ff0000 #ff0000
 
-exec --no-startup-id polybar top
-exec --no-startup-id picom
-exec --no-startup-id dunst
-exec --no-startup-id polkit-dumb-agent
-
-exec --no-startup-id nitrogen --restore
-
-exec --no-startup-id xmodmap ~/.Xmodmap
-
 include ~/.config/i3/config.d/*
 include /etc/i3/config.d/*

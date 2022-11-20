@@ -1,0 +1,17 @@
+# Top status bar
+exec --no-startup-id polybar top
+
+# Compositor (transparency)
+exec --no-startup-id picom
+
+# Notification daemon
+exec --no-startup-id dunst
+
+# Authentication prompt daemon
+exec --no-startup-id polkit-dumb-agent
+
+# Wallpaper
+exec --no-startup-id nitrogen --restore
+
+# Key mapping
+exec --no-startup-id xmodmap ~/.Xmodmap
