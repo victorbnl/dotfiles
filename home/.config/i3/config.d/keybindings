@@ -7,7 +7,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+d exec rofi -show drun
 
 # Lock screen
-bindsym $mod+l exec --no-startup-id i3lock
+bindsym $mod+l exec --no-startup-id ~/.config/i3/lockscreen/lockscreen.sh
 
 # Toggle notifications
 bindsym $mod+n exec --no-startup-id dunstctl set-paused toggle

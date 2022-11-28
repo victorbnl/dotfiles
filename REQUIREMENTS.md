@@ -19,6 +19,7 @@ The softwares are named after their package in the Arch and AUR repositories.
 - `rofi`: application launcher
 - `dunst`: notification daemon
 - `picom`: compositor (transparency)
+- `betterlockscreen`: lock screen
 
 **Keybindings**
 
