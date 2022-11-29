@@ -10,6 +10,10 @@ body {
 .theme__dark {
     .app .sidebar {
         background: #262626;
+
+        &::after {
+            box-shadow: none;
+        }
     }
 
     .tab-item {
