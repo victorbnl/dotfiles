@@ -1,0 +1,53 @@
+body {
+    counter-reset: services;
+}
+
+.sidebar .tabs {
+    gap: 20px;
+    margin-left: 14px;
+}
+
+.theme__dark {
+    .app .sidebar {
+        background: #262626;
+    }
+
+    .tab-item {
+        width: auto !important;
+        flex-direction: row;
+        gap: 7px;
+        filter: brightness(0.5);
+
+        &.is-active {
+            background: transparent;
+            border-top-color: transparent !important;
+            filter: brightness(1);
+        }
+
+        .tab-item__message-count {
+            min-width: 0;
+            min-height: 0;
+            aspect-ratio: 1/1;
+            font-size: 8px;
+            top: 6px;
+            right: 0;
+            padding: 0 4px;
+        }
+
+        .tab-item__icon {
+            width: 15px !important;
+        }
+
+        &::before {
+            content: counter(services);
+            counter-increment: services;
+            font-size: 15px;
+            z-index: 1;
+        }
+    }
+}
+
+.sidebar__button > svg {
+    width: 1.8rem !important;
+    height: auto !important;
+}
