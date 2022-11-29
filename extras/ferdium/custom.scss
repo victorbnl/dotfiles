@@ -42,6 +42,8 @@ body {
             content: counter(services);
             counter-increment: services;
             font-size: 15px;
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 600;
             z-index: 1;
         }
     }
