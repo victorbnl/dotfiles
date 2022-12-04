@@ -1,13 +1,18 @@
 #!/bin/bash
 
-IMAGE=~/.config/i3/lockscreen/background.jpg
 NONE=00000000
 FG=FFFFFF80
 BG=FFFFFF60
 WRONG=FF0000FF
 
+function getWallpaper() {
+    grep -oP "file=\K.*" ~/.config/nitrogen/bg-saved.cfg
+}
+
+image=$(getWallpaper)
+
 i3lock \
-    -i "$IMAGE" \
+    -i "$image" --scale \
     --inside-color="$NONE" \
     --insidever-color="$NONE" \
     --insidewrong-color="$NONE" \
