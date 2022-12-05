@@ -13,6 +13,7 @@ image=$(getWallpaper)
 
 i3lock \
     -i "$image" --scale \
+    --color=000000FF \
     --inside-color="$NONE" \
     --insidever-color="$NONE" \
     --insidewrong-color="$NONE" \
