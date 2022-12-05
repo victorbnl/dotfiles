@@ -10,21 +10,27 @@ function getWallpaper() {
 }
 
 image=$(getWallpaper)
-
-i3lock \
-    -i "$image" --scale \
-    --color=000000FF \
-    --inside-color="$NONE" \
-    --insidever-color="$NONE" \
-    --insidewrong-color="$NONE" \
-    --ring-width=12 \
-    --ring-color="$BG" \
-    --ringver-color="$BG" \
-    --ringwrong-color="$WRONG" \
-    --keyhl-color="$FG" \
-    --line-color="$NONE" \
-    --separator-color="$BG" \
-    --verif-text="" \
-    --wrong-text="" \
-    --noinput-text="" \
+options=(
+    --image="$image"
+    --scale
+    --color=000000FF
+    --inside-color="$NONE"
+    --insidever-color="$NONE"
+    --insidewrong-color="$NONE"
+    --ring-width=12
+    --ring-color="$BG"
+    --ringver-color="$BG"
+    --ringwrong-color="$WRONG"
+    --keyhl-color="$FG"
+    --line-color="$NONE"
+    --separator-color="$BG"
+    --verif-text=""
+    --wrong-text=""
+    --noinput-text=""
     --no-modkey-text
+)
+
+dunstctl set-paused true
+i3lock -n "${options[@]}" &
+wait
+dunstctl set-paused false
