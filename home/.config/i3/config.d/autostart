@@ -15,3 +15,6 @@ exec --no-startup-id nitrogen --restore
 
 # Key mapping
 exec --no-startup-id xmodmap ~/.Xmodmap
+
+# Auto lock screen
+exec --no-startup-id xss-lock --transfer-sleep-lock -- ~/.config/i3/lockscreen/lockscreen.sh
