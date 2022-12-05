@@ -30,7 +30,8 @@ options=(
     --no-modkey-text
 )
 
+dunst_paused=$(dunstctl is-paused)
 dunstctl set-paused true
 i3lock -n "${options[@]}" &
 wait
-dunstctl set-paused false
+dunstctl set-paused "$dunst_paused"
