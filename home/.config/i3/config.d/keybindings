@@ -3,6 +3,9 @@ floating_modifier $mod
 # Start a terminal
 bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 
+# Dropdown terminal
+bindsym $mod+m exec --no-startup-id tdrop i3-sensible-terminal --class "Dropdown"
+
 # Start the launcher
 bindsym $mod+d exec --no-startup-id rofi -show drun
 
