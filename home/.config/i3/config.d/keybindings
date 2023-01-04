@@ -9,6 +9,9 @@ bindsym $mod+m exec --no-startup-id tdrop i3-sensible-terminal --class "Dropdown
 # Start the launcher
 bindsym $mod+d exec --no-startup-id rofi -show drun
 
+# Alt tab like
+bindsym Mod1+Tab exec --no-startup-id rofi -show window
+
 # Lock screen
 bindsym $mod+l exec --no-startup-id ~/.config/i3/lockscreen/lockscreen.sh
 
