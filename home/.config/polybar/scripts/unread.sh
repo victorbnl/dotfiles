@@ -2,16 +2,21 @@
 
 function getFerdiumProperty()
 {
-    raw=$(busctl --user get-property org.ferdium.Ferdium /org/ferdium org.ferdium.Ferdium $1)
-    echo "${raw:2}"
+    raw=$(busctl --user get-property org.ferdium.Ferdium /org/ferdium org.ferdium.Ferdium $1 2>/dev/null)
+    if [[ $? -eq 0 ]]; then
+        echo "${raw:2}"
+    else
+        echo -1
+    fi
 }
 
 function getUnreadCount()
 {
     unreadDirectMessageCount=$(getFerdiumProperty UnreadDirectMessageCount)
-    unreadIndirectMessageCount=$(getFerdiumProperty UnreadIndirectMessageCount)
-
-    echo $(($unreadDirectMessageCount + $unreadIndirectMessageCount))
+    if [[ "$unreadDirectMessageCount" -ne -1 ]]; then
+        unreadIndirectMessageCount=$(getFerdiumProperty UnreadIndirectMessageCount)
+        echo $(($unreadDirectMessageCount + $unreadIndirectMessageCount))
+    fi
 }
 
 function getDunstStatusIcon()
@@ -24,4 +29,13 @@ function getDunstStatusIcon()
     fi
 }
 
-echo "$(getDunstStatusIcon) $(getUnreadCount)"
+icon=$(getDunstStatusIcon)
+count=$(getUnreadCount)
+
+out="$icon"
+if [[ "$count" -ne "" ]]
+then
+    out+=" $count"
+fi
+
+echo "$out"
