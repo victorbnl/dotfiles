@@ -33,7 +33,7 @@ icon=$(getDunstStatusIcon)
 count=$(getUnreadCount)
 
 out="$icon"
-if [[ "$count" -ne "" ]]
+if [[ "$count" != "" ]]
 then
     out+=" $count"
 fi
