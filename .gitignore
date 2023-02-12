@@ -1,1 +1,4 @@
 venv
+dotfiles/.dotter/local.toml
+dotfiles/.dotter/cache.toml
+dotfiles/.dotter/cache

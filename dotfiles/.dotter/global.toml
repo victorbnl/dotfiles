@@ -1,0 +1,33 @@
+[alacritty.files]
+"alacritty" = "~/.config/alacritty"
+
+[dunst.files]
+"dunst" = "~/.config/dunst"
+
+[ferdium.files]
+"ferdium/custom.css" = "~/.config/Ferdium/config/custom.css"
+
+[i3.files]
+"i3" = "~/.config/i3"
+
+[picom.files]
+"picom/picom.conf" = "~/.config/picom.conf"
+
+[polybar.files]
+"polybar" = "~/.config/polybar"
+
+[redshift.files]
+"redshift" = "~/.config/redshift"
+
+[rofi.files]
+"rofi" = "~/.config/rofi"
+
+[sddm.files]
+"sddm/look.conf" = "/etc/sddm.conf.d/look.conf"
+"sddm/theme.conf" = "/usr/share/sddm/themes/chili/theme.conf"
+
+[vim.files]
+"vim/.vimrc" = "~/.vimrc"
+
+[zsh.files]
+"zsh/.zshrc" = "~/.zshrc"

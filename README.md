@@ -2,16 +2,18 @@
 
 My personal dotfiles
 
-![](.docs/screenshot.jpg)
-
 ## Installation
 
-Install the [requirements](REQUIREMENTS.md), then
+First [install dotter](https://github.com/SuperCuber/dotter#installation)
 
-*Run commands in this directory*
+1. Change directory to `dotfiles`
+2. Create a `.dotter/local.toml` file with the packages you want, for instance
 
-- `make copy`: just copies the files
-- `make symlink`: links the files so that they are kept in sync (deletion or movement of this directory will break things up, in which case you just have to run the command again)
+  ```
+  packages = [
+    "i3",
+    "polybar",
+  ]
+  ```
 
-> **Note**  
-> Not only are home files copied, some also get copied to /. If you don't want them to, just press CTRL + C when asked for your password. See (very simple) [Makefile](./Makefile) for more information
+3. Run `dotter`
