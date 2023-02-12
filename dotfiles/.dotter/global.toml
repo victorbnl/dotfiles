@@ -1,3 +1,6 @@
+[xorg.variables]
+screen_dpi = 96
+
 [alacritty.files]
 "alacritty" = "~/.config/alacritty"
 
@@ -28,6 +31,9 @@
 
 [vim.files]
 "vim/.vimrc" = "~/.vimrc"
+
+[xorg.files]
+"xorg/.Xresources" = "~/.Xresources"
 
 [zsh.files]
 "zsh/.zshrc" = "~/.zshrc"
