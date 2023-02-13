@@ -1,3 +1,0 @@
-[submodule "dotfiles/zsh/plugins/zsh-autocomplete"]
-	path = dotfiles/zsh/plugins/zsh-autocomplete
-	url = https://github.com/marlonrichert/zsh-autocomplete

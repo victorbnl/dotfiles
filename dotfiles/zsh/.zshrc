@@ -1,6 +1,3 @@
-# Plugins
-source ~/.zsh-plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-
 # Command prompt
 export PS1="%B%F{green}%n@%M %F{blue}%~ $%F{default}%b "
 
