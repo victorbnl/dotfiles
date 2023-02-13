@@ -20,6 +20,7 @@ bindsym $mod+n exec --no-startup-id dunstctl set-paused toggle
 
 # Take a screenshot
 bindsym $mod+s exec --no-startup-id maim -u -s | xclip -selection clipboard -t image/png
+bindsym $mod+Shift+s exec --no-startup-id maim -u | xclip -selection clipboard -t image/png
 
 # Start the file manager
 bindsym $mod+e exec --no-startup-id pcmanfm
