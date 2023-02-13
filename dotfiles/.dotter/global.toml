@@ -5,13 +5,13 @@ screen_dpi = 96
 backlight_card = "intel_backlight"
 
 [all]
-depends=[
+depends = [
     "all",
     "sddm",
 ]
 
 [all_but_root]
-depends=[
+depends = [
     "desktop",
     "alacritty",
     "ferdium",
@@ -21,7 +21,7 @@ depends=[
 ]
 
 [desktop]
-depends=[
+depends = [
     "dunst",
     "i3",
     "picom",
