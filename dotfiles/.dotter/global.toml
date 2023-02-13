@@ -72,3 +72,4 @@ depends = [
 
 [zsh.files]
 "zsh/.zshrc" = "~/.zshrc"
+"zsh/plugins" = { target = "~/.zsh-plugins", type = "symbolic" }
