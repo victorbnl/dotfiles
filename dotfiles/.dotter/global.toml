@@ -1,6 +1,9 @@
 [global.variables]
 screen_dpi = 96
 
+[polybar.variables]
+backlight_card = "intel_backlight"
+
 [all]
 depends=[
     "all",
