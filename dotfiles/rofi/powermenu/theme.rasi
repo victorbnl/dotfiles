@@ -1,0 +1,37 @@
+@import "../colors.rasi"
+@import "../custom.rasi"
+
+configuration {
+    show-icons: false;
+}
+
+inputbar {
+    enabled: false;
+}
+
+window {
+    width: 800px;
+}
+
+mainbox {
+    children: [ "inputbar", "listview" ];
+}
+
+listview {
+    columns: 5;
+    lines: 1;
+    cycle: true;
+    spacing: 15px;
+}
+
+element {
+    padding: 40px 10px;
+    text-color: @foreground;
+    cursor: pointer;
+}
+element-text {
+    font: "Ubuntu Nerd Font 32";
+    cursor: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+}

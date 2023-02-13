@@ -27,19 +27,8 @@ bindsym $mod+e exec --no-startup-id pcmanfm
 # Network settings
 bindsym $mod+w exec --no-startup-id gnmtui
 
-# Power
-set $power ""
-mode $power {
-    bindsym p exec systemctl poweroff
-    bindsym r exec systemctl reboot
-    bindsym s exec systemctl suspend
-    bindsym e exit
-
-    bindsym Escape mode "default"
-}
-
-# Enter power mode
-bindsym $mod+p mode $power
+# Power menu
+bindsym $mod+p exec --no-startup-id ~/.config/rofi/powermenu/powermenu.sh
 
 ## i3
 

@@ -1,3 +1,5 @@
+@import "colors.rasi"
+
 * {
 	background-color: transparent;
 	font: "Ubuntu 14";
@@ -5,22 +7,17 @@
 }
 
 window {
-	background-color: #212121;
+	background-color: @background;
 }
 
 mainbox {
 	children: [inputbar, message, listview];
 	spacing: 20px;
-	padding: 30px 0;
+	padding: 30px;
 }
 
 inputbar {
-	padding: 0 30px;
 	children: [textbox-prompt-colon, entry, case-indicator];
-}
-
-prompt {
-	text-color: #282828;
 }
 
 textbox-prompt-colon {
@@ -33,21 +30,6 @@ entry {
 	text-color: #ffffff;
 }
 
-button, textbox {
-	background-color: #383838;
-	text-color: #ffffff;
-	padding: 5px;
-}
-
-button selected {
-	background-color: #282828;
-}
-
-listview {
-	scrollbar: true;
-	margin: 0 10px 0 30px;
-}
-
 element {
 	padding: 5px;
 }
@@ -57,10 +39,6 @@ element-icon {
 	margin: 0 10px;
 }
 
-element normal {
-	background-color: transparent;
-}
-
 element selected {
-	background-color: #282828;
+	background-color: @selected;
 }

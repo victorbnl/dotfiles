@@ -1,8 +1,11 @@
-[global.variables]
-screen_dpi = 96
+[variables.variables]
 
-[polybar.variables]
+screen_dpi = 96
 backlight_card = "intel_backlight"
+
+background = "#212121"
+foreground = "#ffffff"
+selected = "#282828"
 
 [all]
 depends = [
@@ -22,6 +25,7 @@ depends = [
 
 [desktop]
 depends = [
+    "variables",
     "dunst",
     "i3",
     "picom",
