@@ -1,6 +1,32 @@
 [global.variables]
 screen_dpi = 96
 
+[all]
+depends=[
+    "all",
+    "sddm",
+]
+
+[all_but_root]
+depends=[
+    "desktop",
+    "alacritty",
+    "ferdium",
+    "redshift",
+    "vim",
+    "zsh",
+]
+
+[desktop]
+depends=[
+    "dunst",
+    "i3",
+    "picom",
+    "polybar",
+    "rofi",
+    "xorg",
+]
+
 [alacritty.files]
 "alacritty" = "~/.config/alacritty"
 
