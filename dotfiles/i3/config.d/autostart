@@ -8,7 +8,7 @@ exec --no-startup-id picom
 exec --no-startup-id dunst
 
 # Authentication prompt daemon
-exec --no-startup-id polkit-dumb-agent
+exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
 
 # Wallpaper
 exec --no-startup-id nitrogen --restore
