@@ -3,9 +3,11 @@
 screen_dpi = 96
 backlight_card = "intel_backlight"
 
-background = "#212121"
+background = "#181818"
 foreground = "#ffffff"
+foreground-alt = "#696969"
 selected = "#282828"
+urgent = "#c91414"
 
 [all]
 depends = [
