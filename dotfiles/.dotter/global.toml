@@ -1,4 +1,4 @@
-[xorg.variables]
+[global.variables]
 screen_dpi = 96
 
 [alacritty.files]
