@@ -2,6 +2,8 @@
 
 My personal dotfiles
 
+![Screenshot](.readme/screenshot.jpg)
+
 ## Installation
 
 First [install dotter](https://github.com/SuperCuber/dotter#installation)
