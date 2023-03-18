@@ -1,6 +1,12 @@
 #!/bin/bash
 
-title=$(playerctl metadata title)
-artist=$(playerctl metadata artist)
+no_player=false
+title=$(playerctl metadata title 2>/dev/null) || no_player=true
+artist=$(playerctl metadata artist 2>/dev/null) || no_player=true
 
-echo "$artist − $title"
+if [[ $no_player == true ]]
+then
+    echo ""
+else
+    echo "$artist − $title"
+fi
