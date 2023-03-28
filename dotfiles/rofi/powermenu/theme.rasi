@@ -5,16 +5,12 @@ configuration {
     show-icons: false;
 }
 
-inputbar {
-    enabled: false;
-}
-
 window {
     width: 800px;
 }
 
 mainbox {
-    children: [ "inputbar", "listview" ];
+    children: [ "listview" ];
 }
 
 listview {
