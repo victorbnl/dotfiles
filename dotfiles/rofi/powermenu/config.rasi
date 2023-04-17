@@ -1,0 +1,11 @@
+configuration {
+    show-icons: false;
+
+    kb-select-1: "p";
+    kb-select-2: "r";
+    kb-select-3: "s";
+    kb-select-4: "l";
+    kb-select-5: "e";
+}
+
+@theme "theme.rasi"

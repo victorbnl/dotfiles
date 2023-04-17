@@ -9,7 +9,7 @@ suspend='󰤄'
 logout='󰗼'
 
 # Actions
-choice="$(echo -e "$shutdown\n$reboot\n$suspend\n$lock\n$logout" | rofi -dmenu -theme ${dir}/theme.rasi)"
+choice="$(echo -e "$shutdown\n$reboot\n$suspend\n$lock\n$logout" | rofi -dmenu -config ${dir}/config.rasi)"
 
 case ${choice} in
     $shutdown)
