@@ -82,5 +82,5 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 ## Scratchpad
 
-bindsym $mod+dollar scratchpad show
-bindsym $mod+Shift+dollar move scratchpad
+bindsym $mod+plus scratchpad show
+bindsym $mod+Shift+plus move scratchpad
