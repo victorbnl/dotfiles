@@ -29,7 +29,7 @@ bindsym $mod+e exec --no-startup-id pcmanfm
 bindsym $mod+w exec --no-startup-id gnmtui
 
 # Power menu
-bindsym $mod+p exec --no-startup-id ~/.config/rofi/powermenu/powermenu.sh
+bindsym XF86PowerOff exec --no-startup-id ~/.config/rofi/powermenu/powermenu.sh
 
 ## i3
 
