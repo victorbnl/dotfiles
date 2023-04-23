@@ -1,5 +1,5 @@
 * {
-    background: {{background}};
-    foreground: {{foreground}};
-    selected: {{selected}};
+    background: #141414;
+    foreground: #ffffff;
+    selected: #282828;
 }

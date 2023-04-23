@@ -1,14 +1,3 @@
-[variables.variables]
-
-screen_dpi = 96
-backlight_card = "intel_backlight"
-
-background = "#141414"
-foreground = "#ffffff"
-foreground-alt = "#696969"
-selected = "#282828"
-urgent = "#c91414"
-
 [all]
 depends = [
     "all",
@@ -27,7 +16,6 @@ depends = [
 
 [desktop]
 depends = [
-    "variables",
     "dunst",
     "i3",
     "picom",
