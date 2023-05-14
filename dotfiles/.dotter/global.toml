@@ -1,11 +1,5 @@
 [all]
 depends = [
-    "all",
-    "sddm",
-]
-
-[all_but_root]
-depends = [
     "desktop",
     "alacritty",
     "redshift",
@@ -43,10 +37,6 @@ depends = [
 
 [rofi.files]
 "rofi" = "~/.config/rofi"
-
-[sddm.files]
-"sddm/look.conf" = "/etc/sddm.conf.d/look.conf"
-"sddm/theme.conf" = "/usr/share/sddm/themes/chili/theme.conf"
 
 [vim.files]
 "vim/.vimrc" = "~/.vimrc"
