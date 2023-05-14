@@ -8,7 +8,6 @@ depends = [
 depends = [
     "desktop",
     "alacritty",
-    "ferdium",
     "redshift",
     "vim",
     "zsh",
@@ -29,9 +28,6 @@ depends = [
 
 [dunst.files]
 "dunst" = "~/.config/dunst"
-
-[ferdium.files]
-"ferdium/custom.css" = "~/.config/Ferdium/config/custom.css"
 
 [i3.files]
 "i3" = "~/.config/i3"
