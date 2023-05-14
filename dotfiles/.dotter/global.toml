@@ -12,7 +12,6 @@ depends = [
     "picom",
     "polybar",
     "rofi",
-    "xorg",
 ]
 
 [alacritty.files]
@@ -35,9 +34,6 @@ depends = [
 
 [vim.files]
 "vim/.vimrc" = "~/.vimrc"
-
-[xorg.files]
-"xorg/.Xresources" = "~/.Xresources"
 
 [zsh.files]
 "zsh/.zshrc" = "~/.zshrc"
