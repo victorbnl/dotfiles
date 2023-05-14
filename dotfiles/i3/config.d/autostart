@@ -13,6 +13,9 @@ exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
 # Network applet
 exec --no-startup-id nm-applet
 
+# Bluetooth applet
+exec --no-startup-id blueman-applet
+
 # Wallpaper
 exec --no-startup-id nitrogen --restore
 
