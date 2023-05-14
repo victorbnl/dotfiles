@@ -2,7 +2,6 @@
 depends = [
     "desktop",
     "alacritty",
-    "vim",
     "zsh",
 ]
 
