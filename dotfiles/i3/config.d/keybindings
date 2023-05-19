@@ -25,9 +25,6 @@ bindsym $mod+Shift+s exec --no-startup-id maim -u | xclip -selection clipboard -
 # Start the file manager
 bindsym $mod+e exec --no-startup-id pcmanfm
 
-# Network settings
-bindsym $mod+w exec --no-startup-id gnmtui
-
 # Power menu
 bindsym XF86PowerOff exec --no-startup-id ~/.config/rofi/powermenu/powermenu.sh
 
