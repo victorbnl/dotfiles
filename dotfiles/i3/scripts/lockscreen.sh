@@ -6,7 +6,7 @@ BG=FFFFFF60
 WRONG=FF0000FF
 
 function getWallpaper() {
-    grep -oP "file=\K.*" ~/.config/nitrogen/bg-saved.cfg
+    grep -o -P -m 1 "file=\K.*" ~/.config/nitrogen/bg-saved.cfg
 }
 
 image=$(getWallpaper)
