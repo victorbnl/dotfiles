@@ -7,8 +7,6 @@ The softwares are named after their package in the Arch and AUR repositories.
 
 **Components**
 
-- `sddm`: session manager
-  - `chili-sddm-theme`: Chili theme
 - `i3`: window manager
 - `rofi`: app launcher
 - `polybar`: status bar
