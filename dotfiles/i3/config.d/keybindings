@@ -31,6 +31,9 @@ bindsym $mod+w exec --no-startup-id gnmtui
 # Power menu
 bindsym XF86PowerOff exec --no-startup-id ~/.config/rofi/powermenu/powermenu.sh
 
+# Autorandr menu
+bindsym $mod+p exec --no-startup-id rofi-autorandr
+
 ## i3
 
 # Kill focused window
