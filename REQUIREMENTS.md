@@ -1,7 +1,7 @@
 # Requirements
 
-These are the requirements, which are all more or less optional.
-The softwares are named after their package in the Arch and AUR repositories.
+Each requirement is named after its package in the Arch official and AUR
+repositories.
 
 ## Desktop core
 
