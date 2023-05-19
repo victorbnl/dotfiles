@@ -20,6 +20,7 @@ The softwares are named after their package in the Arch and AUR repositories.
 - `i3lock-color`: lock screen
 - `autorandr`: auto display management
 - `rofi-autorandr`: projection mode selection
+- `batsignal`: low battery notification
 
 **Keybindings**
 
