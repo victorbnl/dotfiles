@@ -8,7 +8,7 @@ exec --no-startup-id picom
 exec --no-startup-id dunst
 
 # Low battery notification
-exec --no-startup-id batsignal -b -w 20 -I /usr/share/icons/Papirus-Dark/symbolic/status/battery-caution-symbolic.svg
+exec --no-startup-id batsignal -b -w 20 -e -I /usr/share/icons/Papirus-Dark/symbolic/status/battery-caution-symbolic.svg
 
 # Authentication prompt daemon
 exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
