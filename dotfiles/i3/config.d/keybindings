@@ -28,8 +28,8 @@ bindsym $mod+e exec --no-startup-id ~/.config/i3/scripts/open-default.sh file-ma
 # Power menu
 bindsym XF86PowerOff exec --no-startup-id ~/.config/rofi/powermenu/powermenu.sh
 
-# Autorandr menu
-bindsym $mod+p exec --no-startup-id rofi-autorandr
+# Projection menu
+bindsym $mod+p exec --no-startup-id ~/.config/rofi/projection/projection.sh
 
 ## i3
 

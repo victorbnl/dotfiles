@@ -10,6 +10,9 @@ exec --no-startup-id dunst
 # Low battery notification
 exec --no-startup-id batsignal -b -w 20 -e -I /usr/share/icons/Papirus-Dark/symbolic/status/battery-caution-symbolic.svg
 
+# Multi-monitor management
+exec --no-startup-id mons -a -x ~/.config/mons/scripts/daemon.sh
+
 # Authentication prompt daemon
 exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
 

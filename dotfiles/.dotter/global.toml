@@ -11,6 +11,7 @@ depends = [
     "i3",
     "picom",
     "polybar",
+    "mons",
     "rofi",
 ]
 
@@ -28,6 +29,9 @@ depends = [
 
 [polybar.files]
 "polybar" = "~/.config/polybar"
+
+[mons.files]
+"mons" = "~/.config/mons"
 
 [rofi.files]
 "rofi" = "~/.config/rofi"
