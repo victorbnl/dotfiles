@@ -17,7 +17,7 @@ mainbox {
 }
 
 inputbar {
-	children: [textbox-prompt-colon, entry, case-indicator];
+	children: [textbox-prompt-colon, entry];
 }
 
 textbox-prompt-colon {
