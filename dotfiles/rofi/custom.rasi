@@ -3,7 +3,7 @@
 * {
 	background-color: transparent;
 	font: "Ubuntu 14";
-	color: white;
+	color: @foreground;
 }
 
 window {
@@ -18,10 +18,6 @@ mainbox {
 
 inputbar {
 	children: [entry];
-}
-
-entry {
-	text-color: #ffffff;
 }
 
 element {
