@@ -1,0 +1,19 @@
+@import "../colors.rasi"
+@import "../custom.rasi"
+
+* {
+    font: "Ubuntu 15";
+}
+
+window {
+    height: 350px;
+    width: 700px;
+}
+
+mainbox {
+    children: [listview];
+}
+
+element {
+    padding: 15px 20px;
+}

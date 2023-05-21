@@ -6,7 +6,7 @@ duplicate="Duplicate"
 extend_right="Extend to the right"
 extend_left="Extend to the left"
 
-choice="$(echo -e "$primary\n$second\n$duplicate\n$extend_right\n$extend_left" | rofi -dmenu)"
+choice="$(echo -e "$primary\n$second\n$duplicate\n$extend_right\n$extend_left" | rofi -dmenu -config ~/.config/rofi/projection/config.rasi)"
 
 case $choice in
     $primary)
