@@ -1,11 +1,13 @@
 #!/bin/bash
 
-no_player=false
-title=$(playerctl metadata title 2>/dev/null) || no_player=true
-artist=$(playerctl metadata artist 2>/dev/null) || no_player=true
+player=$1
+
+player_not_running=false
+title=$(playerctl -p $player metadata title 2>/dev/null) || player_not_running=true
+artist=$(playerctl -p $player metadata artist 2>/dev/null) || player_not_running=true
 
 out=""
-if [[ $no_player == false ]]
+if [[ $player_not_running == false ]]
 then
     if [[ $artist != "" ]]
     then
