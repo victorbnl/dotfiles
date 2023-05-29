@@ -13,7 +13,7 @@ bindsym $mod+d exec --no-startup-id rofi -show drun
 bindsym Mod1+Tab exec --no-startup-id rofi -show window
 
 # Lock screen
-bindsym $mod+l exec --no-startup-id ~/.config/i3/scripts/lockscreen.sh
+bindsym $mod+l exec --no-startup-id loginctl lock-session
 
 # Toggle notifications
 bindsym $mod+n exec --no-startup-id ~/.config/i3/scripts/ferdium-toggle.sh

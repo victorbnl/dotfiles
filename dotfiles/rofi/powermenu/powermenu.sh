@@ -20,7 +20,7 @@ case ${choice} in
         ;;
     $lock)
 		echo "Locking"
-    ~/.config/i3/lockscreen/lockscreen.sh
+    loginctl lock-session
         ;;
     $suspend)
 		echo "Suspending"
