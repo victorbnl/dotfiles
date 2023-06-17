@@ -17,8 +17,9 @@ repositories.
 - `dunst`: notification daemon
 - `picom`: compositor (transparency)
 - `i3lock-color`: lock screen
-- `mons`: auto display management
-- `rofi-autorandr`: projection mode selection
+- `xss-lock`: auto lock screen management
+- `xidlehook`: auto lock & suspend after inactivity
+- `mons`: display management
 - `batsignal`: low battery notification
 
 **Keybindings**
