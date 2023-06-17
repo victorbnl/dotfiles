@@ -1,7 +1,7 @@
 floating_modifier $mod
 
 # Start a terminal
-bindsym $mod+Return exec --no-startup-id ~/.config/i3/scripts/open-default.sh terminal
+bindsym $mod+Return exec --no-startup-id ~/.scripts/open.sh terminal
 
 # Dropdown terminal
 bindsym $mod+m exec --no-startup-id tdrop i3-sensible-terminal --class "Dropdown"
@@ -13,7 +13,7 @@ bindsym $mod+d exec --no-startup-id rofi -show drun
 bindsym Mod1+Tab exec --no-startup-id rofi -show window
 
 # Lock screen
-bindsym $mod+l exec --no-startup-id loginctl lock-session
+bindsym $mod+l exec --no-startup-id ~/.scripts/open.sh lockscreen
 
 # Toggle notifications
 bindsym $mod+n exec --no-startup-id ~/.config/i3/scripts/ferdium-toggle.sh
@@ -23,7 +23,7 @@ bindsym $mod+s exec --no-startup-id maim -u -s | xclip -selection clipboard -t i
 bindsym $mod+Shift+s exec --no-startup-id maim -u | xclip -selection clipboard -t image/png
 
 # Start the file manager
-bindsym $mod+e exec --no-startup-id ~/.config/i3/scripts/open-default.sh file-manager
+bindsym $mod+e exec --no-startup-id ~/.scripts/open.sh file-manager
 
 # Power menu
 bindsym XF86PowerOff exec --no-startup-id ~/.config/rofi/powermenu/powermenu.sh

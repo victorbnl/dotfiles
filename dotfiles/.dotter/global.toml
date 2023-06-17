@@ -13,6 +13,7 @@ depends = [
     "polybar",
     "mons",
     "rofi",
+    "scripts",
 ]
 
 [alacritty.files]
@@ -35,6 +36,9 @@ depends = [
 
 [rofi.files]
 "rofi" = "~/.config/rofi"
+
+[scripts.files]
+"scripts" = "~/.scripts"
 
 [vim.files]
 "vim/.vimrc" = "~/.vimrc"
