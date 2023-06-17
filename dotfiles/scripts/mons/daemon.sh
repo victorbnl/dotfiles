@@ -5,7 +5,7 @@ case ${MONS_NUMBER} in
         mons -o
         ;;
     2)
-        last=$(cat ~/.config/mons/last)
+        last=$(cat ~/.cache/mons_last)
         if [ ! -z "$last" ]; then
             mons $last
         else

@@ -29,4 +29,4 @@ case $choice in
         ;;
 esac
 
-~/.config/mons/scripts/set.sh $profile
+~/.scripts/mons/set.sh $profile
