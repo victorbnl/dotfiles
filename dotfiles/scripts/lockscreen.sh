@@ -12,7 +12,7 @@ function getWallpaper() {
 image=$(getWallpaper)
 options=(
     --image="$image"
-    --scale
+    --fill
     --color=000000FF
     --inside-color="$NONE"
     --insidever-color="$NONE"
