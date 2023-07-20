@@ -19,8 +19,8 @@ bindsym $mod+l exec --no-startup-id ~/.scripts/open.sh lockscreen
 bindsym $mod+n exec --no-startup-id ~/.config/i3/scripts/ferdium-toggle.sh
 
 # Take a screenshot
-bindsym $mod+s exec --no-startup-id maim -u -s | xclip -selection clipboard -t image/png
-bindsym $mod+Shift+s exec --no-startup-id maim -u | xclip -selection clipboard -t image/png
+bindsym $mod+s exec --no-startup-id maim --hidecursor --select --format png | xclip -selection clipboard -t image/png
+bindsym $mod+Shift+s exec --no-startup-id maim --hidecursor --format png | xclip -selection clipboard -t image/png
 
 # Start the file manager
 bindsym $mod+e exec --no-startup-id ~/.scripts/open.sh file-manager
