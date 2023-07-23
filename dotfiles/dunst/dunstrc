@@ -14,6 +14,7 @@
     horizontal_padding = 15
 
     frame_width = 0
+    frame_color = "#00000000"
 
     idle_threshold = 30
 
