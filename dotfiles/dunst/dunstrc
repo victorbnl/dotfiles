@@ -8,12 +8,12 @@
     offset = 10x50
 
     separator_height = 6
+    separator_color = "#00000000"
 
     padding = 12
     horizontal_padding = 15
 
     frame_width = 0
-    separator_color = "#00000000"
 
     idle_threshold = 30
 
