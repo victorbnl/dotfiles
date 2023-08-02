@@ -16,7 +16,7 @@ bindsym Mod1+Tab exec --no-startup-id rofi -show window
 bindsym $mod+l exec --no-startup-id ~/.scripts/open.sh lockscreen
 
 # Toggle notifications
-bindsym $mod+n exec --no-startup-id ~/.config/i3/scripts/ferdium-toggle.sh
+bindsym $mod+n exec --no-startup-id dunstctl set-paused toggle
 
 # Take a screenshot
 bindsym $mod+s exec --no-startup-id maim --hidecursor --select --format png | xclip -selection clipboard -t image/png

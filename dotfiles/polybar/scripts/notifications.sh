@@ -35,7 +35,7 @@ then
     count=$((direct + indirect))
 fi
 
-muted=$(get Muted)
+muted=$(dunstctl is-paused)
 if [[ "$muted" == "true" ]]
 then
     icon=$muted_icon
