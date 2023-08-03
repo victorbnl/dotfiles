@@ -19,15 +19,12 @@ case ${choice} in
 		systemctl reboot
         ;;
     $lock)
-		echo "Locking"
     loginctl lock-session
         ;;
     $suspend)
-		echo "Suspending"
 		systemctl suspend
         ;;
     $logout)
-		echo "Logging out"
 		i3-msg exit
         ;;
 esac
