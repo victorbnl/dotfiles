@@ -2,7 +2,7 @@
 depends = [
     "desktop",
     "alacritty",
-    "zsh",
+    "bash",
 ]
 
 [desktop]
@@ -17,6 +17,10 @@ depends = [
 
 [alacritty.files]
 "alacritty" = "~/.config/alacritty"
+
+[bash.files]
+"bash/.bashrc" = "~/.bashrc"
+"bash/.bash_aliases" = "~/.bash_aliases"
 
 [dunst.files]
 "dunst" = "~/.config/dunst"
@@ -38,6 +42,3 @@ depends = [
 
 [vim.files]
 "vim/.vimrc" = "~/.vimrc"
-
-[zsh.files]
-"zsh/.zshrc" = "~/.zshrc"
