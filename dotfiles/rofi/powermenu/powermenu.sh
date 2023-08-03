@@ -13,18 +13,18 @@ choice="$(echo -e "$shutdown\n$reboot\n$suspend\n$lock\n$logout" | rofi -dmenu -
 
 case ${choice} in
     $shutdown)
-		systemctl poweroff
+        systemctl poweroff
         ;;
     $reboot)
-		systemctl reboot
+        systemctl reboot
         ;;
     $lock)
-    loginctl lock-session
+        loginctl lock-session
         ;;
     $suspend)
-		systemctl suspend
+        systemctl suspend
         ;;
     $logout)
-		i3-msg exit
+        i3-msg exit
         ;;
 esac
