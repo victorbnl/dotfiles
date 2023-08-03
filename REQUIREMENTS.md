@@ -13,7 +13,8 @@ repositories.
   - `ttf-ubuntu-font-family`: font
   - `otf-material-icons-git`: icon font
 - `alacritty`: terminal emulator
-- `zsh`: shell
+- `bash`: shell
+  - `bash-completion`
 - `dunst`: notification daemon
 - `picom`: compositor (transparency)
 - `i3lock-color`: lock screen
