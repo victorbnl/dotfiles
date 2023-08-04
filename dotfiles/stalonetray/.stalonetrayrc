@@ -1,0 +1,7 @@
+background "#000000"
+grow_gravity E
+icon_gravity E
+icon_size 24
+slot_size 32x32
+window_type normal
+geometry 2x1-0+45
