@@ -45,8 +45,5 @@ depends = [
 [scripts.files]
 "scripts" = "~/.scripts"
 
-[vim.files]
-"vim/.vimrc" = "~/.vimrc"
-
 [stalonetray.files]
 "stalonetray/.stalonetrayrc" = "~/.stalonetrayrc"
