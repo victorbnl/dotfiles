@@ -8,6 +8,7 @@ depends = [
 [desktop]
 depends = [
     "dunst",
+    "fontconfig",
     "i3",
     "picom",
     "polybar",
@@ -24,6 +25,9 @@ depends = [
 
 [dunst.files]
 "dunst" = "~/.config/dunst"
+
+[fontconfig.files]
+"fontconfig" = "~/.config/fontconfig"
 
 [i3.files]
 "i3" = "~/.config/i3"

@@ -2,7 +2,7 @@
 
 * {
 	background-color: transparent;
-	font: "Ubuntu 14";
+	font: "sans-serif 14";
 	color: @foreground;
 }
 
