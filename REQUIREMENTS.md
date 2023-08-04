@@ -12,6 +12,7 @@ repositories.
 - `polybar`: status bar
   - `ttf-ubuntu-font-family`: font
   - `otf-material-icons-git`: icon font
+  - `stalonetray`: tray
 - `alacritty`: terminal emulator
 - `bash`: shell
   - `bash-completion`
