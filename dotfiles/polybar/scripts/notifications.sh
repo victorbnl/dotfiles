@@ -46,6 +46,6 @@ fi
 out=$icon
 if [[ "$count" != "" ]]
 then
-    out+=" $count"
+    out+="  $count"
 fi
 echo "$out"
