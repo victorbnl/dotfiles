@@ -1,25 +1,17 @@
 #!/bin/bash
 
-# Get metadata
-player_not_running=false
-title=$(playerctl metadata title 2>/dev/null) || player_not_running=true
-artist=$(playerctl metadata artist 2>/dev/null) || player_not_running=true
-
-# Ensure played content is music by getting its album
-album=$(playerctl metadata album 2>/dev/null) || player_not_running=true
-if [[ -z "$album" ]]
+# Exit if there is no active player
+playerctl status 2>&1 > /dev/null
+if [[ $? -eq 1 ]]
 then
-    player_not_running=true
+    echo ; exit
 fi
 
-# Format and echo output
-out=""
-if [[ $player_not_running == false ]]
+# Exit if playing content is not music (album is empty)
+if [[ -z "$(playerctl metadata album 2>/dev/null)" ]]
 then
-    if [[ $artist != "" ]]
-    then
-        out+="$artist − "
-    fi
-    out+="$title"
+    echo ; exit
 fi
-echo "$out"
+
+# Print result
+playerctl metadata -f "\{{title}} – \{{artist}}"
