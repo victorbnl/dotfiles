@@ -1,17 +1,9 @@
 #!/bin/bash
 
-# Exit if there is no active player
-playerctl status 2>&1 > /dev/null
-if [[ $? -eq 1 ]]
+playerctl status > /dev/null 2>&1
+if [[ $? -eq 1 || -z "$(playerctl metadata album 2>/dev/null)" ]]
 then
-    echo ; exit
+    echo
+else
+    playerctl metadata -f "\{{title}} – \{{artist}}" 2>/dev/null
 fi
-
-# Exit if playing content is not music (album is empty)
-if [[ -z "$(playerctl metadata album 2>/dev/null)" ]]
-then
-    echo ; exit
-fi
-
-# Print result
-playerctl metadata -f "\{{title}} – \{{artist}}"
