@@ -3,6 +3,7 @@ depends = [
     "desktop",
     "alacritty",
     "bash",
+    "wallpaper",
 ]
 
 [desktop]
@@ -47,3 +48,6 @@ depends = [
 
 [stalonetray.files]
 "stalonetray/.stalonetrayrc" = "~/.stalonetrayrc"
+
+[wallpaper.files]
+"wallpaper/generate.sh" = "~/.wallpaper/generate.sh"

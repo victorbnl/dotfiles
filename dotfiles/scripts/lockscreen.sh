@@ -5,11 +5,7 @@ FG=FFFFFF80
 BG=FFFFFF60
 WRONG=FF0000FF
 
-function getWallpaper() {
-    grep -o -P -m 1 "file=\K.*" ~/.config/nitrogen/bg-saved.cfg
-}
-
-image=$(getWallpaper)
+image="$HOME/.wallpaper/output/lock.jpg"
 options=(
     --image="$image"
     --fill

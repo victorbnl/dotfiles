@@ -8,6 +8,7 @@ repositories.
 **Components**
 
 - `i3`: window manager
+- `feh`: wallpaper
 - `rofi`: app launcher
 - `polybar`: status bar
   - `ttf-ubuntu-font-family`: font

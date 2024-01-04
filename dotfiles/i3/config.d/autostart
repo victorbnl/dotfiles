@@ -23,7 +23,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
 
 # Wallpaper
-exec --no-startup-id nitrogen --restore
+exec --no-startup-id ~/.fehbg
 
 # Automatic power management
 exec --no-startup-id xss-lock --transfer-sleep-lock -- ~/.scripts/open.sh lockscreen
