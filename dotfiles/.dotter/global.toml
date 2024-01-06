@@ -50,4 +50,4 @@ depends = [
 "stalonetray/.stalonetrayrc" = "~/.stalonetrayrc"
 
 [wallpaper.files]
-"wallpaper/generate.sh" = "~/.wallpaper/generate.sh"
+"wallpaper" = "~/.wallpaper"
