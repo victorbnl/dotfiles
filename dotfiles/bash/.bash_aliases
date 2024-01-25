@@ -1,6 +1,7 @@
 # Base commands
 alias ls='eza'
 alias grep='grep --color=auto'
+alias ghc='ghc -dynamic'
 
 # Remove pacman orphan dependencies
 alias pacman-autoremove="pacman -Rs \$(pacman -Qdtq)"
