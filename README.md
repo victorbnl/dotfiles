@@ -6,10 +6,11 @@ My personal dotfiles
 
 ## Installation
 
-First [install dotter](https://github.com/SuperCuber/dotter#installation)
-
-1. Change directory to `dotfiles`
-2. Create a `.dotter/local.toml` file with the packages you want, for instance
+1. [Install dotter](https://github.com/SuperCuber/dotter#installation)
+2. Install the dependencies: `paru -S - < dependencies.txt` (replace `paru` with
+   your AUR helper if you use another)
+3. Change directory to `dotfiles`
+4. Create a `.dotter/local.toml` file with the packages you want, for instance
 
   ```
   packages = [
@@ -18,4 +19,4 @@ First [install dotter](https://github.com/SuperCuber/dotter#installation)
   ]
   ```
 
-3. Run `dotter`
+5. Run `dotter`
