@@ -1,21 +1,7 @@
 #!/bin/bash
 
-while [[ $# -gt 0 ]]
-do
-    case $1 in
-        --icon)
-            shift
-            normal_icon=$1
-            ;;
-        --muted-icon)
-            shift
-            muted_icon=$1
-            ;;
-        *)
-            shift
-            ;;
-    esac
-done
+ICON_NORMAL=''
+ICON_MUTED=''
 
 function get()
 {
@@ -38,9 +24,9 @@ fi
 muted=$(dunstctl is-paused)
 if [[ "$muted" == "true" ]]
 then
-    icon=$muted_icon
+    icon=$ICON_MUTED
 else
-    icon=$normal_icon
+    icon=$ICON_NORMAL
 fi
 
 out=$icon
