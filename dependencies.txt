@@ -6,9 +6,11 @@ dunst
 feh
 i3
 i3lock-color
+imagemagick
 light
 maim
 mons
+network-manager-applet
 otf-material-icons-git
 picom
 playerctl
