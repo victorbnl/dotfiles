@@ -17,6 +17,7 @@ playerctl
 polybar
 rofi
 stalonetray
+tdrop
 ttf-ubuntu-font-family
 xidlehook
 xss-lock

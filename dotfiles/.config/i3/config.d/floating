@@ -13,4 +13,3 @@ for_window [class="Lingot"] move position 510 340
 for_window [class="nmtui"] floating enable
 
 for_window [class="Dropdown"] floating enable
-for_window [class="Dropdown"] resize set 1920 600, move position 0 40

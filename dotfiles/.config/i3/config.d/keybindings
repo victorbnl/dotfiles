@@ -4,7 +4,7 @@ floating_modifier $mod
 bindsym $mod+Return exec --no-startup-id ~/.scripts/open.sh terminal
 
 # Dropdown terminal
-bindsym $mod+m exec --no-startup-id tdrop i3-sensible-terminal --class "Dropdown"
+bindsym $mod+m exec --no-startup-id tdrop -y 40 i3-sensible-terminal --class "Dropdown"
 
 # Start the launcher
 bindsym $mod+d exec --no-startup-id rofi -show drun
