@@ -11,5 +11,7 @@ for_window [class="Lingot"] resize set 900 400
 for_window [class="Lingot"] move position 510 340
 
 for_window [class="nmtui"] floating enable
+for_window [class="nmtui"] resize set 1200 800
+for_window [class="nmtui"] move position center
 
 for_window [class="Dropdown"] floating enable

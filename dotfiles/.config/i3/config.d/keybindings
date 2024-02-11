@@ -31,6 +31,9 @@ bindsym XF86PowerOff exec --no-startup-id ~/.config/rofi/powermenu/powermenu.sh
 # Projection menu
 bindsym $mod+p exec --no-startup-id ~/.config/rofi/projection/projection.sh
 
+# Network manager menu
+bindsym $mod+w exec --no-startup-id alacritty --class nmtui --command nmtui
+
 ## i3
 
 # Kill focused window
