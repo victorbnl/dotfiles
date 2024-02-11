@@ -32,7 +32,7 @@ bindsym XF86PowerOff exec --no-startup-id ~/.config/rofi/powermenu/powermenu.sh
 bindsym $mod+p exec --no-startup-id ~/.config/rofi/projection/projection.sh
 
 # Network manager menu
-bindsym $mod+w exec --no-startup-id alacritty --class nmtui --command nmtui
+bindsym $mod+w exec --no-startup-id alacritty --class nmtui --option 'font.size=10' --command nmtui
 
 # Bluetooth manager menu
 bindsym $mod+b exec --no-startup-id blueman-manager
