@@ -1,19 +1,3 @@
-for_window [class="Guitarix"] floating enable
-for_window [class="Guitarix"] resize set 625 1000
-for_window [class="Guitarix"] move position 647 60
-
-for_window [class="Nitrogen"] floating enable
-for_window [class="Nitrogen"] resize set 900 600
-for_window [class="Nitrogen"] move position 510 240
-
-for_window [class="Lingot"] floating enable
-for_window [class="Lingot"] resize set 900 400
-for_window [class="Lingot"] move position 510 340
-
-for_window [class="nmtui"] floating enable
-for_window [class="nmtui"] resize set 1200 800
-for_window [class="nmtui"] move position center
-
+for_window [class="nmtui"] floating enable, resize set 1200 800, move position center
 for_window [class="Blueman-manager"] floating enable, resize set 1200 800, move position center
-
 for_window [class="Dropdown"] floating enable
