@@ -10,6 +10,7 @@ imagemagick
 light
 maim
 mons
+networkmanager
 network-manager-applet
 otf-material-icons-git
 picom
