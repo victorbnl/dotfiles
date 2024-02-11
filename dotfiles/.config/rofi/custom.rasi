@@ -2,7 +2,7 @@
 
 * {
 	background-color: transparent;
-	font: "sans-serif 14";
+	font: "sans-serif 14.5";
 	color: @foreground;
 }
 
