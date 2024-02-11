@@ -14,4 +14,6 @@ for_window [class="nmtui"] floating enable
 for_window [class="nmtui"] resize set 1200 800
 for_window [class="nmtui"] move position center
 
+for_window [class="Blueman-manager"] floating enable, resize set 1200 800, move position center
+
 for_window [class="Dropdown"] floating enable

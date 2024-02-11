@@ -15,10 +15,6 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# Split orientation
-bindsym $mod+b splith
-bindsym $mod+v splitv
-
 # Layout styles
 bindsym $mod+t layout tabbed
 bindsym $mod+i layout toggle split

@@ -34,6 +34,9 @@ bindsym $mod+p exec --no-startup-id ~/.config/rofi/projection/projection.sh
 # Network manager menu
 bindsym $mod+w exec --no-startup-id alacritty --class nmtui --command nmtui
 
+# Bluetooth manager menu
+bindsym $mod+b exec --no-startup-id blueman-manager
+
 ## i3
 
 # Kill focused window
