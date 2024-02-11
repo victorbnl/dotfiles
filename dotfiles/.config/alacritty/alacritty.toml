@@ -1,3 +1,10 @@
+[window]
+opacity = 0.7
+
+[window.padding]
+x = 10
+y = 10
+
 [colors]
 draw_bold_text_with_bright_colors = true
 
@@ -24,10 +31,3 @@ yellow = "0xf3b43a"
 [colors.primary]
 background = "0x000000"
 foreground = "0xffffff"
-
-[window]
-opacity = 0.7
-
-[window.padding]
-x = 10
-y = 10
