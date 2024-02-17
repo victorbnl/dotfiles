@@ -57,7 +57,7 @@ if __name__ == '__main__':
     ]
 
     output = subprocess.run(
-        ['rofi', '-dmenu', '-format', 'i'],
+        ['rofi', '-dmenu', '-i', '-format', 'i'],
         input=generate_rofi_input(devices).encode(),
         capture_output=True
     ).stdout.decode().strip()
