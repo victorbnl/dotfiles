@@ -35,7 +35,7 @@ bindsym $mod+p exec --no-startup-id ~/.config/rofi/projection/projection.sh
 bindsym $mod+w exec --no-startup-id alacritty --class nmtui --option 'font.size=10' --command nmtui
 
 # Bluetooth manager menu
-bindsym $mod+b exec --no-startup-id blueman-manager
+bindsym $mod+b exec --no-startup-id ~/.config/rofi/bluetooth/bluetooth.py
 
 ## i3
 
