@@ -2,6 +2,7 @@ alacritty
 bash
 bash-completion
 batsignal
+bluez-utils
 dunst
 feh
 i3
@@ -16,6 +17,7 @@ otf-material-icons-git
 picom
 playerctl
 polybar
+python3
 rofi
 stalonetray
 tdrop
