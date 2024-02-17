@@ -60,9 +60,9 @@ if __name__ == '__main__':
         ['rofi', '-dmenu', '-format', 'i'],
         input=generate_rofi_input(devices).encode(),
         capture_output=True
-    ).stdout.decode()
+    ).stdout.decode().strip()
 
-    if output == '':
+    if output in ('', '-1'):
         exit()
     else:
         choice = int(output)
