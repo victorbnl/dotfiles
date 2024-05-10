@@ -27,7 +27,7 @@ def get_device_props(addr: str) -> dict[str, str]:
     props = {}
     props['addr'] = addr
     for line in output.strip().split('\n')[1:]:
-        key, value = line.strip().split(': ')
+        key, value, *_ = [*line.strip().split(': '), ""]
         key = key.lower()
         if key in ('name', 'icon', 'connected'):
             props[key.lower()] = value
