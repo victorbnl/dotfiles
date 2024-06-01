@@ -43,7 +43,8 @@ def generate_rofi_input(devices: list[dict[str, Any]]):
         line = device['name']
         if device['connected'] == 'yes':
             line += " (connected)"
-        line += f"\0icon\x1f{device['icon']}"
+        icon = device['icon'] if 'icon' in device else 'bluetooth'
+        line += f"\0icon\x1f{icon}"
         lines.append(line)
 
     return '\n'.join(lines)
