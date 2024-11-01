@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 let
   home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-24.05.tar.gz";
 in
@@ -85,6 +86,24 @@ in
           "${modifier}+Shift+0x2019" = "move container to workspace number 8";
           "${modifier}+Shift+0xab" = "move container to workspace number 9";
           "${modifier}+Shift+0xbb" = "move container to workspace number 10";
+        };
+      };
+    };
+
+    programs.firefox = {
+      enable = true;
+
+      profiles = {
+        default = {
+          id = 0;
+          name = "default";
+          isDefault = true;
+
+          extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+            ublock-origin
+            bitwarden
+            darkreader
+          ];
         };
       };
     };
