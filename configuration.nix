@@ -57,6 +57,8 @@
     builtins.elem (lib.getName pkg) [
       "vscode"
     ];
+  
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   users.users.victor = {
     isNormalUser = true;
