@@ -11,6 +11,11 @@ in
 
   home-manager.users.victor = {
     xdg.configFile = {
+      "Kvantum/kvantum.kvconfig".text = ''
+        [General]
+        theme=KvAdaptaDark
+      '';
+
       "qt5ct/settings.ini".text = ''
         [Fonts]
         fixed="Noto Sans,9,-1,5,50,0,0,0,0,0,Regular"
