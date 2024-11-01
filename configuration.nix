@@ -73,6 +73,7 @@
     packages = with pkgs; [
       firefox
       git
+      qbittorrent
       vim
       vscode
     ];
@@ -83,6 +84,11 @@
 
   services.power-profiles-daemon.enable = false;
   services.tlp.enable = true;
+
+  qt = {
+    platformTheme = "qt5ct";
+    style = "kvantum";
+  };
 
   nixpkgs.config.packageOverrides = pkgs: {
     nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {

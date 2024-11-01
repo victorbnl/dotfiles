@@ -10,6 +10,20 @@ in
   home-manager.backupFileExtension = "backup";
 
   home-manager.users.victor = {
+    xdg.configFile = {
+      "qt5ct/settings.ini".text = ''
+        [Fonts]
+        fixed="Noto Sans,9,-1,5,50,0,0,0,0,0,Regular"
+        general="Noto Sans,9,-1,5,50,0,0,0,0,0,Regular"
+      '';
+
+      "qt6ct/settings.ini".text = ''
+        [Fonts]
+        fixed="Noto Sans,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular"
+        general="Noto Sans,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular"
+      '';
+    };
+
     gtk = {
       enable = true;
 
