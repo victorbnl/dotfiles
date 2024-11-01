@@ -15,9 +15,15 @@ in
         terminal = "foot";
         menu = "dmenu_path | wmenu | xargs swaymsg exec --";
 
-        input."type:keyboard" = {
-          xkb_layout = "fr";
-          xkb_variant = "afnor";
+        input = {
+          "type:keyboard" = {
+            xkb_layout = "fr";
+            xkb_variant = "afnor";
+          };
+
+          "type:touchpad" = {
+            tap = "enabled";
+          };
         };
 
         output."*".scale = "1.5";
