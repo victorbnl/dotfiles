@@ -73,6 +73,7 @@
     packages = with pkgs; [
       firefox
       git
+      pcmanfm
       qbittorrent
       vim
       vscode
