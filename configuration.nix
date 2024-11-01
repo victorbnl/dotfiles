@@ -68,9 +68,6 @@
     ];
   };
 
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "victor";
-
   environment.systemPackages = with pkgs; [
   ];
 
