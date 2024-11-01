@@ -7,7 +7,28 @@ in
     (import "${home-manager}/nixos")
   ];
 
+  home-manager.backupFileExtension = "backup";
+
   home-manager.users.victor = {
+    gtk = {
+      enable = true;
+
+      theme = {
+        name = "vimix-dark-doder";
+        package = pkgs.vimix-gtk-themes;
+      };
+
+      iconTheme = {
+        name = "Papirus-Dark";
+        package = pkgs.papirus-icon-theme;
+      };
+
+      cursorTheme = {
+        name = "breeze_cursors";
+        size = 20;
+      };
+    };
+
     wayland.windowManager.sway = {
       enable = true;
 
@@ -93,6 +114,10 @@ in
           "${modifier}+Shift+0xbb" = "move container to workspace number 10";
         };
       };
+
+      extraConfig = ''
+        seat * xcursor_theme breeze_cursors 20
+      '';
     };
 
     programs.firefox = {
