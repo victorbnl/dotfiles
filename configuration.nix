@@ -5,13 +5,14 @@
     [
       ./hardware-configuration.nix
       ./home-manager.nix
+      ./wireless-networks.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos";
-  networking.networkmanager.enable = true;
+  networking.wireless.enable = true;
 
   time.timeZone = "Europe/Paris";
 
