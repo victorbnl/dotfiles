@@ -29,11 +29,12 @@
     LC_TIME = "fr_FR.UTF-8";
   };
 
-  services.xserver.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+  };
 
-  services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
-
   programs.sway.enable = true;
 
   services.xserver.xkb = {
