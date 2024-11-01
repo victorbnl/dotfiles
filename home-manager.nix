@@ -108,6 +108,7 @@ in
             ublock-origin
             bitwarden
             darkreader
+            tabliss
           ];
         };
       };
