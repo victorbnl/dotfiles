@@ -62,6 +62,7 @@
     description = "Victor";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+      firefox
       git
       vim
       vscode
