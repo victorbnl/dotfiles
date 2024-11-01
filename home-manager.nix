@@ -29,6 +29,11 @@ in
 
         output."*".scale = "1.5";
 
+        window = {
+          titlebar = false;
+          border = 0;
+        };
+
         keybindings = {
           "${modifier}+Shift+q" = "kill";
 
