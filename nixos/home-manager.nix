@@ -161,6 +161,10 @@ in
             tabliss
             ublock-origin
           ];
+          
+          settings = {
+            "browser.translations.automaticallyPopup" = false;
+          };
         };
       };
     };
