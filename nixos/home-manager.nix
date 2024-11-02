@@ -62,6 +62,33 @@ in
         height = 25;
         modules-left = ["sway/workspaces"];
         modules-right = ["pulseaudio" "backlight" "battery" "clock"];
+
+        "clock" = {
+          tooltip = true;
+          format = "  {:%H:%M}";
+          tooltip-format = "{:%A, %d %B %Y}";
+        };
+
+        "battery" = {
+          format-icons = ["" "" "" "" ""];
+          format = "{icon}   {capacity}%";
+        };
+
+        "backlight" = {
+          format-icons = ["󰃞" "󰃟" "󰃠"];
+          format = "{icon}   {percent}%";
+        };
+
+        "pulseaudio" = {
+          format-icons = ["" ""];
+          format = "{icon}   {volume}%";
+        };
+
+        style = ''
+          * {
+            font-family: "Ubuntu Nerd Font";
+          }
+        '';
       }];
     };
 
