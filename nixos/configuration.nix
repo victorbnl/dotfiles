@@ -59,11 +59,6 @@
     pulse.enable = true;
   };
 
-  nixpkgs.config.allowUnfreePredicate = pkg:
-    builtins.elem (lib.getName pkg) [
-      "vscode"
-    ];
-  
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   users.users.victor = {
@@ -71,12 +66,9 @@
     description = "Victor";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      firefox
-      git
       pcmanfm
       qbittorrent
       vim
-      vscode
     ];
   };
 

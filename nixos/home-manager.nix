@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 let
   home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-24.05.tar.gz";
   firefox-userchrome = builtins.readFile (builtins.fetchurl "https://git.gay/freeplay/Firefox-Onebar/raw/branch/waf/onebar.css");
@@ -11,6 +11,11 @@ in
   home-manager.backupFileExtension = "backup";
 
   home-manager.users.victor = {
+    nixpkgs.config.allowUnfreePredicate = pkg:
+      builtins.elem (lib.getName pkg) [
+        "vscode"
+      ];
+
     xdg.configFile = {
       "Kvantum/kvantum.kvconfig".text = ''
         [General]
@@ -195,6 +200,10 @@ in
           };
         };
       };
+    };
+
+    programs.vscode = {
+      enable = true;
     };
 
     home.stateVersion = "24.05";
