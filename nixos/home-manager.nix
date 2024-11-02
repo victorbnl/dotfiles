@@ -158,6 +158,22 @@ in
 
           userChrome = firefox-userchrome;
 
+          bookmarks = [
+            {
+              toolbar = true;
+              bookmarks = [
+                {
+                  name = "YouTube";
+                  url = "https://www.youtube.com";
+                }
+                {
+                  name = "Discord";
+                  url = "https://discord.com";
+                }
+              ];
+            }
+          ];
+
           extensions = with pkgs.nur.repos.rycee.firefox-addons; [
             bitwarden
             darkreader
