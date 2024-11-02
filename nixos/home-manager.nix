@@ -54,6 +54,16 @@ in
       };
     };
 
+    programs.waybar = {
+      enable = true;
+
+      settings = [{
+        height = 25;
+        modules-left = ["sway/workspaces"];
+        modules-right = ["pulseaudio" "backlight" "battery" "clock"];
+      }];
+    };
+
     wayland.windowManager.sway = {
       enable = true;
 
@@ -81,6 +91,7 @@ in
         };
 
         startup = [
+          { command = "waybar"; }
           { command = "mako"; }
         ];
 
@@ -142,6 +153,8 @@ in
           "${modifier}+Shift+0xab" = "move container to workspace number 9";
           "${modifier}+Shift+0xbb" = "move container to workspace number 10";
         };
+
+        bars = [];
       };
 
       extraConfig = ''
