@@ -1,7 +1,8 @@
-{ lib, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 let
   home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-24.05.tar.gz";
   firefox-userchrome = builtins.readFile (builtins.fetchurl "https://git.gay/freeplay/Firefox-Onebar/raw/branch/waf/onebar.css");
+  homeDir = config.users.users.victor.home;
 in
 {
   imports = [
@@ -218,6 +219,19 @@ in
 
     programs.vscode = {
       enable = true;
+    };
+
+    xdg.userDirs = {
+      enable = true;
+
+      desktop = "${homeDir}/desktop";
+      documents = "${homeDir}/documents";
+      download = "${homeDir}/downloads";
+      music = "${homeDir}/music";
+      pictures = "${homeDir}/pictures";
+      publicShare = "${homeDir}/public";
+      templates = "${homeDir}/templates";
+      videos = "${homeDir}/videos";
     };
 
     home.stateVersion = "24.05";
