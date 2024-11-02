@@ -1,6 +1,7 @@
 { pkgs, ... }:
 let
   home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-24.05.tar.gz";
+  firefox-userchrome = builtins.readFile (builtins.fetchurl "https://git.gay/freeplay/Firefox-Onebar/raw/branch/waf/onebar.css");
 in
 {
   imports = [
@@ -155,6 +156,8 @@ in
           name = "default";
           isDefault = true;
 
+          userChrome = firefox-userchrome;
+
           extensions = with pkgs.nur.repos.rycee.firefox-addons; [
             bitwarden
             darkreader
@@ -164,6 +167,7 @@ in
           
           settings = {
             "browser.translations.automaticallyPopup" = false;
+            "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
           };
         };
       };
