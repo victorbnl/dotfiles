@@ -211,6 +211,12 @@ in
           settings = {
             "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
             "browser.tabs.inTitlebar" = 0;
+
+            "browser.contentblocking.category" = "strict";
+            "privacy.donottrackheader.enabled" = true;
+            "privacy.fingerprintingProtection" = true;
+            "privacy.globalprivacycontrol.enabled" = true;
+
             "browser.translations.automaticallyPopup" = false;
           };
         };
