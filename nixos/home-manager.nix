@@ -210,6 +210,7 @@ in
           settings = {
             "browser.translations.automaticallyPopup" = false;
             "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+            "browser.tabs.inTitlebar" = 0;
           };
         };
       };
