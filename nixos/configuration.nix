@@ -69,6 +69,7 @@
     description = "Victor";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+      ferdium
       pcmanfm
       qbittorrent
       vim
