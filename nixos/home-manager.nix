@@ -139,6 +139,13 @@ in
       '';
     };
 
+    programs.git = {
+      enable = true;
+
+      userEmail = "victor.bonnelle@protonmail.com";
+      userName = "Victor Bonnelle";
+    };
+
     programs.firefox = {
       enable = true;
 
