@@ -75,6 +75,10 @@ in
           border = 0;
         };
 
+        startup = [
+          { command = "mako"; }
+        ];
+
         keybindings = {
           "${modifier}+Shift+q" = "kill";
 
@@ -138,6 +142,10 @@ in
       extraConfig = ''
         seat * xcursor_theme breeze_cursors 20
       '';
+    };
+
+    services.mako = {
+      enable = true;
     };
 
     programs.git = {
