@@ -218,6 +218,7 @@ in
             "privacy.globalprivacycontrol.enabled" = true;
 
             "browser.translations.automaticallyPopup" = false;
+            "browser.aboutConfig.showWarning" = false;
           };
         };
       };
