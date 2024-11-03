@@ -236,6 +236,8 @@ in
           ];
           
           settings = {
+            "extensions.autoDisableScopes" = 0;
+
             "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
             "browser.tabs.inTitlebar" = 0;
 
