@@ -255,6 +255,11 @@ in
 
     programs.vscode = {
       enable = true;
+
+      extensions = with pkgs.vscode-extensions; [
+        bbenoist.nix
+        shardulm94.trailing-spaces
+      ];
     };
 
     xdg.userDirs = {
