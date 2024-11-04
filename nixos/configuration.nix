@@ -37,8 +37,6 @@
     wayland.enable = true;
   };
 
-  services.desktopManager.plasma6.enable = true;
-  
   programs.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
