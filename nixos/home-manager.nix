@@ -159,27 +159,27 @@ in
           "${modifier}+Shift+Up" = "move up";
           "${modifier}+Shift+Right" = "move right";
 
-          "${modifier}+0xe0" = "workspace number 1";
-          "${modifier}+0xe9" = "workspace number 2";
-          "${modifier}+0xe8" = "workspace number 3";
-          "${modifier}+0xea" = "workspace number 4";
-          "${modifier}+0x28" = "workspace number 5";
-          "${modifier}+0x29" = "workspace number 6";
-          "${modifier}+0x2018" = "workspace number 7";
-          "${modifier}+0x2019" = "workspace number 8";
-          "${modifier}+0xab" = "workspace number 9";
-          "${modifier}+0xbb" = "workspace number 10";
+          "${modifier}+agrave" = "workspace number 1";
+          "${modifier}+eacute" = "workspace number 2";
+          "${modifier}+egrave" = "workspace number 3";
+          "${modifier}+ecircumflex" = "workspace number 4";
+          "${modifier}+parenleft" = "workspace number 5";
+          "${modifier}+parenright" = "workspace number 6";
+          "${modifier}+leftsinglequotemark" = "workspace number 7";
+          "${modifier}+rightsinglequotemark" = "workspace number 8";
+          "${modifier}+guillemotleft" = "workspace number 9";
+          "${modifier}+guillemotright" = "workspace number 10";
 
-          "${modifier}+Shift+0xe0" = "move container to workspace number 1";
-          "${modifier}+Shift+0xe9" = "move container to workspace number 2";
-          "${modifier}+Shift+0xe8" = "move container to workspace number 3";
-          "${modifier}+Shift+0xea" = "move container to workspace number 4";
-          "${modifier}+Shift+0x28" = "move container to workspace number 5";
-          "${modifier}+Shift+0x29" = "move container to workspace number 6";
-          "${modifier}+Shift+0x2018" = "move container to workspace number 7";
-          "${modifier}+Shift+0x2019" = "move container to workspace number 8";
-          "${modifier}+Shift+0xab" = "move container to workspace number 9";
-          "${modifier}+Shift+0xbb" = "move container to workspace number 10";
+          "${modifier}+Shift+agrave" = "move container to workspace number 1";
+          "${modifier}+Shift+eacute" = "move container to workspace number 2";
+          "${modifier}+Shift+egrave" = "move container to workspace number 3";
+          "${modifier}+Shift+ecircumflex" = "move container to workspace number 4";
+          "${modifier}+Shift+parenleft" = "move container to workspace number 5";
+          "${modifier}+Shift+parenright" = "move container to workspace number 6";
+          "${modifier}+Shift+leftsinglequotemark" = "move container to workspace number 7";
+          "${modifier}+Shift+rightsinglequotemark" = "move container to workspace number 8";
+          "${modifier}+Shift+guillemotleft" = "move container to workspace number 9";
+          "${modifier}+Shift+guillemotright" = "move container to workspace number 10";
         };
 
         bars = [];
