@@ -79,6 +79,7 @@ in
           "${modifier}+Shift+q" = "kill";
 
           "${modifier}+Shift+c" = "reload";
+          "${modifier}+Shift+r" = "restart";
 
           "${modifier}+b" = "splith";
           "${modifier}+v" = "splitv";
