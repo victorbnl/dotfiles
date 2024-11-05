@@ -174,7 +174,7 @@ in
           format-discharging = "<ramp-capacity>  <label-discharging>";
 
           ramp-capacity = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" ];
-          animation-charging = [ "󰢜" ];
+          animation-charging = [ "󰢜" "󰂆" "󰂇" "󰂈" "󰢝" "󰂉" "󰢞" "󰂊" "󰂋" "󰂅" ];
         };
       };
     };
