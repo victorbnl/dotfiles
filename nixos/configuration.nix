@@ -32,19 +32,18 @@
     LC_TIME = "fr_FR.UTF-8";
   };
 
-  services.displayManager.sddm = {
-    enable = true;
-    wayland.enable = true;
-  };
+  services.displayManager.sddm.enable = true;
 
-  programs.sway = {
+  services.xserver = {
     enable = true;
-    wrapperFeatures.gtk = true;
-  };
 
-  services.xserver.xkb = {
-    layout = "fr";
-    variant = "afnor";
+    windowManager.i3.enable = true;
+    windowManager.fluxbox.enable = true;
+
+    xkb = {
+      layout = "fr";
+      variant = "afnor";
+    };
   };
 
   console.keyMap = "fr";
@@ -60,8 +59,6 @@
     pulse.enable = true;
   };
 
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
-
   users.users.victor = {
     isNormalUser = true;
     description = "Victor";
@@ -73,10 +70,6 @@
       vim
     ];
   };
-
-  fonts.packages = with pkgs; [
-    nerdfonts
-  ];
 
   environment.systemPackages = with pkgs; [
   ];
