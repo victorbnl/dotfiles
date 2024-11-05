@@ -285,7 +285,11 @@ in
           name = "default";
           isDefault = true;
 
-          userChrome = firefox-userchrome;
+          userChrome = firefox-userchrome + ''
+            #navigator-toolbox {
+              border-bottom: none !important;
+            }
+          '';
 
           bookmarks = [
             {
