@@ -17,6 +17,10 @@ in
         "vscode"
       ];
 
+    home.packages = with pkgs; [
+      brightnessctl
+    ];
+
     xdg.configFile = {
       "Kvantum/kvantum.kvconfig".text = ''
         [General]
@@ -124,6 +128,13 @@ in
         ];
 
         keybindings = {
+          "XF86MonBrightnessDown" = "exec brightnessctl set 5%-";
+          "XF86MonBrightnessUp" = "exec brightnessctl set 5%+";
+
+          "XF86AudioMute" = "exec wpctl set-mute @DEFAULT_SINK@ toggle";
+          "XF86AudioLowerVolume" = "exec wpctl set-volume @DEFAULT_SINK@ 5%-";
+          "XF86AudioRaiseVolume" = "exec wpctl set-volume @DEFAULT_SINK@ 5%+";
+
           "${modifier}+Shift+q" = "kill";
 
           "${modifier}+d" = "exec ${menu}";
