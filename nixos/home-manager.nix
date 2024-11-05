@@ -45,6 +45,12 @@ in
       '';
     };
 
+    home.pointerCursor = {
+      package = pkgs.phinger-cursors;
+      name = "phinger-cursors-dark";
+      gtk.enable = true;
+    };
+
     gtk = {
       enable = true;
 
@@ -56,11 +62,6 @@ in
       iconTheme = {
         name = "Papirus-Dark";
         package = pkgs.papirus-icon-theme;
-      };
-
-      cursorTheme = {
-        name = "breeze_cursors";
-        size = 20;
       };
     };
 
