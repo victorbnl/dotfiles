@@ -133,6 +133,13 @@ in
       };
     };
 
+    services.picom = {
+      enable = true;
+
+      backend = "glx";
+      vSync = true;
+    };
+
     programs.git = {
       enable = true;
 
