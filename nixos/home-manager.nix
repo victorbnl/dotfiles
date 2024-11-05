@@ -78,8 +78,10 @@ in
         };
 
         keybindings = {
-          "${modifier}+d" = "exec ${menu}";
-          "${modifier}+Return" = "exec ${terminal}";
+          "${modifier}+d" = "exec --no-startup-id ${menu}";
+          "${modifier}+Return" = "exec --no-startup-id ${terminal}";
+
+          "${modifier}+Shift+e" = "exec --no-startup-id i3-msg exit";
 
           "${modifier}+Shift+q" = "kill";
 
