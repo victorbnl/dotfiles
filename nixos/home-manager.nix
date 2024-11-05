@@ -72,6 +72,11 @@ in
         terminal = "alacritty";
         menu = "dmenu_run";
 
+        window = {
+          titlebar = false;
+          border = 0;
+        };
+
         keybindings = {
           "${modifier}+d" = "exec ${menu}";
           "${modifier}+Return" = "exec ${terminal}";
