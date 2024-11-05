@@ -72,6 +72,11 @@
     ];
   };
 
+  fonts.packages = with pkgs; [
+    nerdfonts
+    ubuntu_font_family
+  ];
+
   environment.systemPackages = with pkgs; [
   ];
 
