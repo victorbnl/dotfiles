@@ -15,6 +15,8 @@ in
   home.packages = with pkgs; [
     brightnessctl
     dconf # required for gtk
+    maim
+    xclip
   ];
 
   xresources.properties = {

@@ -27,6 +27,9 @@
         "${modifier}+d" = "exec --no-startup-id ${menu}";
         "${modifier}+Return" = "exec --no-startup-id ${terminal}";
 
+        "${modifier}+s" = "exec --no-startup-id maim --hidecursor --select --format png | xclip -selection clipboard -t image/png";
+        "${modifier}+Shift+s" = "exec --no-startup-id maim --hidecursor --format png | xclip -selection clipboard -t image/png";
+
         "${modifier}+l" = "exec --no-startup-id i3lock -c '#000000'";
         "${modifier}+Shift+e" = "exec --no-startup-id i3-msg exit";
 
@@ -38,7 +41,6 @@
         "${modifier}+b" = "splith";
         "${modifier}+v" = "splitv";
 
-        "${modifier}+s" = "layout stacking";
         "${modifier}+w" = "layout tabbed";
         "${modifier}+e" = "layout toggle split";
 
