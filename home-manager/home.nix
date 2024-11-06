@@ -12,13 +12,6 @@ in
     ./polybar.nix
   ];
 
-  home.packages = with pkgs; [
-    brightnessctl
-    dconf # required for gtk
-    maim
-    xclip
-  ];
-
   xresources.properties = {
     "Xft.dpi" = 134;
   };

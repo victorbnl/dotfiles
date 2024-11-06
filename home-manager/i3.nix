@@ -1,4 +1,12 @@
+{ pkgs, ... }:
+
 {
+  home.packages = with pkgs; [
+    brightnessctl
+    maim
+    xclip
+  ];
+
   xsession.windowManager.i3 = {
     enable = true;
 

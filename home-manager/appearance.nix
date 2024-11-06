@@ -1,6 +1,10 @@
 { pkgs, ... }:
 
 {
+  home.packages = with pkgs; [
+    dconf
+  ];
+
   xdg.configFile = {
     "Kvantum/kvantum.kvconfig".text = ''
       [General]
