@@ -5,14 +5,13 @@
     [
       ./hardware-configuration.nix
       ./home-manager.nix
-      ./wireless-networks.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos";
-  networking.wireless.enable = true;
+  networking.networkmanager.enable = true;
 
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
