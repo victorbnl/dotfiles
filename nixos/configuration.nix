@@ -4,13 +4,12 @@
   imports =
     [
       ./hardware-configuration.nix
-      ./home-manager.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos";
+  networking.hostName = "Victor-PC";
   networking.networkmanager.enable = true;
 
   hardware.bluetooth.enable = true;
@@ -91,6 +90,11 @@
       inherit pkgs;
     };
   };
+
+  nixpkgs.config.allowUnfreePredicate = pkg:
+    builtins.elem (lib.getName pkg) [
+      "vscode"
+    ];
 
   system.stateVersion = "24.05";
 }
