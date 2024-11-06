@@ -39,4 +39,12 @@
       package = pkgs.papirus-icon-theme;
     };
   };
+
+  fonts.fontconfig = {
+    enable = true;
+
+    defaultFonts.sansSerif = [
+      "Ubuntu"
+    ];
+  };
 }
