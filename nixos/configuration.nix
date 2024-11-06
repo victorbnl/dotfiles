@@ -66,7 +66,6 @@
     packages = with pkgs; [
       ferdium
       pcmanfm
-      qbittorrent
       vim
     ];
   };
