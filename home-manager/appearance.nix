@@ -24,12 +24,6 @@
     '';
   };
 
-  home.pointerCursor = {
-    package = pkgs.phinger-cursors;
-    name = "phinger-cursors-dark";
-    gtk.enable = true;
-  };
-
   gtk = {
     enable = true;
 
@@ -50,5 +44,11 @@
     defaultFonts.sansSerif = [
       "Ubuntu"
     ];
+  };
+
+  home.pointerCursor = {
+    package = pkgs.phinger-cursors;
+    name = "phinger-cursors-dark";
+    gtk.enable = true;
   };
 }
