@@ -192,6 +192,10 @@ in
           border = 0;
         };
 
+        startup = [
+          { command = "polybar top"; }
+        ];
+
         keybindings = {
           "XF86MonBrightnessDown" = "exec brightnessctl set 5%-";
           "XF86MonBrightnessUp" = "exec brightnessctl set 5%+";
@@ -259,6 +263,8 @@ in
           "${modifier}+Shift+guillemotleft" = "move container to workspace number 9";
           "${modifier}+Shift+guillemotright" = "move container to workspace number 10";
         };
+
+        bars = [];
       };
     };
 
