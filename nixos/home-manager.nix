@@ -20,7 +20,7 @@ in
     home.packages = with pkgs; [
       alacritty
       brightnessctl
-      dconf
+      dconf # required for gtk
     ];
 
     xresources.properties = {
