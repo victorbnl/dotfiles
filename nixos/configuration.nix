@@ -65,6 +65,7 @@
 
     packages = with pkgs; [
       ferdium
+      gcc
       pcmanfm
       vim
     ];
