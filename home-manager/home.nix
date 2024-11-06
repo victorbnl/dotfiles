@@ -4,6 +4,7 @@ let
 in
 {
   imports = [
+    ./programs/alacritty.nix
     ./programs/firefox.nix
     ./programs/vscode.nix
     ./appearance.nix
@@ -12,7 +13,6 @@ in
   ];
 
   home.packages = with pkgs; [
-    alacritty
     brightnessctl
     dconf # required for gtk
   ];
