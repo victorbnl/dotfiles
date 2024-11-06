@@ -27,6 +27,7 @@
         "${modifier}+d" = "exec --no-startup-id ${menu}";
         "${modifier}+Return" = "exec --no-startup-id ${terminal}";
 
+        "${modifier}+l" = "exec --no-startup-id i3lock -c '#000000'";
         "${modifier}+Shift+e" = "exec --no-startup-id i3-msg exit";
 
         "${modifier}+Shift+q" = "kill";
