@@ -20,6 +20,11 @@
         border = 0;
       };
 
+      floating = {
+        titlebar = false;
+        border = 0;
+      };
+
       startup = [
         { command = "polybar top"; }
       ];
