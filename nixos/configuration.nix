@@ -72,7 +72,9 @@
     packages = with pkgs; [
       ferdium
       gcc
+      gimp
       pcmanfm
+      python3
       vim
     ];
   };
