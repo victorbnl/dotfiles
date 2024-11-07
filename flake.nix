@@ -23,6 +23,7 @@
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
+            home-manager.backupFileExtension = "backup";
             home-manager.users.victor = import ./home-manager/home.nix;
           }
         ];
