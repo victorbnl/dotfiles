@@ -4,6 +4,10 @@
   programs.vscode = {
     enable = true;
 
+    userSettings = {
+      "workbench.iconTheme" = "material-icon-theme";
+    };
+
     extensions = with pkgs.vscode-extensions; [
       bbenoist.nix
       editorconfig.editorconfig
