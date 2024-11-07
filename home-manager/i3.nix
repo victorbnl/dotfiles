@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     brightnessctl
     maim
+    tdrop
     xclip
   ];
 
@@ -23,6 +24,10 @@
       floating = {
         titlebar = false;
         border = 0;
+
+        criteria = [
+          { class = "Dropdown"; }
+        ];
       };
 
       startup = [
@@ -39,6 +44,8 @@
 
         "${modifier}+d" = "exec --no-startup-id ${menu}";
         "${modifier}+Return" = "exec --no-startup-id ${terminal}";
+
+        "${modifier}+m" = "exec --no-startup-id tdrop -y 40 ${terminal} --class Dropdown";
 
         "${modifier}+s" = "exec --no-startup-id maim --hidecursor --select --format png | xclip -selection clipboard -t image/png";
         "${modifier}+Shift+s" = "exec --no-startup-id maim --hidecursor --format png | xclip -selection clipboard -t image/png";
