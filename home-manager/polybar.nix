@@ -20,7 +20,7 @@
         foreground = "#f2f2f2";
 
         padding-left = 1;
-        padding-right = 3;
+        padding-right = 4;
 
         module-margin-left = 2;
         module-margin-right = 2;
