@@ -10,7 +10,7 @@
         name = "default";
         isDefault = true;
 
-        userChrome = firefox-onebar + ''
+        userChrome = (builtins.readFile firefox-onebar) + ''
           #navigator-toolbox {
             border-bottom: none !important;
           }
