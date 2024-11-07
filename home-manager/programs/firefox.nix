@@ -1,7 +1,5 @@
-{ pkgs, ... }:
-let
-  firefox-userchrome = builtins.readFile (builtins.fetchurl "https://git.gay/freeplay/Firefox-Onebar/raw/branch/waf/onebar.css");
-in
+{ nur, firefox-onebar, ... }:
+
 {
   programs.firefox = {
     enable = true;
@@ -12,7 +10,7 @@ in
         name = "default";
         isDefault = true;
 
-        userChrome = firefox-userchrome + ''
+        userChrome = firefox-onebar + ''
           #navigator-toolbox {
             border-bottom: none !important;
           }
@@ -34,7 +32,7 @@ in
           }
         ];
 
-        extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+        extensions = with nur.repos.rycee.firefox-addons; [
           bitwarden
           darkreader
           tabliss

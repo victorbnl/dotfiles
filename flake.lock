@@ -1,5 +1,17 @@
 {
   "nodes": {
+    "firefox-onebar": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-4uqrK9sBLAI2QNe6obcXjs/fx7PRHvHn13/4bDIirIY=",
+        "type": "file",
+        "url": "https://git.gay/freeplay/Firefox-Onebar/raw/branch/waf/onebar.css"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://git.gay/freeplay/Firefox-Onebar/raw/branch/waf/onebar.css"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -57,11 +69,28 @@
         "type": "github"
       }
     },
+    "nur-repository": {
+      "locked": {
+        "lastModified": 1730937175,
+        "narHash": "sha256-YDJ1R6NmTpGhLpXrlqp3p9H/ktr2BJD1GoG1WMagYRc=",
+        "owner": "nix-community",
+        "repo": "NUR",
+        "rev": "340b8c3ca8a5fcfe8a2230a5e76442b36f68e2ca",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "NUR",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
+        "firefox-onebar": "firefox-onebar",
         "home-manager": "home-manager",
         "nix-index-database": "nix-index-database",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "nur-repository": "nur-repository"
       }
     }
   },

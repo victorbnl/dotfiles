@@ -1,11 +1,17 @@
-{ pkgs, ... }:
+{ pkgs, nur-repository, firefox-onebar, ... }:
 let
+  nur = import nur-repository {
+    nurpkgs = pkgs;
+    pkgs = pkgs;
+  };
+
   homeDir = "/home/victor";
 in
 {
   imports = [
+    (import ./programs/firefox.nix { inherit nur firefox-onebar; })
+
     ./programs/alacritty.nix
-    ./programs/firefox.nix
     ./programs/vscode.nix
     ./appearance.nix
     ./i3.nix
