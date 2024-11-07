@@ -6,6 +6,7 @@
 
     userSettings = {
       "workbench.iconTheme" = "material-icon-theme";
+      "git.confirmSync" = false;
     };
 
     extensions = with pkgs.vscode-extensions; [
