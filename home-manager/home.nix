@@ -14,6 +14,7 @@ in
     ./programs/alacritty.nix
     ./programs/vscode.nix
     ./appearance.nix
+    ./dunst.nix
     ./i3.nix
     ./polybar.nix
   ];
