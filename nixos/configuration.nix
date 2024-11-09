@@ -38,10 +38,10 @@
     };
   };
 
-  services.displayManager.sddm.enable = true;
-
   services.xserver = {
     enable = true;
+
+    displayManager.gdm.enable = true;
 
     windowManager.i3.enable = true;
     windowManager.fluxbox.enable = true;
