@@ -44,6 +44,7 @@
 
         "${modifier}+d" = "exec --no-startup-id ${menu}";
         "${modifier}+Return" = "exec --no-startup-id ${terminal}";
+        "${modifier}+e" = "exec --no-startup-id pcmanfm";
 
         "${modifier}+m" = "exec --no-startup-id tdrop -y 40 ${terminal} --class Dropdown";
 
@@ -62,7 +63,7 @@
         "${modifier}+v" = "splitv";
 
         "${modifier}+w" = "layout tabbed";
-        "${modifier}+e" = "layout toggle split";
+        "${modifier}+i" = "layout toggle split";
 
         "${modifier}+f" = "fullscreen";
 
