@@ -22,11 +22,11 @@
             bookmarks = [
               {
                 name = "YouTube";
-                url = "https://www.youtube.com";
+                url = "https://www.youtube.com/";
               }
               {
-                name = "Discord";
-                url = "https://discord.com";
+                name = "Twitch";
+                url = "https://www.twitch.tv/";
               }
             ];
           }
