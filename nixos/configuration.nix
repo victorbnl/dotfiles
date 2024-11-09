@@ -89,6 +89,8 @@
   services.udisks2.enable = true;
   services.gvfs.enable = true;
 
+  security.polkit.enable = true;
+
   qt = {
     platformTheme = "qt5ct";
     style = "kvantum";
