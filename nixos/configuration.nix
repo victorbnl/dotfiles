@@ -86,6 +86,9 @@
   services.power-profiles-daemon.enable = false;
   services.tlp.enable = true;
 
+  services.udisks2.enable = true;
+  services.gvfs.enable = true;
+
   qt = {
     platformTheme = "qt5ct";
     style = "kvantum";
