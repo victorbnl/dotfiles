@@ -44,7 +44,6 @@
     displayManager.gdm.enable = true;
 
     windowManager.i3.enable = true;
-    windowManager.fluxbox.enable = true;
 
     xkb = {
       layout = "fr";
