@@ -31,16 +31,16 @@
       };
 
       startup = [
-        { command = "polybar top"; }
+        { command = "polybar top"; notification = false; }
       ];
 
       keybindings = {
-        "XF86MonBrightnessDown" = "exec brightnessctl set 5%-";
-        "XF86MonBrightnessUp" = "exec brightnessctl set 5%+";
+        "XF86MonBrightnessDown" = "exec --no-startup-id brightnessctl set 5%-";
+        "XF86MonBrightnessUp" = "exec --no-startup-id brightnessctl set 5%+";
 
-        "XF86AudioMute" = "exec wpctl set-mute @DEFAULT_SINK@ toggle";
-        "XF86AudioLowerVolume" = "exec wpctl set-volume @DEFAULT_SINK@ 5%-";
-        "XF86AudioRaiseVolume" = "exec wpctl set-volume @DEFAULT_SINK@ 5%+";
+        "XF86AudioMute" = "exec --no-startup-id wpctl set-mute @DEFAULT_SINK@ toggle";
+        "XF86AudioLowerVolume" = "exec --no-startup-id wpctl set-volume @DEFAULT_SINK@ 5%-";
+        "XF86AudioRaiseVolume" = "exec --no-startup-id wpctl set-volume @DEFAULT_SINK@ 5%+";
 
         "${modifier}+d" = "exec --no-startup-id ${menu}";
         "${modifier}+Return" = "exec --no-startup-id ${terminal}";
