@@ -31,18 +31,21 @@
           ./nixos/configuration.nix
 
           nix-index-database.nixosModules.nix-index
-          {
-            programs.nix-index-database.comma.enable = true;
-          }
 
           home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.backupFileExtension = "backup";
-            home-manager.users.victor = import ./home-manager/home.nix;
 
-            home-manager.extraSpecialArgs = {
-              inherit nur-repository firefox-onebar nix-vscode-extensions;
+          {
+            programs.nix-index-database.comma.enable = true;
+
+            home-manager = {
+              useGlobalPkgs = true;
+              backupFileExtension = "backup";
+
+              users.victor = import ./home-manager/home.nix;
+
+              extraSpecialArgs = {
+                inherit nur-repository firefox-onebar nix-vscode-extensions;
+              };
             };
           }
         ];
