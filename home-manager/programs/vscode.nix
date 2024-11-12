@@ -13,6 +13,7 @@
       bbenoist.nix
       editorconfig.editorconfig
       formulahendry.code-runner
+      ms-python.python
       pkief.material-icon-theme
       shardulm94.trailing-spaces
     ];
