@@ -8,13 +8,23 @@
     nix-index-database.url = "github:nix-community/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
 
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+
     nur-repository.url = "github:nix-community/NUR";
 
     firefox-onebar.url = "https://git.gay/freeplay/Firefox-Onebar/raw/branch/waf/onebar.css";
     firefox-onebar.flake = false;
   };
 
-  outputs = { nixpkgs, home-manager, nix-index-database, nur-repository, firefox-onebar, ... }: {
+  outputs = {
+    nixpkgs,
+    home-manager,
+    nix-index-database,
+    nur-repository,
+    firefox-onebar,
+    nix-vscode-extensions,
+    ...
+  }: {
     nixosConfigurations = {
       Victor-PC = nixpkgs.lib.nixosSystem {
         modules = [
@@ -29,8 +39,11 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.backupFileExtension = "backup";
-            home-manager.extraSpecialArgs = { inherit nur-repository firefox-onebar; };
             home-manager.users.victor = import ./home-manager/home.nix;
+
+            home-manager.extraSpecialArgs = {
+              inherit nur-repository firefox-onebar nix-vscode-extensions;
+            };
           }
         ];
       };
