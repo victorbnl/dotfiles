@@ -14,6 +14,10 @@
           #navigator-toolbox {
             border-bottom: none !important;
           }
+
+          #nav-bar {
+            border-top: none !important;
+          }
         '';
 
         bookmarks = [
