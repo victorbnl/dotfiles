@@ -13,6 +13,7 @@ in
     (import ./programs/vscode.nix { inherit nix-vscode-extensions; })
 
     ./programs/alacritty.nix
+    ./programs/rofi.nix
     ./appearance.nix
     ./dunst.nix
     ./i3.nix

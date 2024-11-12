@@ -14,7 +14,7 @@
     config = rec {
       modifier = "Mod4";
       terminal = "alacritty";
-      menu = "dmenu_run";
+      menu = "rofi -show drun";
 
       window = {
         titlebar = false;
