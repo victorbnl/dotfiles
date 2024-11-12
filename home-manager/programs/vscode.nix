@@ -5,6 +5,7 @@
     enable = true;
 
     userSettings = {
+      "code-runner.runInTerminal" = true;
       "workbench.iconTheme" = "material-icon-theme";
       "git.confirmSync" = false;
     };
