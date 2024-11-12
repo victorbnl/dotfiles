@@ -10,7 +10,7 @@ in
 {
   imports = [
     (import ./programs/firefox.nix { inherit nur firefox-onebar; })
-    (import ./programs/vscode.nix { inherit pkgs nix-vscode-extensions; })
+    (import ./programs/vscode.nix { inherit nix-vscode-extensions; })
 
     ./programs/alacritty.nix
     ./appearance.nix
