@@ -52,6 +52,37 @@
 
           "browser.translations.automaticallyPopup" = false;
           "browser.aboutConfig.showWarning" = false;
+
+          "browser.uiCustomization.state" = ''
+            {
+              "placements": {
+                "nav-bar": [
+                  "home-button",
+                  "back-button",
+                  "forward-button",
+                  "stop-reload-button",
+                  "urlbar-container",
+                  "downloads-button",
+                  "unified-extensions-button",
+                  "ublock0_raymondhill_net-browser-action",
+                  "addon_darkreader_org-browser-action",
+                  "_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action"
+                ],
+                "toolbar-menubar": [
+                  "menubar-items"
+                ],
+                "TabsToolbar": [
+                  "tabbrowser-tabs",
+                  "new-tab-button",
+                  "alltabs-button"
+                ],
+                "PersonalToolbar": [
+                  "personal-bookmarks"
+                ]
+              },
+              "currentVersion": 20
+            }
+          '';
         };
       };
     };
