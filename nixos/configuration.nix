@@ -38,7 +38,11 @@
     };
   };
 
-  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+
+    theme = "chili";
+  };
 
   services.xserver = {
     enable = true;
@@ -81,6 +85,10 @@
   fonts.packages = with pkgs; [
     nerdfonts
     ubuntu_font_family
+  ];
+
+  environment.systemPackages = with pkgs; [
+    sddm-chili-theme
   ];
 
   services.power-profiles-daemon.enable = false;
