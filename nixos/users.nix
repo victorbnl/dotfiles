@@ -5,7 +5,7 @@
     victor = {
       isNormalUser = true;
       description = "Victor";
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = [ "adbusers" "networkmanager" "wheel" ];
 
       packages = with pkgs; [
         ferdium
