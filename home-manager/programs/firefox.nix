@@ -41,6 +41,15 @@
           darkreader
           tabliss
           ublock-origin
+
+          (buildFirefoxXpiAddon rec {
+            pname = "kureteiyu-dark-theme";
+            version = "1.0";
+            addonId = "{f00ce5dc-ec40-41d1-abb5-8a974e97dae4}";
+            url = "https://addons.mozilla.org/firefox/downloads/file/4387100/kureteiyu_dark_theme-${version}.xpi";
+            sha256 = "452087ffa7db1fe753770d074e94d0220fd9278aa626b1c69ff53f25a4a7ac7b";
+            meta = {};
+          })
         ];
 
         settings = {
