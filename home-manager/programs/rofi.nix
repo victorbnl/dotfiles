@@ -15,23 +15,17 @@
 
     "rofi/theme.rasi".text = ''
       * {
-        background: #000;
-        foreground: #fff;
-        selected: #111;
-      }
-
-      * {
         background-color: transparent;
+        color: white;
+
         font: "sans-serif 14.5";
-        color: @foreground;
       }
 
       window {
-        background-color: @background;
+        background-color: black;
       }
 
       mainbox {
-        children: [inputbar, listview];
         spacing: 20px;
         padding: 30px;
       }
@@ -44,13 +38,13 @@
         padding: 5px;
       }
 
+      element selected {
+        background-color: #111;
+      }
+
       element-icon {
         size: 2.1ch;
         margin: 0 10px;
-      }
-
-      element selected {
-        background-color: @selected;
       }
     '';
   };
