@@ -10,11 +10,10 @@
       packages = with pkgs; [
         android-tools
         ferdium
-        gcc
         gimp
         pcmanfm
-        python3
-        vim
+        qbittorrent
+        yt-dlp
       ];
     };
   };

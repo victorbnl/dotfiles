@@ -34,5 +34,15 @@
     android-udev-rules
   ];
 
+  environment.systemPackages = with pkgs; [
+    aria2
+    htop
+    gcc
+    gparted
+    python3
+    unzip
+    vim
+  ];
+
   system.stateVersion = "24.05";
 }
