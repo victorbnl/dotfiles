@@ -5,9 +5,10 @@
     victor = {
       isNormalUser = true;
       description = "Victor";
-      extraGroups = [ "adbusers" "networkmanager" "wheel" ];
+      extraGroups = [ "networkmanager" "wheel" ];
 
       packages = with pkgs; [
+        android-tools
         ferdium
         gcc
         gimp

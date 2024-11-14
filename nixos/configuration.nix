@@ -30,7 +30,9 @@
       "vscode"
     ];
 
-  programs.adb.enable = true;
+  services.udev.packages = with pkgs; [
+    android-udev-rules
+  ];
 
   system.stateVersion = "24.05";
 }
