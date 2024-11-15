@@ -11,7 +11,9 @@
         android-tools
         ferdium
         gimp
+        lutris
         pcmanfm
+        protonup-qt
         qbittorrent
         yt-dlp
       ];

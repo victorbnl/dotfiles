@@ -39,6 +39,8 @@
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
       "p7zip"
+      "steam"
+      "steam-unwrapped"
       "vscode"
     ];
 
