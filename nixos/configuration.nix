@@ -57,11 +57,15 @@
 
   environment.systemPackages = with pkgs; [
     aria2
+    blueman
     htop
     gcc
     gparted
+    networkmanagerapplet
     p7zip-rar
+    pavucontrol
     python3
+    sqlitebrowser
     unzip
     vim
   ];

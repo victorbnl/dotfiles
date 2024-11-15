@@ -11,6 +11,7 @@
         android-tools
         ferdium
         gimp
+        libreoffice-fresh
         lutris
         pcmanfm
         protonup-qt
