@@ -6,8 +6,8 @@
 
     userSettings = {
       "code-runner.runInTerminal" = true;
-      "workbench.iconTheme" = "material-icon-theme";
       "git.confirmSync" = false;
+      "workbench.iconTheme" = "material-icon-theme";
     };
 
     extensions = with nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace; [
