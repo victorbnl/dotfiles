@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    libsForQt5.qtstyleplugin-kvantum
     sddm-chili-theme
   ];
 
@@ -25,6 +26,8 @@
   };
 
   qt = {
+    enable = true;
+
     platformTheme = "qt5ct";
     style = "kvantum";
   };

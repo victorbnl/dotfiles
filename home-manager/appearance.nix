@@ -1,5 +1,7 @@
 { pkgs, ... }:
-
+let
+  qtFont = "Ubuntu,9";
+in
 {
   home.packages = with pkgs; [
     dconf
@@ -11,16 +13,16 @@
       theme=KvAdaptaDark
     '';
 
-    "qt5ct/settings.ini".text = ''
+    "qt5ct/qt5ct.conf".text = ''
       [Fonts]
-      fixed="Noto Sans,9,-1,5,50,0,0,0,0,0,Regular"
-      general="Noto Sans,9,-1,5,50,0,0,0,0,0,Regular"
+      fixed="${qtFont},-1,5,50,0,0,0,0,0,Regular"
+      general="${qtFont},-1,5,50,0,0,0,0,0,Regular"
     '';
 
-    "qt6ct/settings.ini".text = ''
+    "qt6ct/qt6ct.conf".text = ''
       [Fonts]
-      fixed="Noto Sans,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular"
-      general="Noto Sans,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular"
+      fixed="${qtFont},-1,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular"
+      general="${qtFont},-1,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular"
     '';
   };
 
