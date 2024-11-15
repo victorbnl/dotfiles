@@ -17,7 +17,17 @@
 
   networking = {
     hostName = "Victor-PC";
-    networkmanager.enable = true;
+
+    useDHCP = false;
+    dhcpcd.enable = false;
+
+    networkmanager = {
+      enable = true;
+
+      dns = "none";
+    };
+
+    nameservers = [ "1.1.1.1" "1.0.0.1" ];
   };
 
   hardware.bluetooth = {
