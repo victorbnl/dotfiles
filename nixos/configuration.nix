@@ -38,6 +38,7 @@
 
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
+      "p7zip"
       "vscode"
     ];
 
@@ -50,6 +51,7 @@
     htop
     gcc
     gparted
+    p7zip-rar
     python3
     unzip
     vim
