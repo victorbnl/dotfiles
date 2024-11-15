@@ -25,6 +25,7 @@
       enable = true;
 
       dns = "none";
+      wifi.powersave = true;
     };
 
     nameservers = [ "1.1.1.1" "1.0.0.1" ];
