@@ -18,6 +18,8 @@
 
     xserver = {
       enable = true;
+
+      desktopManager.wallpaper.mode = "fill";
       windowManager.i3.enable = true;
     };
   };
