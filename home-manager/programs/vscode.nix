@@ -6,7 +6,10 @@
 
     userSettings = {
       "code-runner.runInTerminal" = true;
+      "extensions.autoCheckUpdates" = true;
+      "extensions.autoUpdate" = true;
       "git.confirmSync" = false;
+      "update.mode" = "none";
       "workbench.iconTheme" = "material-icon-theme";
     };
 
