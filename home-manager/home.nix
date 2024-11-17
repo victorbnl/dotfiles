@@ -1,6 +1,6 @@
-{ pkgs, nur-repository, firefox-onebar, nix-vscode-extensions, ... }:
+{ pkgs, inputs, ... }:
 let
-  nur = import nur-repository {
+  nur = import inputs.nur-repository {
     nurpkgs = pkgs;
     pkgs = pkgs;
   };
@@ -9,8 +9,8 @@ let
 in
 {
   imports = [
-    (import ./programs/firefox.nix { inherit nur firefox-onebar; })
-    (import ./programs/vscode.nix { inherit nix-vscode-extensions; })
+    (import ./programs/firefox.nix { inherit nur inputs; })
+    (import ./programs/vscode.nix { inherit inputs; })
 
     ./programs/alacritty.nix
     ./programs/rofi.nix

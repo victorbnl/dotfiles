@@ -1,4 +1,4 @@
-{ nix-vscode-extensions, ... }:
+{ inputs, ... }:
 
 {
   programs.vscode = {
@@ -13,7 +13,7 @@
       "workbench.iconTheme" = "material-icon-theme";
     };
 
-    extensions = with nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace; [
+    extensions = with inputs.nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace; [
       bbenoist.nix
       editorconfig.editorconfig
       formulahendry.code-runner

@@ -25,20 +25,16 @@
   outputs = {
     nixpkgs,
     home-manager,
-    nix-index-database,
-    nur-repository,
-    firefox-onebar,
-    nix-vscode-extensions,
     ...
-  }: {
+  }@inputs: {
     nixosConfigurations = {
       Victor-PC = nixpkgs.lib.nixosSystem {
         modules = [
           ./nixos/configuration.nix
 
-          nix-index-database.nixosModules.nix-index
-
           home-manager.nixosModules.home-manager
+
+          inputs.nix-index-database.nixosModules.nix-index
 
           {
             programs.nix-index-database.comma.enable = true;
@@ -50,7 +46,7 @@
               users.victor = import ./home-manager/home.nix;
 
               extraSpecialArgs = {
-                inherit nur-repository firefox-onebar nix-vscode-extensions;
+                inherit inputs;
               };
             };
           }

@@ -1,4 +1,4 @@
-{ nur, firefox-onebar, ... }:
+{ nur, inputs, ... }:
 
 {
   programs.firefox = {
@@ -10,7 +10,7 @@
         name = "default";
         isDefault = true;
 
-        userChrome = (builtins.readFile firefox-onebar) + ''
+        userChrome = (builtins.readFile inputs.firefox-onebar) + ''
           #navigator-toolbox {
             border-bottom: none !important;
           }
