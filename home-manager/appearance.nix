@@ -1,6 +1,7 @@
 { pkgs, ... }:
 let
-  qtFont = "Ubuntu,9";
+  font = "Ubuntu";
+  qtFont = "${font},9";
 in
 {
   home.packages = with pkgs; [
@@ -44,7 +45,7 @@ in
     enable = true;
 
     defaultFonts.sansSerif = [
-      "Ubuntu"
+      font
     ];
   };
 
