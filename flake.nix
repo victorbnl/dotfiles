@@ -20,6 +20,11 @@
       url = "https://git.gay/freeplay/Firefox-Onebar/raw/branch/waf/onebar.css";
       flake = false;
     };
+
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {

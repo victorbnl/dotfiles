@@ -7,11 +7,14 @@ let
 in
 {
   imports = [
+    inputs.spicetify-nix.homeManagerModules.default
+
     (import ./programs/firefox.nix { inherit nur inputs; })
     (import ./programs/vscode.nix { inherit inputs; })
 
     ./programs/alacritty.nix
     ./programs/rofi.nix
+    ./programs/spotify.nix
     ./appearance.nix
     ./dunst.nix
     ./i3.nix
