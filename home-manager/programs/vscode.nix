@@ -19,6 +19,7 @@
       formulahendry.code-runner
       ms-python.mypy-type-checker
       ms-python.python
+      ms-vscode.cpptools-extension-pack
       pkief.material-icon-theme
       shardulm94.trailing-spaces
       tomoki1207.pdf
