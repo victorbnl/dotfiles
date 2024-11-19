@@ -16,6 +16,7 @@ in
     ./programs/rofi.nix
     ./programs/spotify.nix
     ./appearance.nix
+    ./desktop-entries.nix
     ./dunst.nix
     ./i3.nix
     ./polybar.nix
