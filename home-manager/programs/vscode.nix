@@ -1,6 +1,15 @@
 { pkgs, inputs, ... }:
 
 {
+  xdg.desktopEntries = {
+    code-tempdir = {
+      name = "Visual Studio Code (temporary directory)";
+      genericName = "Text Editor";
+      exec = "bash -c \"code \\\\$(mktemp -d)\"";
+      icon = "vscode";
+    };
+  };
+
   programs.vscode = {
     enable = true;
 
