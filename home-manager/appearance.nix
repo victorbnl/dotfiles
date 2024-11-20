@@ -1,7 +1,7 @@
 { pkgs, ... }:
 let
   font = "Ubuntu";
-  qtFont = "${font},9";
+  qtFont = "${font},10";
 in
 {
   home.packages = with pkgs; [
