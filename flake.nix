@@ -1,6 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nur.url = "github:nix-community/NUR";
 
     home-manager = {
       url = "github:nix-community/home-manager/master";
@@ -13,8 +14,6 @@
     };
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
-
-    nur.url = "github:nix-community/NUR";
 
     firefox-onebar = {
       url = "https://git.gay/freeplay/Firefox-Onebar/raw/branch/waf/onebar.css";
