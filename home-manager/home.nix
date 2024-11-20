@@ -37,10 +37,6 @@ in
 
     backend = "glx";
     vSync = true;
-
-    settings = {
-      inactive-dim = 0.2;
-    };
   };
 
   programs.git = {
