@@ -41,11 +41,10 @@
             ];
           })
 
-          ./nixos/configuration.nix
-
           home-manager.nixosModules.home-manager
-
           inputs.nix-index-database.nixosModules.nix-index
+
+          ./nixos/configuration.nix
 
           {
             programs.nix-index-database.comma.enable = true;
