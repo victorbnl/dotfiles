@@ -7,44 +7,14 @@ let
 in
 {
   imports = [
-    inputs.spicetify-nix.homeManagerModules.default
-
-    (import ./programs/firefox.nix { inherit nur inputs; })
-    (import ./programs/vscode.nix { inherit pkgs inputs; })
-
-    ./programs/alacritty.nix
-    ./programs/notepadqq.nix
-    ./programs/rofi.nix
-    ./programs/spotify.nix
-    ./appearance.nix
-    ./desktop-entries.nix
-    ./dunst.nix
-    ./i3.nix
-    ./polybar.nix
+    (import ./programs { inherit pkgs inputs nur; })
+    ./desktop
   ];
 
   programs.bash.enable = true;
 
   home.shellAliases = {
     "rebuild-nixos" = "sudo nixos-rebuild switch --flake path:/data/victor/dotfiles";
-  };
-
-  xresources.properties = {
-    "Xft.dpi" = 134;
-  };
-
-  services.picom = {
-    enable = true;
-
-    backend = "glx";
-    vSync = true;
-  };
-
-  programs.git = {
-    enable = true;
-
-    userEmail = "victor.bonnelle@protonmail.com";
-    userName = "Victor Bonnelle";
   };
 
   xdg.userDirs =
