@@ -2,12 +2,11 @@
 
 {
   imports = [
-    (import ./firefox.nix { inherit pkgs inputs; })
-    (import ./vscode.nix { inherit pkgs inputs; })
-
     ./alacritty.nix
+    ./firefox.nix
     ./notepadqq.nix
     ./spotify.nix
+    ./vscode.nix
   ];
 
   programs.git = {

@@ -2,7 +2,7 @@
 
 {
   imports = [
-    (import ./programs { inherit pkgs inputs; })
+    ./programs
     ./desktop
   ];
 
