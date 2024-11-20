@@ -60,6 +60,7 @@
   environment.systemPackages = with pkgs; [
     aria2
     blueman
+    file
     htop
     gcc
     gparted
