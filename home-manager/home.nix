@@ -10,7 +10,7 @@ in
     inputs.spicetify-nix.homeManagerModules.default
 
     (import ./programs/firefox.nix { inherit nur inputs; })
-    (import ./programs/vscode.nix { inherit inputs; })
+    (import ./programs/vscode.nix { inherit pkgs inputs; })
 
     ./programs/alacritty.nix
     ./programs/rofi.nix

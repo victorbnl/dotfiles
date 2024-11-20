@@ -50,6 +50,7 @@
       "steam"
       "steam-unwrapped"
       "vscode"
+      "vscode-extension-ms-vscode-cpptools"
     ];
 
   services.udev.packages = with pkgs; [

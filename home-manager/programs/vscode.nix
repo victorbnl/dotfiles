@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   programs.vscode = {
@@ -19,7 +19,7 @@
       formulahendry.code-runner
       ms-python.mypy-type-checker
       ms-python.python
-      ms-vscode.cpptools-extension-pack
+      pkgs.vscode-extensions.ms-vscode.cpptools
       pkief.material-icon-theme
       shardulm94.trailing-spaces
       tomoki1207.pdf
