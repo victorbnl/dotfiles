@@ -1,9 +1,12 @@
 { pkgs, ... }:
 
 {
+  imports = [
+    ./sddm.nix
+  ];
+
   environment.systemPackages = with pkgs; [
     libsForQt5.qtstyleplugin-kvantum
-    sddm-chili-theme
   ];
 
   fonts.packages = with pkgs; [
@@ -12,11 +15,6 @@
   ];
 
   services = {
-    displayManager.sddm = {
-      enable = true;
-      theme = "chili";
-    };
-
     xserver = {
       enable = true;
 
