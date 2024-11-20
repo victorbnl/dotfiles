@@ -1,4 +1,4 @@
-{ nur, inputs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   programs.firefox = {
@@ -36,7 +36,7 @@
           }
         ];
 
-        extensions = with nur.repos.rycee.firefox-addons; [
+        extensions = with pkgs.nur.repos.rycee.firefox-addons; [
           bitwarden
           darkreader
           tabliss

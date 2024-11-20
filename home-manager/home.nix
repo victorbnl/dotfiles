@@ -1,13 +1,8 @@
 { pkgs, inputs, ... }:
-let
-  nur = import inputs.nur-repository {
-    nurpkgs = pkgs;
-    pkgs = pkgs;
-  };
-in
+
 {
   imports = [
-    (import ./programs { inherit pkgs inputs nur; })
+    (import ./programs { inherit pkgs inputs; })
     ./desktop
   ];
 

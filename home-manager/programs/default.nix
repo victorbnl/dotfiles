@@ -1,8 +1,8 @@
-{ pkgs, inputs, nur, ... }:
+{ pkgs, inputs, ... }:
 
 {
   imports = [
-    (import ./firefox.nix { inherit nur inputs; })
+    (import ./firefox.nix { inherit pkgs inputs; })
     (import ./vscode.nix { inherit pkgs inputs; })
 
     ./alacritty.nix

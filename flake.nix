@@ -14,7 +14,7 @@
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
-    nur-repository.url = "github:nix-community/NUR";
+    nur.url = "github:nix-community/NUR";
 
     firefox-onebar = {
       url = "https://git.gay/freeplay/Firefox-Onebar/raw/branch/waf/onebar.css";
@@ -30,11 +30,18 @@
   outputs = {
     nixpkgs,
     home-manager,
+    nur,
     ...
   }@inputs: {
     nixosConfigurations = {
       Victor-PC = nixpkgs.lib.nixosSystem {
         modules = [
+          ({ pkgs, ... }: {
+            nixpkgs.overlays = [
+              nur.overlay
+            ];
+          })
+
           ./nixos/configuration.nix
 
           home-manager.nixosModules.home-manager
