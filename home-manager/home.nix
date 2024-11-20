@@ -13,6 +13,7 @@ in
     (import ./programs/vscode.nix { inherit pkgs inputs; })
 
     ./programs/alacritty.nix
+    ./programs/notepadqq.nix
     ./programs/rofi.nix
     ./programs/spotify.nix
     ./appearance.nix
