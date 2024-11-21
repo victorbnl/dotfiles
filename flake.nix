@@ -44,7 +44,7 @@
           home-manager.nixosModules.home-manager
           inputs.nix-index-database.nixosModules.nix-index
 
-          ./nixos/configuration.nix
+          ./nixos
 
           {
             programs.nix-index-database.comma.enable = true;
@@ -53,7 +53,7 @@
               useGlobalPkgs = true;
               backupFileExtension = "backup";
 
-              users.victor = import ./home-manager/home.nix;
+              users.victor = import ./home;
 
               extraSpecialArgs = {
                 inherit inputs;
