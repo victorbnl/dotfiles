@@ -2,8 +2,8 @@
 
 {
   imports = [
-    ./programs
     ./desktop
+    ./programs
   ];
 
   programs.bash.enable = true;
