@@ -4,6 +4,8 @@
   imports = [
     ./desktop
     ./programs
+
+    ./packages.nix
   ];
 
   programs.bash.enable = true;
