@@ -27,6 +27,8 @@
 
         criteria = [
           { class = "Dropdown"; }
+          { class = "blueman-manager"; }
+          { class = "pavucontrol"; }
         ];
       };
 
