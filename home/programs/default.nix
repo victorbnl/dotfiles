@@ -3,7 +3,6 @@
     ./alacritty.nix
     ./firefox.nix
     ./notepadqq.nix
-    ./spotify.nix
     ./vscode.nix
   ];
 

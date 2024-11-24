@@ -1,6 +1,15 @@
 { pkgs, inputs, ... }:
 
 {
+  xdg.desktopEntries = {
+    spotify = {
+      name = "Spotify";
+      icon = "spotify";
+      genericName = "Music Player";
+      exec = "firefox -p webapp open.spotify.com";
+    };
+  };
+
   programs.firefox = {
     enable = true;
 
@@ -96,6 +105,27 @@
               "currentVersion": 20
             }
           '';
+        };
+      };
+
+      webapp = {
+        id = 1;
+        name = "webapp";
+
+        userChrome = ''
+          #navigator-toolbox {
+            visibility: collapse;
+          }
+        '';
+
+        extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+          ublock-origin
+        ];
+
+        settings = {
+          "extensions.autoDisableScopes" = 0;
+          "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+          "media.eme.enabled" = true;
         };
       };
     };
