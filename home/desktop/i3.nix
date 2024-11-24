@@ -6,6 +6,7 @@
     maim
     tdrop
     xclip
+    xss-lock
   ];
 
   xsession.windowManager.i3 = {
@@ -34,9 +35,12 @@
 
       startup = [
         { command = "polybar top"; notification = false; }
+        { command = "xss-lock --transfer-sleep-lock -- i3lock -c 000000"; notification = false; }
       ];
 
       keybindings = {
+        "XF86PowerOff" = "exec --no-startup-id rofi-power-menu";
+
         "XF86MonBrightnessDown" = "exec --no-startup-id brightnessctl set 5%-";
         "XF86MonBrightnessUp" = "exec --no-startup-id brightnessctl set 5%+";
 
@@ -53,7 +57,7 @@
         "${modifier}+s" = "exec --no-startup-id maim --hidecursor --select --format png | xclip -selection clipboard -t image/png";
         "${modifier}+Shift+s" = "exec --no-startup-id maim --hidecursor --format png | xclip -selection clipboard -t image/png";
 
-        "${modifier}+l" = "exec --no-startup-id i3lock -c '#000000'";
+        "${modifier}+l" = "exec --no-startup-id loginctl lock-session";
         "${modifier}+Shift+e" = "exec --no-startup-id i3-msg exit";
 
         "${modifier}+Shift+q" = "kill";

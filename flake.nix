@@ -46,7 +46,7 @@
 
           ./nixos
 
-          {
+          ({ pkgs, ... }: {
             programs.nix-index-database.comma.enable = true;
 
             home-manager = {
@@ -56,10 +56,11 @@
               users.victor = import ./home;
 
               extraSpecialArgs = {
+                localpkgs = import ./packages { inherit pkgs; };
                 inherit inputs;
               };
             };
-          }
+          })
         ];
       };
     };

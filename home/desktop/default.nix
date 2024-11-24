@@ -1,3 +1,5 @@
+{ localpkgs, ... }:
+
 {
   imports = [
     ./dunst.nix
@@ -5,6 +7,10 @@
     ./polybar.nix
     ./rofi.nix
     ./theme.nix
+  ];
+
+  home.packages = with localpkgs; [
+    rofi-power-menu
   ];
 
   xresources.properties = {
