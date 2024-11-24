@@ -8,7 +8,13 @@
     fprintd.enable = true;
 
     power-profiles-daemon.enable = false;
-    tlp.enable = true;
+    tlp = {
+      enable = true;
+      settings = {
+        CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+        CPU_SCALING_GOVERNOR_ON_AC = "performance";
+      };
+    };
 
     udisks2.enable = true;
     gvfs.enable = true;
