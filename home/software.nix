@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, localpkgs, ... }:
 
 {
   home.packages = with pkgs; [
@@ -7,7 +7,6 @@
     ferdium
     gimp
     gparted
-    libreoffice-fresh
     lutris
     networkmanagerapplet
     pavucontrol

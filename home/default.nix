@@ -3,7 +3,7 @@
     ./desktop
     ./programs
 
-    ./packages.nix
+    ./software.nix
   ];
 
   programs.bash.enable = true;
