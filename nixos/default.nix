@@ -66,7 +66,5 @@
     vim
   ];
 
-  services.logind.powerKey = "ignore";
-
   system.stateVersion = "24.05";
 }
