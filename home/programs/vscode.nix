@@ -13,14 +13,16 @@
   programs.vscode = {
     enable = true;
 
+    enableUpdateCheck = false;
+    enableExtensionUpdateCheck = false;
+
     userSettings = {
       "code-runner.runInTerminal" = true;
-      "extensions.autoCheckUpdates" = true;
-      "extensions.autoUpdate" = true;
       "git.confirmSync" = false;
-      "update.mode" = "none";
       "workbench.iconTheme" = "material-icon-theme";
     };
+
+    mutableExtensionsDir = false;
 
     extensions = with inputs.nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace; [
       bbenoist.nix
