@@ -20,6 +20,8 @@
     };
   };
 
+  zramSwap.enable = true;
+
   networking = {
     hostName = "Victor-PC";
 
