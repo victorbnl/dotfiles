@@ -19,7 +19,9 @@
     userSettings = {
       "code-runner.runInTerminal" = true;
       "git.confirmSync" = false;
+      "window.commandCenter" = false;
       "window.dialogStyle" = "custom";
+      "window.experimentalControlOverlay" = false;
       "window.titleBarStyle" = "custom";
       "workbench.iconTheme" = "material-icon-theme";
     };
