@@ -19,6 +19,7 @@
     userSettings = {
       "code-runner.runInTerminal" = true;
       "git.confirmSync" = false;
+      "window.dialogStyle" = "custom";
       "window.titleBarStyle" = "custom";
       "workbench.iconTheme" = "material-icon-theme";
     };
