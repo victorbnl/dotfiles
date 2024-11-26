@@ -46,7 +46,7 @@
       postInstall = (oldAttrs.postInstall or "") + ''
         workbenchPath="$out/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.css"
         cat >> "$workbenchPath" << EOF
-          // Hide window controls
+          /* Hide window controls */
           .window-controls-container { width: 4px !important; }
           .window-controls-container > * { display: none !important; }
         EOF
