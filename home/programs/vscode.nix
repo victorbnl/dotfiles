@@ -39,5 +39,20 @@
       shardulm94.trailing-spaces
       tomoki1207.pdf
     ];
+
+    # mostly taken from https://github.com/KatsuteDev/Background/
+    package = pkgs.vscode.overrideAttrs(oldAttrs: {
+      buildInputs = (oldAttrs.buildInputs or []) ++ [ pkgs.tinyxxd ];
+      postInstall = (oldAttrs.postInstall or "") + ''
+        workbenchPath="$out/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.css"
+        cat >> "$workbenchPath" << EOF
+          // Hide window controls
+          .window-controls-container { width: 4px !important; }
+          .window-controls-container > * { display: none !important; }
+        EOF
+        checksum="$(sha256sum -b "$workbenchPath" | xxd -r -p | base64 | sed "s/=*$//g")"
+        sed -i -E 's|(^\s*"vs\/workbench\/workbench\.desktop\.main\.css": ")[^"]*("),|\1'$checksum'\2,|' "$out/lib/vscode/resources/app/product.json"
+      '';
+    });
   };
 }
