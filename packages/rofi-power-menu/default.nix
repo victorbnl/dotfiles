@@ -12,6 +12,6 @@ stdenv.mkDerivation {
     mkdir -p $out/bin $out/share/$pname
     cp config.rasi $out/share/$pname/power-menu-config.rasi
     makeWrapper $src/script.sh $out/bin/rofi-power-menu \
-     --set CONFIG_FILE $out/share/$pname/power-menu-config.rasi
+      --set CONFIG_FILE $out/share/$pname/power-menu-config.rasi
   '';
 }
