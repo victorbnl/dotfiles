@@ -11,6 +11,7 @@
     networkmanagerapplet
     pavucontrol
     pcmanfm
+    prismlauncher
     protonup-qt
     python3
     qbittorrent
