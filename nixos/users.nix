@@ -3,7 +3,7 @@
     victor = {
       isNormalUser = true;
       description = "Victor";
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = [ "networkmanager" "wheel" "vboxusers" ];
     };
   };
 }

@@ -43,6 +43,8 @@
     powerOnBoot = true;
   };
 
+  virtualisation.virtualbox.host.enable = true;
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   nixpkgs.config.allowUnfreePredicate = pkg:
