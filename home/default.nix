@@ -12,7 +12,18 @@
     "rebuild-nixos" = "sudo nixos-rebuild switch --flake path:/data/victor/dotfiles";
   };
 
-  xdg.userDirs =
+  xdg = {
+    mimeApps = {
+      enable = true;
+
+      defaultApplications = {
+        "image/jpeg" = [ "viewnior.desktop" ];
+        "image/png" = [ "viewnior.desktop" ];
+        "text/plain" = [ "notepadqq.desktop" ];
+      };
+    };
+
+    userDirs =
     let
       homeDir = "/home/victor";
     in
@@ -28,6 +39,7 @@
       templates = "${homeDir}/templates";
       videos = "${homeDir}/videos";
     };
+  };
 
   home.stateVersion = "24.05";
 }
