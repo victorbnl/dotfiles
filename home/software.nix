@@ -16,6 +16,7 @@
     python3
     qbittorrent
     sqlitebrowser
+    viewnior
     yt-dlp
   ];
 }
