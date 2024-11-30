@@ -72,7 +72,7 @@
       tomoki1207.pdf
     ];
 
-    # mostly taken from https://github.com/KatsuteDev/Background/
+    # mostly taken from https://github.com/KatsuteDev/Background/ and https://github.com/shalldie/vscode-background.git
     package = pkgs.vscode.overrideAttrs(oldAttrs: {
       buildInputs = (oldAttrs.buildInputs or []) ++ [ pkgs.tinyxxd ];
       postInstall = (oldAttrs.postInstall or "") + ''
