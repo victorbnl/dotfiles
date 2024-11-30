@@ -23,8 +23,39 @@
       "window.dialogStyle" = "custom";
       "window.experimentalControlOverlay" = false;
       "window.titleBarStyle" = "custom";
-      "workbench.colorTheme" = "Styx Material";
+      "workbench.colorTheme" = "Dark Modern";
       "workbench.iconTheme" = "material-icon-theme";
+
+      "workbench.colorCustomizations" = {
+        "activityBar.background" = "#000000";
+        "sideBar.background" = "#000000";
+        "sideBarSectionHeader.background" = "#000000";
+        "sideBarSectionHeader.border" = "#00000033";
+        "sideBar.border" = "#2b2b2b";
+        "statusBar.background" = "#000000";
+        "titleBar.activeBackground" = "#000000";
+        "titleBar.inactiveBackground" = "#000000";
+        "menu.background" = "#000000";
+        "editor.background" = "#000000";
+        "editorGutter.background" = "#000000";
+        "panel.background" = "#000000";
+        "breadcrumb.background" = "#000000";
+        "editorGroupHeader.tabsBackground" = "#000000";
+        "tab.border" = "#000000";
+        "tab.activeBackground" = "#000000";
+        "tab.inactiveBackground" = "#000000";
+        "widget.shadow" = "#3838385c";
+        "editorWidget.background" = "#000000";
+        "debugToolBar.background" = "#000000";
+        "notifications.background" = "#000000";
+        "notificationCenterHeader.background" = "#000000";
+        "editorMarkerNavigation.background" = "#000000";
+        "editorSuggestWidget.background" = "#000000";
+        "editorHoverWidget.background" = "#000000";
+        "minimap.background" = "#000000";
+        "editorGroup.emptyBackground" = "#000000";
+        "debugExceptionWidget.background" = "#000000";
+      };
     };
 
     mutableExtensionsDir = false;
@@ -39,15 +70,6 @@
       pkief.material-icon-theme
       shardulm94.trailing-spaces
       tomoki1207.pdf
-
-      (hshhrr.styx.overrideAttrs (oldAttrs: {
-        postInstall = (oldAttrs.postInstall or "") + ''
-          find $out -name "styx*-color-theme.json" \
-            -exec sed -i "s/#0A3329/#303030/g" "{}" \; \
-            -exec sed -i "s/#91F2DA/#FFFFFF/g" "{}" \; \
-            -exec sed -i -E 's/("widget\.shadow": )"#000000"/\1"#202020"/g' "{}" \;
-        '';
-      }))
     ];
 
     # mostly taken from https://github.com/KatsuteDev/Background/
