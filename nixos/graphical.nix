@@ -10,7 +10,7 @@
   ];
 
   fonts.packages = with pkgs; [
-    nerdfonts
+    nerd-fonts.ubuntu
     ubuntu_font_family
   ];
 
