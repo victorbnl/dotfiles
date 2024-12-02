@@ -65,6 +65,7 @@
       bbenoist.nix
       editorconfig.editorconfig
       formulahendry.code-runner
+      mhutchie.git-graph
       ms-python.mypy-type-checker
       ms-python.python
       pkgs.vscode-extensions.ms-vscode.cpptools
