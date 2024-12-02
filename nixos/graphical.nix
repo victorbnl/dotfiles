@@ -21,6 +21,8 @@
       desktopManager.wallpaper.mode = "fill";
       windowManager.i3.enable = true;
     };
+
+    libinput.touchpad.naturalScrolling = true;
   };
 
   qt = {
