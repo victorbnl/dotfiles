@@ -25,17 +25,10 @@
   networking = {
     hostName = "Victor-PC";
 
-    useDHCP = false;
-    dhcpcd.enable = false;
-
     networkmanager = {
       enable = true;
-
-      dns = "none";
       wifi.powersave = true;
     };
-
-    nameservers = [ "1.1.1.1" "1.0.0.1" ];
   };
 
   hardware.bluetooth = {
