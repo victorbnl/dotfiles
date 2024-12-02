@@ -9,6 +9,7 @@
     gparted
     lutris
     networkmanagerapplet
+    nmap
     pavucontrol
     pcmanfm
     prismlauncher
