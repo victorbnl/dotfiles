@@ -7,6 +7,7 @@
     ferdium
     gimp
     gparted
+    libreoffice-fresh
     lutris
     networkmanagerapplet
     nmap
