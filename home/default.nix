@@ -17,6 +17,7 @@
       enable = true;
 
       defaultApplications = {
+        "application/pdf" = [ "firefox.desktop" ];
         "image/jpeg" = [ "viewnior.desktop" ];
         "image/png" = [ "viewnior.desktop" ];
         "text/plain" = [ "notepadqq.desktop" ];
