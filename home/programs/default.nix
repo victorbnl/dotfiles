@@ -1,6 +1,7 @@
 {
   imports = [
     ./alacritty.nix
+    ./ferdium.nix
     ./firefox.nix
     ./notepadqq.nix
     ./vscode.nix
