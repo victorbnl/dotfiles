@@ -1,6 +1,6 @@
 { pkgs }:
 
 {
-  ferdium-theme = pkgs.callPackage ./ferdium-theme/default.nix {};
-  rofi-power-menu = pkgs.callPackage ./rofi-power-menu/default.nix {};
+  ferdium-theme = pkgs.callPackage ./ferdium-theme {};
+  rofi-power-menu = pkgs.callPackage ./rofi-power-menu {};
 }
