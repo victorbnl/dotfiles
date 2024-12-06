@@ -12,6 +12,12 @@
 
     userEmail = "victor.bonnelle@protonmail.com";
     userName = "Victor Bonnelle";
+
+    extraConfig = {
+      credential = {
+        helper = "store";
+      };
+    };
   };
 
   programs.vim = {
