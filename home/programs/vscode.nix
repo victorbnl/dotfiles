@@ -68,6 +68,7 @@
       mhutchie.git-graph
       ms-python.mypy-type-checker
       ms-python.python
+      ms-vsliveshare.vsliveshare
       pkgs.vscode-extensions.ms-vscode.cpptools
       pkief.material-icon-theme
       shardulm94.trailing-spaces
