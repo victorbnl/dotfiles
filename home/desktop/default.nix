@@ -4,6 +4,7 @@
   imports = [
     ./dunst.nix
     ./i3.nix
+    ./nmtui.nix
     ./polybar.nix
     ./rofi.nix
     ./theme.nix
