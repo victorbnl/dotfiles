@@ -27,8 +27,8 @@
         border = 0;
 
         criteria = [
-          { class = "Dropdown"; }
           { class = "blueman-manager"; }
+          { class = "dropdown"; }
           { class = "pavucontrol"; }
         ];
       };
@@ -52,7 +52,7 @@
         "${modifier}+Return" = "exec --no-startup-id ${terminal}";
         "${modifier}+e" = "exec --no-startup-id pcmanfm";
 
-        "${modifier}+m" = "exec --no-startup-id tdrop -y 40 ${terminal} --class Dropdown";
+        "${modifier}+m" = "exec --no-startup-id tdrop -y 40 ${terminal} --class dropdown";
 
         "${modifier}+s" = "exec --no-startup-id maim --hidecursor --select --format png | xclip -selection clipboard -t image/png";
         "${modifier}+Shift+s" = "exec --no-startup-id maim --hidecursor --format png | xclip -selection clipboard -t image/png";
