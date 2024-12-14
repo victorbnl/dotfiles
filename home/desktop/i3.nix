@@ -119,9 +119,9 @@
     };
 
     extraConfig = ''
-      for_window [class="blueman-manager"] resize set 1200 700, move position center
-      for_window [class="nmtui"] resize set 1200 700, move position center
-      for_window [class="pavucontrol"] resize set 1200 700, move position center
+      for_window [class="blueman-manager"] resize set 1200 750, move position center
+      for_window [class="nmtui"] resize set 1200 750, move position center
+      for_window [class="pavucontrol"] resize set 1200 750, move position center
     '';
   };
 }
