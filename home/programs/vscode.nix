@@ -27,6 +27,11 @@
       "workbench.colorTheme" = "Dark Modern";
       "workbench.iconTheme" = "material-icon-theme";
 
+      "files.exclude" = {
+        "**/.mypy_cache" = true;
+        "**/__pycache__" = true;
+      };
+
       "workbench.colorCustomizations" = {
         "activityBar.background" = "#000000";
         "sideBar.background" = "#000000";
