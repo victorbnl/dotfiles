@@ -13,6 +13,10 @@
     userEmail = "victor.bonnelle@protonmail.com";
     userName = "Victor Bonnelle";
 
+    ignores = [
+      "__pycache__"
+    ];
+
     extraConfig = {
       credential = {
         helper = "store";
