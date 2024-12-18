@@ -71,6 +71,7 @@
       bbenoist.nix
       editorconfig.editorconfig
       formulahendry.code-runner
+      mechatroner.rainbow-csv
       mhutchie.git-graph
       ms-python.mypy-type-checker
       ms-python.python
