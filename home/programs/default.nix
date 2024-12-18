@@ -14,6 +14,7 @@
     userName = "Victor Bonnelle";
 
     ignores = [
+      ".devenv*"
       "__pycache__"
     ];
 

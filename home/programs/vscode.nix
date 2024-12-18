@@ -30,6 +30,7 @@
       "files.exclude" = {
         "**/.mypy_cache" = true;
         "**/__pycache__" = true;
+        "**/.devenv*" = true;
       };
 
       "workbench.colorCustomizations" = {

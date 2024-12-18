@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     android-tools
     blueman
+    devenv
     ferdium
     gimp
     gparted
