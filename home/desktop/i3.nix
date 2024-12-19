@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     brightnessctl
     maim
+    playerctl
     tdrop
     xclip
     xss-lock
@@ -48,6 +49,8 @@
         "XF86AudioMute" = "exec --no-startup-id wpctl set-mute @DEFAULT_SINK@ toggle";
         "XF86AudioLowerVolume" = "exec --no-startup-id wpctl set-volume @DEFAULT_SINK@ 5%-";
         "XF86AudioRaiseVolume" = "exec --no-startup-id wpctl set-volume @DEFAULT_SINK@ 5%+";
+
+        "XF86AudioPlay" = "exec --no-startup-id playerctl play-pause";
 
         "${modifier}+d" = "exec --no-startup-id ${menu}";
         "${modifier}+Return" = "exec --no-startup-id ${terminal}";
