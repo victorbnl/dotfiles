@@ -11,6 +11,7 @@
 
   home.packages = with localpkgs; [
     rofi-power-menu
+    rofi-vscode
   ];
 
   xresources.properties = {

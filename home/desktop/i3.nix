@@ -55,6 +55,8 @@
         "${modifier}+b" = "exec --no-startup-id blueman-manager";
         "${modifier}+n" = "exec --no-startup-id alacritty --class nmtui --command nmtui";
 
+        "${modifier}+p" = "exec --no-startup-id rofi-vscode";
+
         "${modifier}+d" = "exec --no-startup-id ${menu}";
         "${modifier}+Return" = "exec --no-startup-id ${terminal}";
         "${modifier}+e" = "exec --no-startup-id pcmanfm";
