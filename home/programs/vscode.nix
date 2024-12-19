@@ -15,6 +15,51 @@
 
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
+    mutableExtensionsDir = false;
+
+    extensions = with inputs.nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace; [
+      bbenoist.nix
+      editorconfig.editorconfig
+      formulahendry.code-runner
+      mechatroner.rainbow-csv
+      mhutchie.git-graph
+      ms-python.mypy-type-checker
+      ms-python.python
+      ms-vsliveshare.vsliveshare
+      pkgs.vscode-extensions.ms-vscode.cpptools
+      pkief.material-icon-theme
+      shardulm94.trailing-spaces
+      tomoki1207.pdf
+    ];
+
+    package = pkgs.vscode.overrideAttrs(oldAttrs: {
+      buildInputs = (oldAttrs.buildInputs or []) ++ [ pkgs.tinyxxd ];
+      postInstall = (oldAttrs.postInstall or "") + ''
+        workbenchPath="$out/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.css"
+        cat >> "$workbenchPath" << EOF
+          /* Hide window controls */
+          .window-controls-container { width: 4px !important; }
+          .window-controls-container > * { display: none !important; }
+
+          /* Background */
+          body::after{
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: 1000;
+            inset: 0;
+            background-image: url("vscode-file://vscode-app/home/victor/.vscode-background-image.jpg");
+            background-size: cover;
+            background-position: center;
+            pointer-events: none;
+            opacity: 0.2;
+            mix-blend-mode: lighten;
+          }
+        EOF
+        checksum="$(sha256sum -b "$workbenchPath" | xxd -r -p | base64 | sed "s/=*$//g")"
+        sed -i -E 's|(^\s*"vs\/workbench\/workbench\.desktop\.main\.css": ")[^"]*("),|\1'$checksum'\2,|' "$out/lib/vscode/resources/app/product.json"
+      '';
+    });
 
     userSettings = {
       "code-runner.runInTerminal" = true;
@@ -64,51 +109,5 @@
         "debugExceptionWidget.background" = "#000000";
       };
     };
-
-    mutableExtensionsDir = false;
-
-    extensions = with inputs.nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace; [
-      bbenoist.nix
-      editorconfig.editorconfig
-      formulahendry.code-runner
-      mechatroner.rainbow-csv
-      mhutchie.git-graph
-      ms-python.mypy-type-checker
-      ms-python.python
-      ms-vsliveshare.vsliveshare
-      pkgs.vscode-extensions.ms-vscode.cpptools
-      pkief.material-icon-theme
-      shardulm94.trailing-spaces
-      tomoki1207.pdf
-    ];
-
-    package = pkgs.vscode.overrideAttrs(oldAttrs: {
-      buildInputs = (oldAttrs.buildInputs or []) ++ [ pkgs.tinyxxd ];
-      postInstall = (oldAttrs.postInstall or "") + ''
-        workbenchPath="$out/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.css"
-        cat >> "$workbenchPath" << EOF
-          /* Hide window controls */
-          .window-controls-container { width: 4px !important; }
-          .window-controls-container > * { display: none !important; }
-
-          /* Background */
-          body::after{
-            content: "";
-            display: block;
-            position: absolute;
-            z-index: 1000;
-            inset: 0;
-            background-image: url("vscode-file://vscode-app/home/victor/.vscode-background-image.jpg");
-            background-size: cover;
-            background-position: center;
-            pointer-events: none;
-            opacity: 0.2;
-            mix-blend-mode: lighten;
-          }
-        EOF
-        checksum="$(sha256sum -b "$workbenchPath" | xxd -r -p | base64 | sed "s/=*$//g")"
-        sed -i -E 's|(^\s*"vs\/workbench\/workbench\.desktop\.main\.css": ")[^"]*("),|\1'$checksum'\2,|' "$out/lib/vscode/resources/app/product.json"
-      '';
-    });
   };
 }
