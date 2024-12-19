@@ -6,4 +6,8 @@
       extraGroups = [ "networkmanager" "wheel" "vboxusers" ];
     };
   };
+
+  nix.settings.trusted-users = [
+    "victor"
+  ];
 }
