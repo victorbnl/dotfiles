@@ -52,6 +52,9 @@
 
         "XF86AudioPlay" = "exec --no-startup-id playerctl play-pause";
 
+        "${modifier}+b" = "exec --no-startup-id blueman-manager";
+        "${modifier}+n" = "exec --no-startup-id alacritty --class nmtui --command nmtui";
+
         "${modifier}+d" = "exec --no-startup-id ${menu}";
         "${modifier}+Return" = "exec --no-startup-id ${terminal}";
         "${modifier}+e" = "exec --no-startup-id pcmanfm";
@@ -69,7 +72,7 @@
         "${modifier}+Shift+c" = "reload";
         "${modifier}+Shift+r" = "restart";
 
-        "${modifier}+b" = "splith";
+        "${modifier}+h" = "splith";
         "${modifier}+v" = "splitv";
 
         "${modifier}+w" = "layout tabbed";
