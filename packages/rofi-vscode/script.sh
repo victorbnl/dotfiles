@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-function iconify() {
+function fix() {
     while read line
     do
-        echo -e "$line\0icon\x1fvscode"
+        echo -e "${line/#\~/$HOME}\0icon\x1fvscode"
     done
 }
 
-choice="$($VSCODE_RECENT | iconify | rofi -dmenu)"
+choice="$($VSCODE_RECENT | fix | rofi -dmenu)"
 
 if [ ! -z "$choice" ]
 then
