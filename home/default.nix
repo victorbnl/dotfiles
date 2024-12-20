@@ -3,7 +3,6 @@
     ./desktop
     ./programs
 
-    ./shell.nix
     ./software.nix
   ];
 
