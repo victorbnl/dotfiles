@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-function fix() {
+function process() {
     while read line
     do
-        echo -e "${line/#\~/$HOME}\0icon\x1fvscode"
+        [ -d "$line" ] && echo -e "$line\0icon\x1fvscode"
     done
 }
 
-choice="$($VSCODE_RECENT | fix | rofi -dmenu)"
+choice="$($VSCODE_RECENT --output-format absolute-path | process | rofi -dmenu)"
 
 if [ ! -z "$choice" ]
 then
