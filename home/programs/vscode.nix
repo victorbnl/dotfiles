@@ -62,7 +62,6 @@
     });
 
     userSettings = {
-      "code-runner.runInTerminal" = true;
       "editor.rulers" = [ 80 ];
       "git.confirmSync" = false;
       "window.commandCenter" = false;
