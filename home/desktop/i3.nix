@@ -65,6 +65,7 @@
 
         "${modifier}+s" = "exec --no-startup-id maim --hidecursor --select --format png | xclip -selection clipboard -t image/png";
         "${modifier}+Shift+s" = "exec --no-startup-id maim --hidecursor --format png | xclip -selection clipboard -t image/png";
+        "${modifier}+Ctrl+s" = "exec --no-startup-id sleep 2 && maim --hidecursor --format png | xclip -selection clipboard -t image/png && dunstify -t 1000 'Screenshot taken'";
 
         "${modifier}+l" = "exec --no-startup-id loginctl lock-session";
         "${modifier}+Shift+e" = "exec --no-startup-id i3-msg exit";
