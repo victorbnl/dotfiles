@@ -1,6 +1,10 @@
 { pkgs, inputs, ... }:
 
 {
+  home.sessionVariables = {
+    MOZ_USE_XINPUT2 = 1;
+  };
+
   xdg.desktopEntries = {
     spotify = {
       name = "Spotify";

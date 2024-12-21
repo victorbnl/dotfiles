@@ -1,3 +1,5 @@
+{ config, ... }:
+
 {
   imports = [
     ./desktop
@@ -5,6 +7,10 @@
 
     ./software.nix
   ];
+
+  home.file.".xprofile".text = ''
+    . "${config.home.profileDirectory}/etc/profile.d/hm-session-vars.sh"
+  '';
 
   xdg = {
     mimeApps = {
