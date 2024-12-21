@@ -10,6 +10,7 @@
     gparted
     libreoffice-fresh
     lutris
+    mpv
     networkmanagerapplet
     nmap
     pavucontrol
@@ -19,6 +20,7 @@
     python3
     qbittorrent
     sqlitebrowser
+    tor-browser
     viewnior
     yt-dlp
   ];
