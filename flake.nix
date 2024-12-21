@@ -16,7 +16,7 @@
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
     firefox-onebar = {
-      url = "https://git.gay/freeplay/Firefox-Onebar/raw/branch/waf/onebar.css";
+      url = "git+https://git.gay/freeplay/Firefox-Onebar";
       flake = false;
     };
   };
