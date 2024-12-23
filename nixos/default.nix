@@ -5,6 +5,7 @@
     [
       ./graphical.nix
       ./hardware-configuration.nix
+      ./keyboard.nix
       ./localisation.nix
       ./services.nix
       ./users.nix

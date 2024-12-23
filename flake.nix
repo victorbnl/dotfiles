@@ -19,6 +19,11 @@
       url = "git+https://git.gay/freeplay/Firefox-Onebar";
       flake = false;
     };
+
+    arsenik = {
+      url = "https://github.com/OneDeadKey/arsenik/releases/download/0.2.0/arsenik-0.2.0.zip";
+      flake = false;
+    };
   };
 
   outputs = {
@@ -43,6 +48,10 @@
 
           ({ pkgs, ... }: {
             programs.nix-index-database.comma.enable = true;
+
+            _module.args = {
+              inherit inputs;
+            };
 
             home-manager = {
               useGlobalPkgs = true;
