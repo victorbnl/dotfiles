@@ -6,7 +6,6 @@
       ./graphical.nix
       ./hardware-configuration.nix
       ./keyboard.nix
-      ./localisation.nix
       ./services.nix
       ./users.nix
     ];
@@ -22,6 +21,9 @@
   };
 
   zramSwap.enable = true;
+
+  time.timeZone = "Europe/Paris";
+  i18n.defaultLocale = "en_US.UTF-8";
 
   networking = {
     hostName = "Victor-PC";
