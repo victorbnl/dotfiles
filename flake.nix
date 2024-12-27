@@ -31,41 +31,28 @@
     home-manager,
     nur,
     ...
-  }@inputs: {
+  }@inputs:
+    let
+      pkgs = import nixpkgs {
+        system = "x86_64-linux";
+        overlays = [ nur.overlays.default ];
+      };
+
+      localpkgs = import ./packages { inherit pkgs; };
+    in
+  {
     nixosConfigurations = {
-      Victor-PC = nixpkgs.lib.nixosSystem {
-        modules = [
-          ({ pkgs, ... }: {
-            nixpkgs.overlays = [
-              nur.overlays.default
-            ];
-          })
+      "Victor-PC" = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [ ./nixos ];
+      };
+    };
 
-          home-manager.nixosModules.home-manager
-          inputs.nix-index-database.nixosModules.nix-index
-
-          ./nixos
-
-          ({ pkgs, ... }: {
-            programs.nix-index-database.comma.enable = true;
-
-            _module.args = {
-              inherit inputs;
-            };
-
-            home-manager = {
-              useGlobalPkgs = true;
-              backupFileExtension = "backup";
-
-              users.victor = import ./home;
-
-              extraSpecialArgs = {
-                localpkgs = import ./packages { inherit pkgs; };
-                inherit inputs;
-              };
-            };
-          })
-        ];
+    homeConfigurations = {
+      "victor@Victor-PC" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = { inherit inputs localpkgs; };
+        modules = [ ./home ];
       };
     };
   };

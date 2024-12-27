@@ -1,8 +1,10 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, inputs, ... }:
 
 {
   imports =
     [
+      inputs.nix-index-database.nixosModules.nix-index
+
       ./graphical.nix
       ./hardware-configuration.nix
       ./keyboard.nix
@@ -43,30 +45,15 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  nixpkgs.config.allowUnfreePredicate = pkg:
-    builtins.elem (lib.getName pkg) [
-      "p7zip"
-      "spotify"
-      "steam"
-      "steam-unwrapped"
-      "vscode"
-      "vscode-extension-ms-vscode-cpptools"
-    ];
-
   services.udev.packages = with pkgs; [
     android-udev-rules
   ];
 
   environment.systemPackages = with pkgs; [
-    aria2
-    file
-    gcc
-    htop
-    unzip
-    vim
+    home-manager
   ];
 
-  programs.steam.enable = true;
+  programs.nix-index-database.comma.enable = true;
 
   system.stateVersion = "24.05";
 }
