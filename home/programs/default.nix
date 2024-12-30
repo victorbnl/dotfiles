@@ -39,4 +39,11 @@
       set laststatus=0
     '';
   };
+
+  programs.bash.enable = true;
+
+  programs.direnv = {
+    enable = true;
+    enableBashIntegration = true;
+  };
 }

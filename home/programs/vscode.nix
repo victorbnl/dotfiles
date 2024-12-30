@@ -15,7 +15,6 @@
 
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
-    mutableExtensionsDir = false;
 
     extensions = with inputs.nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace; [
       bbenoist.nix
@@ -23,10 +22,8 @@
       formulahendry.code-runner
       mechatroner.rainbow-csv
       mhutchie.git-graph
-      ms-python.mypy-type-checker
-      ms-python.python
+      mkhl.direnv
       ms-vsliveshare.vsliveshare
-      pkgs.vscode-extensions.ms-vscode.cpptools
       pkief.material-icon-theme
       shardulm94.trailing-spaces
       tomoki1207.pdf
