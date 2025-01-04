@@ -4,7 +4,7 @@
   services = {
     xserver.xkb = {
       layout = "fr";
-      variant = "ergol_iso";
+      variant = "ergol";
     };
 
     kanata = {
@@ -27,7 +27,7 @@
             long_hold_timeout 300
           )
 
-          (include ${arsenik}/defsrc/pc.kbd)
+          (include ${arsenik}/defsrc/pc_wide_anglemod.kbd)
 
           (include ${arsenik}/deflayer/base_lt_hrm.kbd)
           (include ${arsenik}/deflayer/symbols_noop.kbd)
