@@ -42,14 +42,14 @@
     in
   {
     nixosConfigurations = {
-      "Victor-PC" = nixpkgs.lib.nixosSystem {
+      "Victor-ThinkPad" = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
-        modules = [ ./nixos ];
+        modules = [ ./nixos/thinkpad.nix ];
       };
     };
 
     homeConfigurations = {
-      "victor@Victor-PC" = home-manager.lib.homeManagerConfiguration {
+      "victor@Victor-ThinkPad" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         extraSpecialArgs = { inherit inputs localpkgs; };
         modules = [ ./home ];
