@@ -36,7 +36,7 @@
       };
 
       startup = [
-        { command = "polybar top"; notification = false; }
+        { command = "polybar bar"; notification = false; }
         { command = "xss-lock --transfer-sleep-lock -- i3lock -c 000000"; notification = false; }
       ];
 

@@ -9,12 +9,14 @@
       pulseSupport = true;
     };
 
-    script = "polybar top";
+    script = "polybar bar";
 
     settings = {
-      "bar/top" = {
+      "bar/bar" = {
         width = "100%";
         height = 45;
+
+        bottom = true;
 
         background = "#000000";
         foreground = "#f2f2f2";
@@ -26,8 +28,7 @@
         module-margin-right = 2;
 
         modules-left = "i3";
-        modules-center = "date";
-        modules-right = "network pulseaudio backlight battery";
+        modules-right = "network pulseaudio backlight battery date";
 
         font = [
           "Ubuntu Nerd Font:size=14;3"
