@@ -37,21 +37,6 @@
           /* Hide window controls */
           .window-controls-container { width: 4px !important; }
           .window-controls-container > * { display: none !important; }
-
-          /* Background */
-          body::after{
-            content: "";
-            display: block;
-            position: absolute;
-            z-index: 1000;
-            inset: 0;
-            background-image: url("vscode-file://vscode-app/home/victor/.vscode-background-image.jpg");
-            background-size: cover;
-            background-position: center;
-            pointer-events: none;
-            opacity: 0.2;
-            mix-blend-mode: lighten;
-          }
         EOF
         checksum="$(sha256sum -b "$workbenchPath" | xxd -r -p | base64 | sed "s/=*$//g")"
         sed -i -E 's|(^\s*"vs\/workbench\/workbench\.desktop\.main\.css": ")[^"]*("),|\1'$checksum'\2,|' "$out/lib/vscode/resources/app/product.json"
@@ -72,37 +57,6 @@
         "**/.mypy_cache" = true;
         "**/__pycache__" = true;
         "**/.devenv*" = true;
-      };
-
-      "workbench.colorCustomizations" = {
-        "activityBar.background" = "#000000";
-        "sideBar.background" = "#000000";
-        "sideBarSectionHeader.background" = "#000000";
-        "sideBarSectionHeader.border" = "#00000033";
-        "sideBar.border" = "#2b2b2b";
-        "statusBar.background" = "#000000";
-        "titleBar.activeBackground" = "#000000";
-        "titleBar.inactiveBackground" = "#000000";
-        "menu.background" = "#000000";
-        "editor.background" = "#000000";
-        "editorGutter.background" = "#000000";
-        "panel.background" = "#000000";
-        "breadcrumb.background" = "#000000";
-        "editorGroupHeader.tabsBackground" = "#000000";
-        "tab.border" = "#000000";
-        "tab.activeBackground" = "#000000";
-        "tab.inactiveBackground" = "#000000";
-        "widget.shadow" = "#3838385c";
-        "editorWidget.background" = "#000000";
-        "debugToolBar.background" = "#000000";
-        "notifications.background" = "#000000";
-        "notificationCenterHeader.background" = "#000000";
-        "editorMarkerNavigation.background" = "#000000";
-        "editorSuggestWidget.background" = "#000000";
-        "editorHoverWidget.background" = "#000000";
-        "minimap.background" = "#000000";
-        "editorGroup.emptyBackground" = "#000000";
-        "debugExceptionWidget.background" = "#000000";
       };
     };
   };
