@@ -1,14 +1,16 @@
 { inputs, ... }:
 
 {
+  console.keyMap = "fr";
+
   services = {
     xserver.xkb = {
       layout = "fr";
-      variant = "ergol";
+      variant = "";
     };
 
     kanata = {
-      enable = true;
+      enable = false;
 
       keyboards.internal = {
         devices = [
