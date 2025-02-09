@@ -51,8 +51,16 @@
     home-manager
   ];
 
-  programs.nix-index-database.comma.enable = true;
-  programs.nix-ld.enable = true;
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+    "steam"
+    "steam-unwrapped"
+  ];
+
+  programs = {
+    nix-index-database.comma.enable = true;
+    nix-ld.enable = true;
+    steam.enable = true;
+  };
 
   system.stateVersion = "24.05";
 }
