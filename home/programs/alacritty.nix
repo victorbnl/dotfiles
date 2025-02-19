@@ -8,6 +8,10 @@
         padding = { x = 10; y = 10; };
       };
 
+      font = {
+        size = 11;
+      };
+
       colors = {
         draw_bold_text_with_bright_colors = true;
 
