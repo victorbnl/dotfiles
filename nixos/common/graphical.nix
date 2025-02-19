@@ -12,6 +12,7 @@
   fonts.packages = with pkgs; [
     nerd-fonts.ubuntu
     ubuntu_font_family
+    ibm-plex
   ];
 
   services = {
