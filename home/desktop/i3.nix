@@ -3,6 +3,7 @@
 {
   home.packages = with pkgs; [
     brightnessctl
+    i3lock-color
     maim
     playerctl
     tdrop
@@ -37,7 +38,7 @@
 
       startup = [
         { command = "polybar bar"; notification = false; }
-        { command = "xss-lock --transfer-sleep-lock -- i3lock -c 000000"; notification = false; }
+        { command = "xss-lock --transfer-sleep-lock -- i3lock-color --no-unlock-indicator --color 000000 --image ~/.background-image --fill"; notification = false; }
       ];
 
       keybindings = {
