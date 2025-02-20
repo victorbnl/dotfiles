@@ -13,6 +13,7 @@
     nerd-fonts.ubuntu
     ubuntu_font_family
     ibm-plex
+    noto-fonts
   ];
 
   services = {

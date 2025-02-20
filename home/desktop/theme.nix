@@ -1,6 +1,6 @@
 { pkgs, ... }:
 let
-  font = "Ubuntu";
+  font = "Noto Sans";
   qtFont = "${font},10";
 in
 {
