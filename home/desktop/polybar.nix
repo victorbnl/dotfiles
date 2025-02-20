@@ -128,7 +128,7 @@ in
         format-full-foreground = idle;
 
         format-low = "[BAT] <label-low>";
-        format-low-foreground = idle;
+        format-low-foreground = urgent;
 
         label-charging-foreground = foreground;
         label-discharging-foreground = foreground;
