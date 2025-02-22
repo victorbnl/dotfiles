@@ -25,7 +25,7 @@ in
 
         bottom = true;
 
-        padding-left = 0;
+        padding-left = 1;
         padding-right = 1;
 
         module-margin-left = 0;
