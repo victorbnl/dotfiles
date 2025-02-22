@@ -4,6 +4,7 @@ let
   foreground = "#FFFFFF";
   idle = "#555555";
   urgent = "#FF0000";
+  charging = "#096600";
 in
 {
   services.polybar = {
@@ -119,7 +120,7 @@ in
         low-at = 20;
 
         format-charging = "[BAT] <label-charging>";
-        format-charging-foreground = idle;
+        format-charging-foreground = charging;
 
         format-discharging = "[BAT] <label-discharging>";
         format-discharging-foreground = idle;
