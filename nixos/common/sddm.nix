@@ -1,8 +1,12 @@
 { pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    sddm-chili-theme
+  environment.systemPackages = [
+    (pkgs.sddm-chili-theme.overrideAttrs(oldAttrs: {
+      preInstall = (oldAttrs.preInstall or "") + ''
+        sed -i 's/^background=.*$/background=\/etc\/sddm-background-image/' theme.conf
+      '';
+    }))
   ];
 
   services.displayManager.sddm = {
