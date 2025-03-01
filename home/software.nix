@@ -31,6 +31,7 @@
     protonup-qt
     python3
     qbittorrent
+    simple-scan
     sqlitebrowser
     tor-browser
     unzip
