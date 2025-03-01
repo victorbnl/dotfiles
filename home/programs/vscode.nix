@@ -13,22 +13,6 @@
   programs.vscode = {
     enable = true;
 
-    enableUpdateCheck = false;
-    enableExtensionUpdateCheck = false;
-
-    extensions = with inputs.nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace; [
-      bbenoist.nix
-      editorconfig.editorconfig
-      formulahendry.code-runner
-      mechatroner.rainbow-csv
-      mhutchie.git-graph
-      mkhl.direnv
-      ms-vsliveshare.vsliveshare
-      pkief.material-icon-theme
-      shardulm94.trailing-spaces
-      tomoki1207.pdf
-    ];
-
     package = pkgs.vscode.overrideAttrs(oldAttrs: {
       buildInputs = (oldAttrs.buildInputs or []) ++ [ pkgs.tinyxxd ];
       postInstall = (oldAttrs.postInstall or "") + ''
@@ -43,20 +27,38 @@
       '';
     });
 
-    userSettings = {
-      "editor.rulers" = [ 80 ];
-      "git.confirmSync" = false;
-      "window.commandCenter" = false;
-      "window.dialogStyle" = "custom";
-      "window.experimentalControlOverlay" = false;
-      "window.titleBarStyle" = "custom";
-      "workbench.colorTheme" = "Dark Modern";
-      "workbench.iconTheme" = "material-icon-theme";
+    profiles.default = {
+      enableUpdateCheck = false;
+      enableExtensionUpdateCheck = false;
 
-      "files.exclude" = {
-        "**/.mypy_cache" = true;
-        "**/__pycache__" = true;
-        "**/.devenv*" = true;
+      extensions = with inputs.nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace; [
+        bbenoist.nix
+        editorconfig.editorconfig
+        formulahendry.code-runner
+        mechatroner.rainbow-csv
+        mhutchie.git-graph
+        mkhl.direnv
+        ms-vsliveshare.vsliveshare
+        pkief.material-icon-theme
+        shardulm94.trailing-spaces
+        tomoki1207.pdf
+      ];
+
+      userSettings = {
+        "editor.rulers" = [ 80 ];
+        "git.confirmSync" = false;
+        "window.commandCenter" = false;
+        "window.dialogStyle" = "custom";
+        "window.experimentalControlOverlay" = false;
+        "window.titleBarStyle" = "custom";
+        "workbench.colorTheme" = "Dark Modern";
+        "workbench.iconTheme" = "material-icon-theme";
+
+        "files.exclude" = {
+          "**/.mypy_cache" = true;
+          "**/__pycache__" = true;
+          "**/.devenv*" = true;
+        };
       };
     };
   };
