@@ -10,6 +10,8 @@
 }:
 
 rustPlatform.buildRustPackage rec {
+  useFetchCargoVendor = true;
+
   pname = "vscode-recent";
   version = "0.7.0";
 
@@ -20,7 +22,7 @@ rustPlatform.buildRustPackage rec {
     hash = "sha256-krP4yXCPZC455WHOh49he6nfE8ZaEbXv8xQKqRsWoy8=";
   };
 
-  cargoHash = "sha256-sCJKPHGIoHpr/77S+k8IcW3KAdJre66l1gbCD60SDA0=";
+  cargoHash = "sha256-RNeFhq2LOCEYpOaqfjLiF+S7DtFti15S43dVvRFACCE=";
 
   nativeBuildInputs = [
     pkg-config
