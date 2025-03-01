@@ -79,6 +79,10 @@
           "browser.translations.automaticallyPopup" = false;
           "browser.aboutConfig.showWarning" = false;
 
+          "extensions.activeThemeID" = "{f00ce5dc-ec40-41d1-abb5-8a974e97dae4}";
+
+          "browser.toolbars.bookmarks.visibility" = "newtab";
+
           "browser.uiCustomization.state" = ''
             {
               "placements": {
