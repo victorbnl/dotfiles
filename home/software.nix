@@ -34,6 +34,7 @@
     simple-scan
     sqlitebrowser
     tor-browser
+    ungit
     unzip
     viewnior
     yt-dlp
