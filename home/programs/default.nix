@@ -2,7 +2,7 @@
   imports = [
     ./alacritty.nix
     ./ferdium.nix
-    ./firefox.nix
+    ./librewolf.nix
     ./notepadqq.nix
     ./vscode.nix
   ];

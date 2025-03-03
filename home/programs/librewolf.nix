@@ -5,16 +5,7 @@
     MOZ_USE_XINPUT2 = 1;
   };
 
-  xdg.desktopEntries = {
-    spotify = {
-      name = "Spotify";
-      icon = "spotify";
-      genericName = "Music Player";
-      exec = "firefox -p webapp open.spotify.com";
-    };
-  };
-
-  programs.firefox = {
+  programs.librewolf = {
     enable = true;
 
     profiles = {
@@ -33,22 +24,6 @@
           }
         '';
 
-        bookmarks = [
-          {
-            toolbar = true;
-            bookmarks = [
-              {
-                name = "YouTube";
-                url = "https://www.youtube.com/";
-              }
-              {
-                name = "Twitch";
-                url = "https://www.twitch.tv/";
-              }
-            ];
-          }
-        ];
-
         extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
           bitwarden
           darkreader
@@ -66,15 +41,12 @@
         ];
 
         settings = {
+          "privacy.resistFingerprinting" = false;
+
           "extensions.autoDisableScopes" = 0;
 
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
           "browser.tabs.inTitlebar" = 0;
-
-          "browser.contentblocking.category" = "strict";
-          "privacy.donottrackheader.enabled" = true;
-          "privacy.fingerprintingProtection" = true;
-          "privacy.globalprivacycontrol.enabled" = true;
 
           "browser.translations.automaticallyPopup" = false;
           "browser.aboutConfig.showWarning" = false;
@@ -113,27 +85,6 @@
               "currentVersion": 20
             }
           '';
-        };
-      };
-
-      webapp = {
-        id = 1;
-        name = "webapp";
-
-        userChrome = ''
-          #navigator-toolbox {
-            visibility: collapse;
-          }
-        '';
-
-        extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
-          ublock-origin
-        ];
-
-        settings = {
-          "extensions.autoDisableScopes" = 0;
-          "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-          "media.eme.enabled" = true;
         };
       };
     };
