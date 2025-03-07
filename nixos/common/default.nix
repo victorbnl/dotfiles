@@ -59,7 +59,6 @@
   programs = {
     nix-index-database.comma.enable = true;
     nix-ld.enable = true;
-    steam.enable = true;
   };
 
   system.stateVersion = "24.05";

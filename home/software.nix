@@ -33,6 +33,7 @@
     qbittorrent
     simple-scan
     sqlitebrowser
+    steam
     tor-browser
     ungit
     unzip
