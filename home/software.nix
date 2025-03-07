@@ -38,5 +38,6 @@
     unzip
     viewnior
     yt-dlp
+    zip
   ];
 }
