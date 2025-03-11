@@ -15,6 +15,7 @@
 
     ignores = [
       ".devenv*"
+      ".vscode"
       "__pycache__"
     ];
 
