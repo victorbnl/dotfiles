@@ -61,6 +61,10 @@
         };
 
         "direnv.restart.automatic" = true;
+
+        "[nix]" = {
+          "editor.tabSize" = 2;
+        };
       };
     };
   };
