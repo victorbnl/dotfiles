@@ -18,10 +18,19 @@
     "Xft.dpi" = 134;
   };
 
-  services.picom = {
-    enable = true;
+  services = {
+    picom = {
+      enable = true;
 
-    backend = "glx";
-    vSync = true;
+      backend = "glx";
+      vSync = true;
+    };
+
+    redshift = {
+      enable = true;
+
+      dawnTime = "08:00";
+      duskTime = "20:00";
+    };
   };
 }
