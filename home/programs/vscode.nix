@@ -58,6 +58,7 @@
           "**/.mypy_cache" = true;
           "**/__pycache__" = true;
           "**/.devenv*" = true;
+          "**/.venv" = true;
         };
 
         "direnv.restart.automatic" = true;
