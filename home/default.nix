@@ -23,6 +23,7 @@
 
       defaultApplications = {
         "application/pdf" = [ "firefox.desktop" ];
+        "application/zip" = [ "xarchiver.desktop" ];
         "image/jpeg" = [ "viewnior.desktop" ];
         "image/png" = [ "viewnior.desktop" ];
         "text/plain" = [ "notepadqq.desktop" ];

@@ -38,6 +38,7 @@
     ungit
     unzip
     viewnior
+    xarchiver
     yt-dlp
     zip
   ];
