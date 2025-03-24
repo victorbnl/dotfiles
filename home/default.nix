@@ -11,11 +11,11 @@
   home = {
     username = "victor";
     homeDirectory = "/home/victor";
-  };
 
-  home.file.".xprofile".text = ''
+    file.".xprofile".text = ''
     . "${config.home.profileDirectory}/etc/profile.d/hm-session-vars.sh"
   '';
+  };
 
   xdg = {
     mimeApps = {
