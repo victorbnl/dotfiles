@@ -23,6 +23,8 @@
       credential = {
         helper = "store";
       };
+
+      safe.directory = [ "/dotfiles" ];
     };
   };
 

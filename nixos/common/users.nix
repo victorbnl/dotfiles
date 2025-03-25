@@ -1,9 +1,19 @@
 {
-  users.users = {
-    victor = {
-      isNormalUser = true;
-      description = "Victor";
-      extraGroups = [ "networkmanager" "wheel" "vboxusers" "input" ];
+  users = {
+    groups.dotfiles = {};
+
+    users = {
+      victor = {
+        isNormalUser = true;
+        description = "Victor";
+        extraGroups = [ "dotfiles" "networkmanager" "wheel" "vboxusers" "input" ];
+      };
+
+      study = {
+        isNormalUser = true;
+        description = "Study";
+        extraGroups = [ "networkmanager" "wheel" "vboxusers" "input" ];
+      };
     };
   };
 

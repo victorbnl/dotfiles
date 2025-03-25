@@ -9,37 +9,23 @@
   ];
 
   home.packages = with pkgs; [
-    android-tools
     blueman
-    aria2
     devenv
-    ferdium
     file
-    gcc
     gimp
     gnumake
-    gparted
     htop
-    libreoffice-fresh
-    lutris
-    mpv
     networkmanagerapplet
     nmap
     pavucontrol
     pcmanfm
-    prismlauncher
-    protonup-qt
     python3
-    qbittorrent
     simple-scan
     sqlitebrowser
-    steam
-    tor-browser
     ungit
     unzip
     viewnior
     xarchiver
-    yt-dlp
     zip
   ];
 }
