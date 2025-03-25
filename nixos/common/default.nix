@@ -57,5 +57,10 @@
     nix-ld.enable = true;
   };
 
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
   system.stateVersion = "24.05";
 }
