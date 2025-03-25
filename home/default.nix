@@ -1,4 +1,4 @@
-{ config, ... }:
+{ pkgs, config, inputs, ... }:
 
 {
   imports = [
@@ -11,6 +11,12 @@
   home = {
     username = "victor";
     homeDirectory = "/home/victor";
+
+    packages = [
+      (pkgs.writeShellScriptBin "init" ''
+        cp --no-preserve=mode,ownership --recursive ${inputs.boilerplates}/$1/. .
+      '')
+    ];
 
     file.".xprofile".text = ''
     . "${config.home.profileDirectory}/etc/profile.d/hm-session-vars.sh"

@@ -29,6 +29,11 @@
       url = "https://github.com/OneDeadKey/arsenik/releases/download/0.2.0/arsenik-0.2.0.zip";
       flake = false;
     };
+
+    boilerplates = {
+      url = "git+https://github.com/victorbnl/boilerplates";
+      flake = false;
+    };
   };
 
   outputs = {
