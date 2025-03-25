@@ -52,11 +52,6 @@
     home-manager
   ];
 
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-    "steam"
-    "steam-unwrapped"
-  ];
-
   programs = {
     nix-index-database.comma.enable = true;
     nix-ld.enable = true;
