@@ -14,6 +14,12 @@
         description = "Study";
         extraGroups = [ "networkmanager" "wheel" "vboxusers" "input" ];
       };
+
+      work = {
+        isNormalUser = true;
+        description = "Work";
+        extraGroups = [ "networkmanager" "wheel" "vboxusers" "input" ];
+      };
     };
   };
 
