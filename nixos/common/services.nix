@@ -7,6 +7,8 @@
   services = {
     fwupd.enable = true;
 
+    earlyoom.enable = true;
+
     fprintd.enable = true;
 
     power-profiles-daemon.enable = false;
