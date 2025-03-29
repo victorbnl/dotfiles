@@ -3,7 +3,6 @@
 {
   imports =
     [
-      inputs.lix-module.nixosModules.default
       inputs.nix-index-database.nixosModules.nix-index
 
       ./graphical.nix
