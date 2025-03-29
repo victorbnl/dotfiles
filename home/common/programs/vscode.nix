@@ -36,7 +36,6 @@
         editorconfig.editorconfig
         formulahendry.code-runner
         mechatroner.rainbow-csv
-        mhutchie.git-graph
         mkhl.direnv
         ms-vsliveshare.vsliveshare
         pkief.material-icon-theme
