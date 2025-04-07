@@ -43,6 +43,7 @@
 
         settings = {
           "privacy.resistFingerprinting" = false;
+          "privacy.clearOnShutdown_v2.cookiesAndStorage" = false;
 
           "extensions.autoDisableScopes" = 0;
 
