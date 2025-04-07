@@ -39,7 +39,14 @@
     powerOnBoot = true;
   };
 
-  virtualisation.virtualbox.host.enable = true;
+  virtualisation.libvirtd = {
+    enable = true;
+
+    qemu = {
+      package = pkgs.qemu_kvm;
+      runAsRoot = true;
+    };
+  };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 

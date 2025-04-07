@@ -6,7 +6,7 @@
       victor = {
         isNormalUser = true;
         description = "Victor";
-        extraGroups = [ "dotfiles" "networkmanager" "wheel" "vboxusers" "input" ];
+        extraGroups = [ "dotfiles" "libvirtd" "networkmanager" "wheel" "vboxusers" "input" ];
       };
 
       study = {

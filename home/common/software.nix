@@ -25,6 +25,7 @@
     ungit
     unzip
     viewnior
+    virt-manager
     xarchiver
     zip
   ];
