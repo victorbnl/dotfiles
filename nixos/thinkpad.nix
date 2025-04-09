@@ -10,6 +10,8 @@
   services = {
     upower.enable = true;
     tp-auto-kbbl.enable = true;
+
+    fprintd.enable = true;
   };
 
   systemd = {

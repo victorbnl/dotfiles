@@ -7,7 +7,6 @@
   services = {
     fwupd.enable = true;
     earlyoom.enable = true;
-    fprintd.enable = true;
 
     tlp = {
       enable = true;
