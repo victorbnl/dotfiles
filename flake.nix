@@ -59,18 +59,6 @@
         extraSpecialArgs = { inherit inputs localpkgs; };
         modules = [ ./home/victor.nix ];
       };
-
-      "study@Victor-ThinkPad" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        extraSpecialArgs = { inherit inputs localpkgs; };
-        modules = [ ./home/study.nix ];
-      };
-
-      "work@Victor-ThinkPad" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        extraSpecialArgs = { inherit inputs localpkgs; };
-        modules = [ ./home/work.nix ];
-      };
     };
   };
 }

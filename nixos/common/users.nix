@@ -8,18 +8,6 @@
         description = "Victor";
         extraGroups = [ "dotfiles" "libvirtd" "networkmanager" "wheel" "vboxusers" "input" ];
       };
-
-      study = {
-        isNormalUser = true;
-        description = "Study";
-        extraGroups = [ "networkmanager" "wheel" "vboxusers" "input" ];
-      };
-
-      work = {
-        isNormalUser = true;
-        description = "Work";
-        extraGroups = [ "networkmanager" "wheel" "vboxusers" "input" ];
-      };
     };
   };
 
