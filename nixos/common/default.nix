@@ -1,4 +1,4 @@
-{ pkgs, lib, inputs, ... }:
+{ pkgs, lib, inputs, secrets, ... }:
 
 {
   imports =
@@ -9,6 +9,7 @@
       ./graphical.nix
       ./hardware-configuration.nix
       ./keyboard.nix
+      ./network.nix
       ./services.nix
       ./users.nix
     ];
@@ -27,13 +28,6 @@
 
   time.timeZone = "Europe/Paris";
   i18n.defaultLocale = "en_US.UTF-8";
-
-  networking = {
-    networkmanager = {
-      enable = true;
-      wifi.powersave = true;
-    };
-  };
 
   hardware.bluetooth = {
     enable = true;

@@ -49,6 +49,8 @@
       };
 
       localpkgs = import ./packages { inherit pkgs; };
+
+      secrets = (import ./secrets.nix);
     in
   {
     nixosConfigurations = {
@@ -59,7 +61,7 @@
       };
 
       "Victor-ThinkPad" = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
+        specialArgs = { inherit inputs secrets; };
         modules = [ ./nixos/thinkpad.nix ];
       };
     };
