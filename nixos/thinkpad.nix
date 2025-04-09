@@ -5,8 +5,10 @@
 
   networking.hostName = "Victor-ThinkPad";
 
-  services.upower.enable = true;
-  services.tp-auto-kbbl.enable = true;
+  services = {
+    upower.enable = true;
+    tp-auto-kbbl.enable = true;
+  };
 
   systemd = {
     tmpfiles.rules = [
