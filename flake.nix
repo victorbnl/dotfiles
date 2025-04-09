@@ -3,6 +3,11 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nur.url = "github:nix-community/NUR";
 
+    disko = {
+      url = "github:nix-community/disko/latest";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -47,6 +52,12 @@
     in
   {
     nixosConfigurations = {
+      "installer" = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [ ./installer ];
+      };
+
       "Victor-ThinkPad" = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [ ./nixos/thinkpad.nix ];

@@ -5,6 +5,7 @@
     [
       inputs.nix-index-database.nixosModules.nix-index
 
+      ./disko.nix
       ./graphical.nix
       ./hardware-configuration.nix
       ./keyboard.nix
@@ -56,6 +57,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
+    git
     home-manager
   ];
 

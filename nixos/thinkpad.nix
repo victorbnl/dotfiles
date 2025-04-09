@@ -3,6 +3,8 @@
 {
   imports = [ ./common ];
 
+  disko.devices.disk.main.device = "/dev/nvme0n1";
+
   networking.hostName = "Victor-ThinkPad";
 
   services = {
