@@ -30,14 +30,17 @@
       ];
 
       userSettings = {
-        "editor.rulers" = [ 80 ];
-        "git.confirmSync" = false;
         "window.commandCenter" = false;
         "window.controlsStyle" = "hidden";
         "window.dialogStyle" = "custom";
         "window.titleBarStyle" = "custom";
+
         "workbench.colorTheme" = "Dark Modern";
         "workbench.iconTheme" = "material-icon-theme";
+
+        "editor.rulers" = [ 80 ];
+        "git.confirmSync" = false;
+        "direnv.restart.automatic" = true;
 
         "files.exclude" = {
           "**/.mypy_cache" = true;
@@ -45,8 +48,6 @@
           "**/.devenv*" = true;
           "**/.venv" = true;
         };
-
-        "direnv.restart.automatic" = true;
 
         "[nix]" = {
           "editor.tabSize" = 2;
