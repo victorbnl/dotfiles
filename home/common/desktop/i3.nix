@@ -77,8 +77,8 @@
         "${modifier}+space" = "focus mode_toggle";
         "${modifier}+Shift+space" = "floating toggle";
 
-        "${modifier}+minus" = "scratchpad show";
-        "${modifier}+Shift+minus" = "move scratchpad";
+        "${modifier}+dollar" = "scratchpad show";
+        "${modifier}+Shift+dollar" = "move scratchpad";
 
         "${modifier}+a" = "focus parent";
 
