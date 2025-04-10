@@ -16,7 +16,6 @@
         extraGroups = [
           "dotfiles"
           "libvirtd"
-          "networkmanager"
           "wheel"
           "vboxusers"
           "input"
