@@ -4,8 +4,6 @@
   users = {
     mutableUsers = false;
 
-    groups.dotfiles = {};
-
     users = {
       root.password = secrets.session.root;
 
@@ -14,7 +12,6 @@
         password = secrets.session.user;
 
         extraGroups = [
-          "dotfiles"
           "libvirtd"
           "wheel"
           "vboxusers"
