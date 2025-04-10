@@ -11,8 +11,16 @@
 
       "${names.user}" = {
         isNormalUser = true;
-        extraGroups = [ "dotfiles" "libvirtd" "networkmanager" "wheel" "vboxusers" "input" ];
         password = secrets.session.user;
+
+        extraGroups = [
+          "dotfiles"
+          "libvirtd"
+          "networkmanager"
+          "wheel"
+          "vboxusers"
+          "input"
+        ];
       };
     };
   };
