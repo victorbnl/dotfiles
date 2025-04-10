@@ -1,4 +1,4 @@
-{ pkgs, inputs, modulesPath, ... }:
+{ pkgs, inputs, modulesPath, names, ... }:
 
 {
   imports = [
@@ -11,8 +11,8 @@
     inherit pkgs;
     disko = inputs.disko;
     flake = ../.;
-    host = "Victor-ThinkPad";
-    user = "victor";
+    host = names.host;
+    user = names.user;
   });
 
   zramSwap.enable = true;

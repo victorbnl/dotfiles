@@ -43,8 +43,15 @@
     ...
   }@inputs:
   let
+    names = {
+      user = "victor";
+      host = "Victor-ThinkPad";
+    };
+
+    system = "x86_64-linux";
+
     pkgs = import nixpkgs {
-      system = "x86_64-linux";
+      inherit system;
       overlays = [ nur.overlays.default ];
     };
 
@@ -55,23 +62,23 @@
   {
     nixosConfigurations = {
       "installer" = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
+        inherit system;
+        specialArgs = { inherit inputs names; };
         modules = [ ./installer ];
       };
 
-      "Victor-ThinkPad" = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs secrets; };
+      "${names.host}" = nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = { inherit inputs secrets names; };
         modules = [ ./nixos/thinkpad.nix ];
       };
     };
 
     homeConfigurations = {
-      "victor@Victor-ThinkPad" = home-manager.lib.homeManagerConfiguration {
+      "${names.user}@${names.host}" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = { inherit inputs localpkgs; };
-        modules = [ ./home/victor.nix ];
+        extraSpecialArgs = { inherit inputs localpkgs names; };
+        modules = [ ./home/user.nix ];
       };
     };
   };

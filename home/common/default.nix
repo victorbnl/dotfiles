@@ -35,7 +35,7 @@
 
     userDirs =
     let
-      homeDir = "/home/victor";
+      homeDir = config.home.homeDirectory;
     in
     {
       enable = true;

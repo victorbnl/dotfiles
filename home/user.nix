@@ -1,11 +1,11 @@
-{ pkgs, ... }:
+{ pkgs, names, ... }:
 
 {
   imports = [ ./common ];
 
   home = {
-    username = "victor";
-    homeDirectory = "/home/victor";
+    username = username;
+    homeDirectory = "/home/${names.user}";
 
     packages = with pkgs; [
       android-tools

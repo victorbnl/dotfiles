@@ -1,4 +1,4 @@
-{ secrets, ... }:
+{ secrets, names, ... }:
 
 {
   users = {
@@ -9,16 +9,13 @@
     users = {
       root.password = secrets.session.root;
 
-      victor = {
+      "${names.user}" = {
         isNormalUser = true;
-        description = "Victor";
         extraGroups = [ "dotfiles" "libvirtd" "networkmanager" "wheel" "vboxusers" "input" ];
-        password = secrets.session.victor;
+        password = secrets.session.user;
       };
     };
   };
 
-  nix.settings.trusted-users = [
-    "victor"
-  ];
+  nix.settings.trusted-users = [ names.user ];
 }
