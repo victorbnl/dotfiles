@@ -61,6 +61,7 @@
       };
 
       "Victor-ThinkPad" = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
         specialArgs = { inherit inputs secrets; };
         modules = [ ./nixos/thinkpad.nix ];
       };

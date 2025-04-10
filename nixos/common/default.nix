@@ -1,13 +1,14 @@
-{ pkgs, lib, inputs, secrets, ... }:
+{ pkgs, lib, modulesPath, inputs, secrets, ... }:
 
 {
   imports =
     [
+      (modulesPath + "/installer/scan/not-detected.nix")
+
       inputs.nix-index-database.nixosModules.nix-index
 
       ./disko.nix
       ./graphical.nix
-      ./hardware-configuration.nix
       ./keyboard.nix
       ./network.nix
       ./services.nix

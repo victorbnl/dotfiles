@@ -34,4 +34,9 @@
       '';
     };
   };
+
+  boot = {
+    initrd.availableKernelModules = [ "nvme" ];
+    kernelModules = [ "kvm-amd" ];
+  };
 }
