@@ -42,16 +42,16 @@
     nur,
     ...
   }@inputs:
-    let
-      pkgs = import nixpkgs {
-        system = "x86_64-linux";
-        overlays = [ nur.overlays.default ];
-      };
+  let
+    pkgs = import nixpkgs {
+      system = "x86_64-linux";
+      overlays = [ nur.overlays.default ];
+    };
 
-      localpkgs = import ./packages { inherit pkgs; };
+    localpkgs = import ./packages { inherit pkgs; };
 
-      secrets = (import ./secrets.nix);
-    in
+    secrets = (import ./secrets.nix);
+  in
   {
     nixosConfigurations = {
       "installer" = nixpkgs.lib.nixosSystem {
