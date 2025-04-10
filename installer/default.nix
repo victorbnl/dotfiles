@@ -8,11 +8,9 @@
   users.motd = "Run `i` to install the system.";
 
   environment.shellAliases.i = "sudo " + (import ./script.nix {
-    inherit pkgs;
+    inherit pkgs names;
     disko = inputs.disko;
     flake = ../.;
-    host = names.host;
-    user = names.user;
   });
 
   zramSwap.enable = true;
