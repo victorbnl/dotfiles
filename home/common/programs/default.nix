@@ -1,7 +1,6 @@
 {
   imports = [
     ./alacritty.nix
-    ./ferdium.nix
     ./librewolf.nix
     ./notepadqq.nix
     ./vscode.nix
