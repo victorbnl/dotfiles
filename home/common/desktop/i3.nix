@@ -1,6 +1,8 @@
 { pkgs, lib, ... }:
 
 {
+  imports = [ ./power-menu ];
+
   xsession.windowManager.i3 = {
     enable = true;
 
@@ -32,8 +34,6 @@
       ];
 
       keybindings = {
-        "XF86PowerOff" = "exec --no-startup-id rofi-power-menu";
-
         "XF86MonBrightnessDown" = "exec --no-startup-id ${pkgs.brightnessctl}/bin/brightnessctl set 5%-";
         "XF86MonBrightnessUp" = "exec --no-startup-id ${pkgs.brightnessctl}/bin/brightnessctl set 5%+";
 
