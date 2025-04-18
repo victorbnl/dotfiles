@@ -14,6 +14,8 @@
     rofi-vscode
   ];
 
+  home.file.".background-image".source = ../../../wallpapers/desktop;
+
   xresources.properties = {
     "Xft.dpi" = 134;
   };

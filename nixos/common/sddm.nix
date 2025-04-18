@@ -4,7 +4,7 @@
   environment.systemPackages = [
     (pkgs.sddm-chili-theme.overrideAttrs(oldAttrs: {
       preInstall = (oldAttrs.preInstall or "") + ''
-        sed -i 's/^background=.*$/background=\/etc\/sddm-background-image/' theme.conf
+        sed -i 's|^background=.*$|background=${../../wallpapers/dm}|' theme.conf
       '';
     }))
   ];
