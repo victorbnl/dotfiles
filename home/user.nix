@@ -4,7 +4,7 @@
   imports = [ ./common ];
 
   home = {
-    username = username;
+    username = names.user;
     homeDirectory = "/home/${names.user}";
 
     packages = with pkgs; [
