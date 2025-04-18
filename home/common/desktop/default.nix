@@ -9,7 +9,7 @@
     ./theme.nix
   ];
 
-  home.file.".background-image".source = root + /assets/wallpapers/desktop;
+  home.file.".background-image".source = root + /assets/wallpapers/desktop.jpg;
 
   xresources.properties = {
     "Xft.dpi" = 134;
