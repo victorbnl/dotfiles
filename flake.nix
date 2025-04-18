@@ -57,7 +57,7 @@
 
     localpkgs = import ./packages { inherit pkgs; };
 
-    secrets = (import ./secrets.nix);
+    secrets = import ./secrets.nix;
 
     root = ./.;
   in

@@ -46,7 +46,7 @@
 
     wireless = {
       enable = true;
-      networks = secrets.networks;
+      inherit (secrets) networks;
     };
   };
 }

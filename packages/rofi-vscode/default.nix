@@ -1,6 +1,6 @@
 { stdenv, pkgs }:
 let
-  vscode-recent = (pkgs.callPackage ./vscode-recent.nix {});
+  vscode-recent = pkgs.callPackage ./vscode-recent.nix {};
 in
 stdenv.mkDerivation {
   pname = "rofi-vscode";

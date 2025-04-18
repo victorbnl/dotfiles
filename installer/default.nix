@@ -9,7 +9,7 @@
 
   environment.shellAliases.i = "sudo " + (import ./script.nix {
     inherit pkgs names;
-    disko = inputs.disko;
+    inherit (inputs) disko;
     flake = ../.;
   });
 

@@ -1,7 +1,6 @@
 { pkgs, disko, flake, names }:
 let
-  host = names.host;
-  user = names.user;
+  inherit (names) host user;
 in
 pkgs.writeScript "install-system"
 ''
