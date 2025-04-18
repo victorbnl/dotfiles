@@ -7,6 +7,8 @@ let
   charging = "#096600";
 in
 {
+  home.packages = [ pkgs.ibm-plex ];
+
   services.polybar = {
     enable = true;
 

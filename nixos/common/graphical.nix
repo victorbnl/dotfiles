@@ -9,12 +9,7 @@
     libsForQt5.qtstyleplugin-kvantum
   ];
 
-  fonts.packages = with pkgs; [
-    nerd-fonts.ubuntu
-    ubuntu_font_family
-    ibm-plex
-    noto-fonts
-  ];
+  fonts.packages = [ pkgs.noto-fonts ];
 
   services = {
     xserver = {
