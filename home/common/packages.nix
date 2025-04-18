@@ -5,7 +5,6 @@
     "steam"
     "steam-unwrapped"
     "vscode"
-    "vscode-extension-ms-vscode-cpptools"
   ];
 
   home.packages = with pkgs; [
