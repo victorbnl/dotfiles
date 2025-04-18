@@ -14,7 +14,6 @@
         extraGroups = [
           "libvirtd"
           "wheel"
-          "vboxusers"
           "input"
         ];
       };
