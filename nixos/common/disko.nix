@@ -1,4 +1,4 @@
-{ inputs, diskName, ... }:
+{ inputs, ... }:
 
 {
   imports = [
