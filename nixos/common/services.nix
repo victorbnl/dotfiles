@@ -1,8 +1,5 @@
 {
-  security = {
-    polkit.enable = true;
-    rtkit.enable = true;
-  };
+  security.polkit.enable = true;
 
   services = {
     fwupd.enable = true;
