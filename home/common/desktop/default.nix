@@ -1,4 +1,4 @@
-{ localpkgs, ... }:
+{ localpkgs, root, ... }:
 
 {
   imports = [
@@ -14,7 +14,7 @@
     rofi-vscode
   ];
 
-  home.file.".background-image".source = ../../../wallpapers/desktop;
+  home.file.".background-image".source = root + /wallpapers/desktop;
 
   xresources.properties = {
     "Xft.dpi" = 134;

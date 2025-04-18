@@ -58,6 +58,8 @@
     localpkgs = import ./packages { inherit pkgs; };
 
     secrets = (import ./secrets.nix);
+
+    root = ./.;
   in
   {
     nixosConfigurations = {
@@ -69,7 +71,7 @@
 
       "${names.host}" = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = { inherit inputs secrets names; };
+        specialArgs = { inherit inputs secrets names root; };
         modules = [ ./nixos/thinkpad.nix ];
       };
     };
@@ -77,7 +79,7 @@
     homeConfigurations = {
       "${names.user}@${names.host}" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = { inherit inputs localpkgs names; };
+        extraSpecialArgs = { inherit inputs localpkgs names root; };
         modules = [ ./home/user.nix ];
       };
     };
