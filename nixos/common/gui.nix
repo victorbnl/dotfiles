@@ -1,13 +1,16 @@
 { pkgs, ... }:
 
 {
-  imports = [
-    ./sddm.nix
+  environment.systemPackages = [
+    pkgs.libsForQt5.qtstyleplugin-kvantum
   ];
 
-  environment.systemPackages = with pkgs; [
-    libsForQt5.qtstyleplugin-kvantum
-  ];
+  qt = {
+    enable = true;
+
+    platformTheme = "qt5ct";
+    style = "kvantum";
+  };
 
   fonts.packages = [ pkgs.noto-fonts ];
 
@@ -20,12 +23,5 @@
     };
 
     libinput.touchpad.naturalScrolling = true;
-  };
-
-  qt = {
-    enable = true;
-
-    platformTheme = "qt5ct";
-    style = "kvantum";
   };
 }

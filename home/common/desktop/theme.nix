@@ -4,9 +4,7 @@ let
   qtFont = "${font},10";
 in
 {
-  home.packages = with pkgs; [
-    dconf
-  ];
+  home.packages = [ pkgs.dconf ];
 
   xdg.configFile = {
     "Kvantum/kvantum.kvconfig".text = ''

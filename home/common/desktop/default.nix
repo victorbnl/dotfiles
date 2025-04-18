@@ -1,4 +1,4 @@
-{ localpkgs, root, ... }:
+{ root, ... }:
 
 {
   imports = [
@@ -7,11 +7,6 @@
     ./polybar.nix
     ./rofi.nix
     ./theme.nix
-  ];
-
-  home.packages = with localpkgs; [
-    rofi-power-menu
-    rofi-vscode
   ];
 
   home.file.".background-image".source = root + /assets/wallpapers/desktop;

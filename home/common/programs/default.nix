@@ -1,51 +1,19 @@
 {
   imports = [
     ./alacritty.nix
+    ./git.nix
     ./librewolf.nix
     ./notepadqq.nix
+    ./vim.nix
     ./vscode.nix
   ];
 
-  programs.git = {
-    enable = true;
+  programs = {
+    bash.enable = true;
 
-    userEmail = "victor.bonnelle@protonmail.com";
-    userName = "Victor Bonnelle";
-
-    ignores = [
-      ".devenv*"
-      ".vscode"
-      "__pycache__"
-    ];
-
-    extraConfig = {
-      credential = {
-        helper = "store";
-      };
-
-      safe.directory = [ "/dotfiles" ];
+    direnv = {
+      enable = true;
+      enableBashIntegration = true;
     };
-  };
-
-  programs.vim = {
-    enable = true;
-
-    settings = {
-      expandtab = true;
-
-      number = true;
-      relativenumber = true;
-    };
-
-    extraConfig = ''
-      set laststatus=0
-    '';
-  };
-
-  programs.bash.enable = true;
-
-  programs.direnv = {
-    enable = true;
-    enableBashIntegration = true;
   };
 }

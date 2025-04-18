@@ -1,9 +1,7 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
-    notepadqq
-  ];
+  home.packages = [ pkgs.notepadqq ];
 
   xdg.configFile."Notepadqq/Notepadqq.ini".text = ''
     [Appearance]

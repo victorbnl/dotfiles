@@ -5,7 +5,7 @@
     ./desktop
     ./programs
 
-    ./software.nix
+    ./packages.nix
   ];
 
   home = {
