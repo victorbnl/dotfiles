@@ -3,8 +3,6 @@
 {
   imports =
     [
-      (modulesPath + "/installer/scan/not-detected.nix")
-
       inputs.nix-index-database.nixosModules.nix-index
 
       ./disko.nix
@@ -14,6 +12,8 @@
       ./services.nix
       ./users.nix
     ];
+
+  hardware.enableRedistributableFirmware = true;
 
   boot.loader = {
     timeout = 0;
