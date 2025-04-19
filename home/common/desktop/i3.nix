@@ -33,7 +33,24 @@
         { command = "${pkgs.xss-lock}/bin/xss-lock --transfer-sleep-lock -- ${pkgs.i3lock-color}/bin/i3lock-color --no-unlock-indicator --color 000000 --image ~/.background-image --fill"; notification = false; }
       ];
 
-      keybindings = {
+      keybindings =
+      with lib;
+      let
+        pairsForWorkspace =
+          i: let
+            ws = toString i;
+            key = toString (mod i 10);
+          in [
+            (nameValuePair "${modifier}+${key}" "workspace number ${ws}")
+            (nameValuePair "${modifier}+Shift+${key}" "move container to workspace number ${ws}")
+          ];
+
+        workspaceKeybindings = pipe (range 1 10) [
+          (concatMap pairsForWorkspace)
+          builtins.listToAttrs
+        ];
+      in
+      {
         "XF86MonBrightnessDown" = "exec --no-startup-id ${pkgs.brightnessctl}/bin/brightnessctl set 5%-";
         "XF86MonBrightnessUp" = "exec --no-startup-id ${pkgs.brightnessctl}/bin/brightnessctl set 5%+";
 
@@ -91,20 +108,7 @@
         "${modifier}+Shift+Down" = "move down";
         "${modifier}+Shift+Up" = "move up";
         "${modifier}+Shift+Right" = "move right";
-      }
-      // builtins.foldl'
-        (set: args:
-          set // builtins.listToAttrs (builtins.genList (i:
-            let ws = i + 1;
-            in {
-              name = "${args.mod}+${toString (lib.trivial.mod ws 10)}";
-              value = "${args.cmd} ${toString ws}";
-            }) 10))
-        {}
-        [
-          { mod = modifier; cmd = "workspace number"; }
-          { mod = "${modifier}+Shift"; cmd = "move container to workspace number"; }
-        ];
+      } // workspaceKeybindings;
 
       bars = [];
     };
