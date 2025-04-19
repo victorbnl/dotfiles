@@ -36,14 +36,10 @@
       keybindings =
       with lib;
       let
-        pairsForWorkspace =
-          i: let
-            ws = toString i;
-            key = toString (mod i 10);
-          in [
-            (nameValuePair "${modifier}+${key}" "workspace number ${ws}")
-            (nameValuePair "${modifier}+Shift+${key}" "move container to workspace number ${ws}")
-          ];
+        pairsForWorkspace = i: [
+          (nameValuePair "${modifier}+${toString (mod i 10)}" "workspace number ${toString i}")
+          (nameValuePair "${modifier}+Shift+${toString (mod i 10)}" "move container to workspace number ${toString i}")
+        ];
 
         workspaceKeybindings = pipe (range 1 10) [
           (concatMap pairsForWorkspace)
