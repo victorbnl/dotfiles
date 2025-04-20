@@ -4,6 +4,8 @@
   programs.vscode = {
     enable = true;
 
+    mutableExtensionsDir = false;
+
     profiles.default = {
       enableUpdateCheck = false;
       enableExtensionUpdateCheck = false;
@@ -15,6 +17,7 @@
         mechatroner.rainbow-csv
         mkhl.direnv
         ms-vsliveshare.vsliveshare
+        myriad-dreamin.tinymist
         pkief.material-icon-theme
         shardulm94.trailing-spaces
         tomoki1207.pdf
