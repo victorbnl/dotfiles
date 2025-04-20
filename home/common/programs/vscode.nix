@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, lib, inputs, ... }:
 
 {
   programs.vscode = {
@@ -23,30 +23,43 @@
         tomoki1207.pdf
       ];
 
-      userSettings = {
-        "window.commandCenter" = false;
-        "window.controlsStyle" = "hidden";
-        "window.dialogStyle" = "custom";
-        "window.titleBarStyle" = "custom";
+      userSettings =
+        with lib;
+        let
+          forLangs = langs: opts: genAttrs (map (x: "[${x}]") langs) (_: opts);
+        in
+        {
+          "window.commandCenter" = false;
+          "window.controlsStyle" = "hidden";
+          "window.dialogStyle" = "custom";
+          "window.titleBarStyle" = "custom";
 
-        "workbench.colorTheme" = "Dark Modern";
-        "workbench.iconTheme" = "material-icon-theme";
+          "workbench.colorTheme" = "Dark Modern";
+          "workbench.iconTheme" = "material-icon-theme";
 
-        "editor.rulers" = [ 80 ];
-        "git.confirmSync" = false;
-        "direnv.restart.automatic" = true;
+          "editor.rulers" = [ 80 ];
+          "git.confirmSync" = false;
+          "direnv.restart.automatic" = true;
 
-        "files.exclude" = {
-          "**/.mypy_cache" = true;
-          "**/__pycache__" = true;
-          "**/.devenv*" = true;
-          "**/.venv" = true;
+          "files.exclude" = {
+            "**/.mypy_cache" = true;
+            "**/__pycache__" = true;
+            "**/.devenv*" = true;
+            "**/.venv" = true;
+          };
+
+          "[nix]" = {
+            "editor.tabSize" = 2;
+          };
+        }
+        // forLangs [
+          "markdown"
+          "plaintext"
+          "typst"
+        ] {
+          "editor.wordWrap" = "bounded";
+          "editor.wordWrapColumn" = 80;
         };
-
-        "[nix]" = {
-          "editor.tabSize" = 2;
-        };
-      };
     };
   };
 }
