@@ -34,77 +34,77 @@
       ];
 
       keybindings =
-      with lib;
-      let
-        pairsForWorkspace = i: [
-          (nameValuePair "${modifier}+${toString (mod i 10)}" "workspace number ${toString i}")
-          (nameValuePair "${modifier}+Shift+${toString (mod i 10)}" "move container to workspace number ${toString i}")
-        ];
+        with lib;
+        let
+          pairsForWorkspace = i: [
+            (nameValuePair "${modifier}+${toString (mod i 10)}" "workspace number ${toString i}")
+            (nameValuePair "${modifier}+Shift+${toString (mod i 10)}" "move container to workspace number ${toString i}")
+          ];
 
-        workspaceKeybindings = pipe (range 1 10) [
-          (concatMap pairsForWorkspace)
-          builtins.listToAttrs
-        ];
-      in
-      {
-        "XF86MonBrightnessDown" = "exec --no-startup-id ${pkgs.brightnessctl}/bin/brightnessctl set 5%-";
-        "XF86MonBrightnessUp" = "exec --no-startup-id ${pkgs.brightnessctl}/bin/brightnessctl set 5%+";
+          workspaceKeybindings = pipe (range 1 10) [
+            (concatMap pairsForWorkspace)
+            builtins.listToAttrs
+          ];
+        in
+        {
+          "XF86MonBrightnessDown" = "exec --no-startup-id ${pkgs.brightnessctl}/bin/brightnessctl set 5%-";
+          "XF86MonBrightnessUp" = "exec --no-startup-id ${pkgs.brightnessctl}/bin/brightnessctl set 5%+";
 
-        "XF86AudioMute" = "exec --no-startup-id wpctl set-mute @DEFAULT_SINK@ toggle";
-        "XF86AudioLowerVolume" = "exec --no-startup-id wpctl set-volume @DEFAULT_SINK@ 5%-";
-        "XF86AudioRaiseVolume" = "exec --no-startup-id wpctl set-volume @DEFAULT_SINK@ 5%+";
+          "XF86AudioMute" = "exec --no-startup-id wpctl set-mute @DEFAULT_SINK@ toggle";
+          "XF86AudioLowerVolume" = "exec --no-startup-id wpctl set-volume @DEFAULT_SINK@ 5%-";
+          "XF86AudioRaiseVolume" = "exec --no-startup-id wpctl set-volume @DEFAULT_SINK@ 5%+";
 
-        "XF86AudioPlay" = "exec --no-startup-id ${pkgs.playerctl}/bin/playerctl play-pause";
+          "XF86AudioPlay" = "exec --no-startup-id ${pkgs.playerctl}/bin/playerctl play-pause";
 
-        "${modifier}+b" = "exec --no-startup-id blueman-manager";
-        "${modifier}+n" = "exec --no-startup-id alacritty --class nmtui --command nmtui";
+          "${modifier}+b" = "exec --no-startup-id blueman-manager";
+          "${modifier}+n" = "exec --no-startup-id alacritty --class nmtui --command nmtui";
 
-        "${modifier}+p" = "exec --no-startup-id ${localpkgs.rofi-vscode}/bin/rofi-vscode";
+          "${modifier}+p" = "exec --no-startup-id ${localpkgs.rofi-vscode}/bin/rofi-vscode";
 
-        "${modifier}+d" = "exec --no-startup-id ${menu}";
-        "${modifier}+Return" = "exec --no-startup-id ${terminal}";
-        "${modifier}+e" = "exec --no-startup-id pcmanfm";
+          "${modifier}+d" = "exec --no-startup-id ${menu}";
+          "${modifier}+Return" = "exec --no-startup-id ${terminal}";
+          "${modifier}+e" = "exec --no-startup-id pcmanfm";
 
-        "${modifier}+m" = "exec --no-startup-id ${pkgs.tdrop}/bin/tdrop -y 0 ${terminal} --class dropdown";
+          "${modifier}+m" = "exec --no-startup-id ${pkgs.tdrop}/bin/tdrop -y 0 ${terminal} --class dropdown";
 
-        "${modifier}+s" = "exec --no-startup-id ${pkgs.maim}/bin/maim --hidecursor --select --format png | ${pkgs.xclip}/bin/xclip -selection clipboard -t image/png";
-        "${modifier}+Shift+s" = "exec --no-startup-id ${pkgs.maim}/bin/maim --hidecursor --format png | ${pkgs.xclip}/bin/xclip -selection clipboard -t image/png";
-        "${modifier}+Ctrl+s" = "exec --no-startup-id sleep 2 && ${pkgs.maim}/bin/maim --hidecursor --format png | ${pkgs.xclip}/bin/xclip -selection clipboard -t image/png && dunstify -t 1000 'Screenshot taken'";
+          "${modifier}+s" = "exec --no-startup-id ${pkgs.maim}/bin/maim --hidecursor --select --format png | ${pkgs.xclip}/bin/xclip -selection clipboard -t image/png";
+          "${modifier}+Shift+s" = "exec --no-startup-id ${pkgs.maim}/bin/maim --hidecursor --format png | ${pkgs.xclip}/bin/xclip -selection clipboard -t image/png";
+          "${modifier}+Ctrl+s" = "exec --no-startup-id sleep 2 && ${pkgs.maim}/bin/maim --hidecursor --format png | ${pkgs.xclip}/bin/xclip -selection clipboard -t image/png && dunstify -t 1000 'Screenshot taken'";
 
-        "${modifier}+l" = "exec --no-startup-id loginctl lock-session";
-        "${modifier}+Shift+e" = "exec --no-startup-id i3-msg exit";
+          "${modifier}+l" = "exec --no-startup-id loginctl lock-session";
+          "${modifier}+Shift+e" = "exec --no-startup-id i3-msg exit";
 
-        "${modifier}+Shift+q" = "kill";
+          "${modifier}+Shift+q" = "kill";
 
-        "${modifier}+Shift+c" = "reload";
-        "${modifier}+Shift+r" = "restart";
+          "${modifier}+Shift+c" = "reload";
+          "${modifier}+Shift+r" = "restart";
 
-        "${modifier}+h" = "splith";
-        "${modifier}+v" = "splitv";
+          "${modifier}+h" = "splith";
+          "${modifier}+v" = "splitv";
 
-        "${modifier}+w" = "layout tabbed";
-        "${modifier}+i" = "layout toggle split";
+          "${modifier}+w" = "layout tabbed";
+          "${modifier}+i" = "layout toggle split";
 
-        "${modifier}+f" = "fullscreen";
+          "${modifier}+f" = "fullscreen";
 
-        "${modifier}+space" = "focus mode_toggle";
-        "${modifier}+Shift+space" = "floating toggle";
+          "${modifier}+space" = "focus mode_toggle";
+          "${modifier}+Shift+space" = "floating toggle";
 
-        "${modifier}+dollar" = "scratchpad show";
-        "${modifier}+Shift+dollar" = "move scratchpad";
+          "${modifier}+dollar" = "scratchpad show";
+          "${modifier}+Shift+dollar" = "move scratchpad";
 
-        "${modifier}+a" = "focus parent";
+          "${modifier}+a" = "focus parent";
 
-        "${modifier}+Left" = "focus left";
-        "${modifier}+Down" = "focus down";
-        "${modifier}+Up" = "focus up";
-        "${modifier}+Right" = "focus right";
+          "${modifier}+Left" = "focus left";
+          "${modifier}+Down" = "focus down";
+          "${modifier}+Up" = "focus up";
+          "${modifier}+Right" = "focus right";
 
-        "${modifier}+Shift+Left" = "move left";
-        "${modifier}+Shift+Down" = "move down";
-        "${modifier}+Shift+Up" = "move up";
-        "${modifier}+Shift+Right" = "move right";
-      } // workspaceKeybindings;
+          "${modifier}+Shift+Left" = "move left";
+          "${modifier}+Shift+Down" = "move down";
+          "${modifier}+Shift+Up" = "move up";
+          "${modifier}+Shift+Right" = "move right";
+        } // workspaceKeybindings;
 
       bars = [];
     };
