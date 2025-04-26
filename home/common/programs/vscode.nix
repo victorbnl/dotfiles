@@ -57,7 +57,7 @@
           "plaintext"
           "typst"
         ] {
-          "editor.wordWrap" = "bounded";
+          "editor.wordWrap" = "wordWrapColumn";
           "editor.wordWrapColumn" = 80;
         };
     };
