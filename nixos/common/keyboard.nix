@@ -4,9 +4,13 @@
   console.keyMap = "fr";
 
   services = {
-    xserver.xkb = {
-      layout = "fr";
-      variant = "";
+    xserver = {
+      exportConfiguration = true;
+
+      xkb = {
+        layout = "fr,fr(ergol)";
+        options = "grp:alt_space_toggle";
+      };
     };
 
     kanata = {

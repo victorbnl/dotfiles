@@ -35,9 +35,19 @@ in
         module-margin-right = 1;
 
         modules-left = "i3";
-        modules-right = "network pulseaudio backlight battery date";
+        modules-right = "network xkeyboard pulseaudio backlight battery date";
 
         font = ["IBM Plex Mono Medm:size=13;3"];
+      };
+
+      "module/xkeyboard" = {
+        type = "internal/xkeyboard";
+
+        format = "[XKB] <label-layout>";
+        format-foreground = idle;
+
+        label-layout = "%name%";
+        label-layout-foreground = foreground;
       };
 
       "module/i3" = {
