@@ -2,11 +2,11 @@
 
 {
   imports = [
+    ./appearance.nix
     ./dunst.nix
     ./i3.nix
     ./polybar.nix
     ./rofi.nix
-    ./theme.nix
   ];
 
   home.file.".background-image".source = root + /assets/wallpapers/desktop.jpg;
