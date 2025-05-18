@@ -58,7 +58,7 @@
           "typst"
         ] {
           "editor.wordWrap" = "wordWrapColumn";
-          "editor.wordWrapColumn" = 80;
+          "editor.wordWrapColumn" = 60;
         };
     };
   };
