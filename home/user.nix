@@ -8,6 +8,7 @@
     homeDirectory = "/home/${names.user}";
 
     packages = with pkgs; [
+      aseprite
       android-tools
       lutris
       mpv
