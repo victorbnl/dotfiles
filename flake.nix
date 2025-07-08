@@ -44,8 +44,8 @@
   }@inputs:
   let
     names = {
-      user = "victor";
-      host = "Victor-ThinkPad";
+      user = "marie";
+      host = "Marie-ThinkPad";
     };
 
     system = "x86_64-linux";

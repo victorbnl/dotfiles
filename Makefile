@@ -6,7 +6,7 @@ installer:
 	nix build ${flake}#nixosConfigurations.installer.config.system.build.isoImage
 
 sys:
-	nixos-rebuild switch --flake ${flake}
+	nixos-rebuild switch --flake ${flake}#Marie-ThinkPad
 
 home:
 	home-manager switch --flake ${flake}
