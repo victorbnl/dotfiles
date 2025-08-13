@@ -17,6 +17,7 @@
       qbittorrent
       steam
       tor-browser
+      vlc
       yt-dlp
     ];
   };
