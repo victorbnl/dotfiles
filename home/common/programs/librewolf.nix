@@ -47,6 +47,8 @@
 
           "extensions.autoDisableScopes" = 0;
 
+          "xpinstall.signatures.required" = false;
+
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
           "browser.tabs.inTitlebar" = 0;
 
