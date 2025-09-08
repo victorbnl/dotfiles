@@ -23,6 +23,6 @@
       nssmdns4 = true;
     };
 
-    logind.powerKey = "ignore";
+    logind.settings.Login.HandlePowerKey = "ignore";
   };
 }
