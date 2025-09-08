@@ -3,7 +3,6 @@
     ./alacritty.nix
     ./git.nix
     ./librewolf.nix
-    ./notepadqq.nix
     ./vim.nix
     ./vscode.nix
   ];
