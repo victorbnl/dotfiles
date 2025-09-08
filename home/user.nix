@@ -10,6 +10,7 @@
     packages = with pkgs; [
       aseprite
       android-tools
+      discord
       lutris
       mpv
       prismlauncher
