@@ -10,8 +10,6 @@
 }:
 
 rustPlatform.buildRustPackage rec {
-  useFetchCargoVendor = true;
-
   pname = "vscode-recent";
   version = "0.7.0";
 
