@@ -7,8 +7,8 @@
   };
 
   services.openvpn.servers.uni = {
+    inherit (secrets.uniVpn) authUserPass;
     autoStart = false;
-    authUserPass = secrets.uniVpnAuthUserPass;
     config = "config ${./config.ovpn}";
     updateResolvConf = true;
   };
