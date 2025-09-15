@@ -29,7 +29,7 @@ in
     enable = true;
 
     theme = {
-      name = "vimix-dark-doder";
+      name = "Vimix-dark-doder";
       package = pkgs.vimix-gtk-themes;
     };
 
