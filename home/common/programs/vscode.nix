@@ -21,6 +21,7 @@
         pkief.material-icon-theme
         shardulm94.trailing-spaces
         tomoki1207.pdf
+        vstirbu.vscode-mermaid-preview
       ];
 
       userSettings =
