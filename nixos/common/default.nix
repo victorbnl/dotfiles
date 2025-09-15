@@ -2,6 +2,8 @@
 
 {
   imports = [
+    ./vpn-uni
+
     ./disk.nix
     ./display-manager.nix
     ./gui.nix
