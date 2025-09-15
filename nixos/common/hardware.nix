@@ -40,13 +40,4 @@
       };
     };
   };
-
-  networking = {
-    useDHCP = true;
-
-    wireless = {
-      enable = true;
-      inherit (secrets) networks;
-    };
-  };
 }

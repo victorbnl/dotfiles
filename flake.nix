@@ -57,9 +57,9 @@
 
     localpkgs = import ./packages { inherit pkgs; };
 
-    secrets = import ./secrets;
-
     root = ./.;
+
+    secrets = import ./secrets { inherit root; };
   in
   {
     nixosConfigurations = {

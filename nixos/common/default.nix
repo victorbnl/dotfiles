@@ -2,13 +2,12 @@
 
 {
   imports = [
-    ./vpn-uni
-
     ./disk.nix
     ./display-manager.nix
     ./gui.nix
     ./hardware.nix
     ./keyboard.nix
+    ./network.nix
     ./nix.nix
     ./services.nix
     ./users.nix
