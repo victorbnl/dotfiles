@@ -7,6 +7,7 @@
   };
 
   services.openvpn.servers.uni = {
+    autoStart = false;
     authUserPass = secrets.uniVpnAuthUserPass;
     config = "config ${./config.ovpn}";
     updateResolvConf = true;
