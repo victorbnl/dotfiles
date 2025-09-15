@@ -12,6 +12,7 @@
 
       extensions = with inputs.nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace; [
         bbenoist.nix
+        eamodio.gitlens
         editorconfig.editorconfig
         formulahendry.code-runner
         mechatroner.rainbow-csv
