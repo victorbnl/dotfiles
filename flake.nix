@@ -55,8 +55,6 @@
       overlays = [ nur.overlays.default ];
     };
 
-    localpkgs = import ./packages { inherit pkgs; };
-
     root = ./.;
 
     secrets = import ./secrets.nix { inherit root; };
@@ -79,7 +77,7 @@
     homeConfigurations = {
       "${names.user}@${names.host}" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = { inherit inputs localpkgs names root; };
+        extraSpecialArgs = { inherit inputs names root; };
         modules = [ ./home/user.nix ];
       };
     };
