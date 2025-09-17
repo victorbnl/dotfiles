@@ -23,7 +23,6 @@
         criteria = [
           { class = "blueman-manager"; }
           { class = "dropdown"; }
-          { class = "nmtui"; }
           { class = "pavucontrol"; }
         ];
       };
@@ -57,7 +56,6 @@
           "XF86AudioPlay" = "exec --no-startup-id ${pkgs.playerctl}/bin/playerctl play-pause";
 
           "${modifier}+b" = "exec --no-startup-id blueman-manager";
-          "${modifier}+n" = "exec --no-startup-id alacritty --class nmtui --command nmtui";
 
           "${modifier}+p" = "exec --no-startup-id ${import ./rofi-vscode { inherit pkgs; }}";
 
@@ -111,7 +109,6 @@
 
     extraConfig = ''
       for_window [class="blueman-manager"] resize set 1200 750, move position center
-      for_window [class="nmtui"] resize set 1200 750, move position center
       for_window [class="pavucontrol"] resize set 1200 750, move position center
     '';
   };

@@ -16,7 +16,6 @@
     gimp
     gnumake
     htop
-    networkmanagerapplet
     nmap
     pavucontrol
     pcmanfm
