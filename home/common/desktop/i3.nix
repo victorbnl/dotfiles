@@ -12,6 +12,9 @@ in
 {
   imports = [ ./power-menu ];
 
+  # Blueman manager fails if blueman is not installed
+  home.packages = [ pkgs.blueman ];
+
   xsession.windowManager.i3 = {
     enable = true;
 
