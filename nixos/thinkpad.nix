@@ -1,11 +1,12 @@
 { pkgs, names, ... }:
 
 {
-  imports = [ ./common ];
+  imports = [
+    ./system
+    ./config
+  ];
 
   disko.devices.disk.main.device = "/dev/nvme0n1";
-
-  networking.hostName = names.host;
 
   services = {
     upower.enable = true;

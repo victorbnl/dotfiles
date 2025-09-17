@@ -1,10 +1,5 @@
 {
-  security.polkit.enable = true;
-
   services = {
-    udisks2.enable = true;
-    gvfs.enable = true;
-
     printing = {
       enable = true;
       browsing = true;
@@ -22,7 +17,5 @@
       enable = true;
       nssmdns4 = true;
     };
-
-    logind.settings.Login.HandlePowerKey = "ignore";
   };
 }

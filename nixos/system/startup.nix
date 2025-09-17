@@ -1,6 +1,16 @@
 { pkgs, root, ... }:
 
 {
+  boot.loader = {
+    timeout = 0;
+    efi.canTouchEfiVariables = true;
+
+    systemd-boot = {
+      enable = true;
+      configurationLimit = 5;
+    };
+  };
+
   environment.systemPackages = [
     (pkgs.sddm-chili-theme.overrideAttrs(oldAttrs: {
       preInstall = (oldAttrs.preInstall or "") + ''
