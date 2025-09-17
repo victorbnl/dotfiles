@@ -35,7 +35,7 @@ in
         module-margin-right = 1;
 
         modules-left = "i3";
-        modules-right = "vpn-uni network xkeyboard pulseaudio backlight battery date";
+        modules-right = "vpn network xkeyboard pulseaudio backlight battery date";
 
         font = ["IBM Plex Mono Medm:size=13;3"];
       };
@@ -149,11 +149,11 @@ in
         label-low-foreground = foreground;
       };
 
-      "module/vpn-uni" = {
+      "module/vpn" = {
         type = "custom/script";
 
-        exec = "echo Uni";
-        exec-if = "systemctl status openvpn-uni";
+        exec = "cat /run/current-vpn";
+        exec-if = "test -f /run/current-vpn";
 
         format = "[VPN] <label>";
         format-foreground = idle;

@@ -8,9 +8,13 @@
 
   services.openvpn.servers.uni = {
     inherit (secrets.uni.vpn) authUserPass;
-    autoStart = false;
     config = "config ${root + /assets/uni/vpn.ovpn}";
+
+    autoStart = false;
     updateResolvConf = true;
+
+    up = "echo University > /run/current-vpn";
+    down = "rm /run/current-vpn";
   };
 
   networking.wireless.networks."eduroam".auth = ''
