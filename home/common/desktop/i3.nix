@@ -1,5 +1,14 @@
 { pkgs, lib, ... }:
-
+let
+  blueman-manager = "${pkgs.blueman}/bin/blueman-manager";
+  brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
+  i3lock-color = "${pkgs.i3lock-color}/bin/i3lock-color";
+  maim = "${pkgs.maim}/bin/maim";
+  playerctl = "${pkgs.playerctl}/bin/playerctl";
+  tdrop = "${pkgs.tdrop}/bin/tdrop";
+  xclip = "${pkgs.xclip}/bin/xclip";
+  xss-lock = "${pkgs.xss-lock}/bin/xss-lock";
+in
 {
   imports = [ ./power-menu ];
 
@@ -29,7 +38,7 @@
 
       startup = [
         { command = "polybar bar"; notification = false; }
-        { command = "${pkgs.xss-lock}/bin/xss-lock --transfer-sleep-lock -- ${pkgs.i3lock-color}/bin/i3lock-color --no-unlock-indicator --color 000000 --image ~/.background-image --fill"; notification = false; }
+        { command = "${xss-lock} --transfer-sleep-lock -- ${i3lock-color} --no-unlock-indicator --color 000000 --image ~/.background-image --fill"; notification = false; }
       ];
 
       keybindings =
@@ -46,28 +55,28 @@
           ];
         in
         {
-          "XF86MonBrightnessDown" = "exec --no-startup-id ${pkgs.brightnessctl}/bin/brightnessctl set 5%-";
-          "XF86MonBrightnessUp" = "exec --no-startup-id ${pkgs.brightnessctl}/bin/brightnessctl set 5%+";
+          "XF86MonBrightnessDown" = "exec --no-startup-id ${brightnessctl} set 5%-";
+          "XF86MonBrightnessUp" = "exec --no-startup-id ${brightnessctl} set 5%+";
 
           "XF86AudioMute" = "exec --no-startup-id wpctl set-mute @DEFAULT_SINK@ toggle";
           "XF86AudioLowerVolume" = "exec --no-startup-id wpctl set-volume @DEFAULT_SINK@ 5%-";
           "XF86AudioRaiseVolume" = "exec --no-startup-id wpctl set-volume @DEFAULT_SINK@ 5%+";
 
-          "XF86AudioPlay" = "exec --no-startup-id ${pkgs.playerctl}/bin/playerctl play-pause";
+          "XF86AudioPlay" = "exec --no-startup-id ${playerctl} play-pause";
 
-          "${modifier}+b" = "exec --no-startup-id blueman-manager";
+          "${modifier}+b" = "exec --no-startup-id ${blueman-manager}";
 
           "${modifier}+p" = "exec --no-startup-id ${import ./rofi-vscode { inherit pkgs; }}";
 
           "${modifier}+d" = "exec --no-startup-id ${menu}";
           "${modifier}+Return" = "exec --no-startup-id ${terminal}";
-          "${modifier}+e" = "exec --no-startup-id pcmanfm";
+          "${modifier}+e" = "exec --no-startup-id xdg-open ~";
 
-          "${modifier}+m" = "exec --no-startup-id ${pkgs.tdrop}/bin/tdrop -y 0 ${terminal} --class dropdown";
+          "${modifier}+m" = "exec --no-startup-id ${tdrop} -y 0 ${terminal} --class dropdown";
 
-          "${modifier}+s" = "exec --no-startup-id ${pkgs.maim}/bin/maim --hidecursor --select --format png | ${pkgs.xclip}/bin/xclip -selection clipboard -t image/png";
-          "${modifier}+Shift+s" = "exec --no-startup-id ${pkgs.maim}/bin/maim --hidecursor --format png | ${pkgs.xclip}/bin/xclip -selection clipboard -t image/png";
-          "${modifier}+Ctrl+s" = "exec --no-startup-id sleep 2 && ${pkgs.maim}/bin/maim --hidecursor --format png | ${pkgs.xclip}/bin/xclip -selection clipboard -t image/png && dunstify -t 1000 'Screenshot taken'";
+          "${modifier}+s" = "exec --no-startup-id ${maim} --hidecursor --select --format png | ${xclip} -selection clipboard -t image/png";
+          "${modifier}+Shift+s" = "exec --no-startup-id ${maim} --hidecursor --format png | ${xclip} -selection clipboard -t image/png";
+          "${modifier}+Ctrl+s" = "exec --no-startup-id sleep 2 && ${maim} --hidecursor --format png | ${xclip} -selection clipboard -t image/png && dunstify -t 1000 'Screenshot taken'";
 
           "${modifier}+l" = "exec --no-startup-id loginctl lock-session";
           "${modifier}+Shift+e" = "exec --no-startup-id i3-msg exit";

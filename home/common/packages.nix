@@ -10,7 +10,6 @@
   ];
 
   home.packages = with pkgs; [
-    blueman
     devenv
     file
     gimp
@@ -18,7 +17,6 @@
     htop
     nmap
     pavucontrol
-    pcmanfm
     python3
     simple-scan
     sqlitebrowser
