@@ -11,8 +11,9 @@
     };
   };
 
-  environment.systemPackages = [
-    (pkgs.sddm-chili-theme.overrideAttrs(oldAttrs: {
+  environment.systemPackages = with pkgs; [
+    libsForQt5.qt5.qtquickcontrols
+    (sddm-chili-theme.overrideAttrs(oldAttrs: {
       preInstall = (oldAttrs.preInstall or "") + ''
         sed -i 's|^background=.*$|background=${root + /assets/wallpapers/display-manager.jpg}|' theme.conf
       '';
