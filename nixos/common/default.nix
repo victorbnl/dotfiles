@@ -7,9 +7,9 @@
     ./gui.nix
     ./hardware.nix
     ./keyboard.nix
-    ./network.nix
     ./nix.nix
     ./services.nix
+    ./uni.nix
     ./users.nix
   ];
 
@@ -25,6 +25,15 @@
 
   time.timeZone = "Europe/Paris";
   i18n.defaultLocale = "en_US.UTF-8";
+
+  networking = {
+    useDHCP = true;
+
+    wireless = {
+      enable = true;
+      inherit (secrets) networks;
+    };
+  };
 
   virtualisation.libvirtd = {
     enable = true;

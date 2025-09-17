@@ -59,7 +59,7 @@
 
     root = ./.;
 
-    secrets = import ./secrets { inherit root; };
+    secrets = import ./secrets.nix { inherit root; };
   in
   {
     nixosConfigurations = {
