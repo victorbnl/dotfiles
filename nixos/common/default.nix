@@ -9,7 +9,7 @@
     ./keyboard.nix
     ./nix.nix
     ./services.nix
-    ./uni.nix
+    ./university.nix
     ./users.nix
   ];
 
