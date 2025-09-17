@@ -29,7 +29,6 @@
         "application/zip" = [ "xarchiver.desktop" ];
         "image/jpeg" = [ "viewnior.desktop" ];
         "image/png" = [ "viewnior.desktop" ];
-        "text/plain" = [ "notepadqq.desktop" ];
       };
     };
 
