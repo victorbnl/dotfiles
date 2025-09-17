@@ -12,8 +12,10 @@ in
 {
   imports = [ ./power-menu ];
 
-  # Blueman manager fails if blueman is not installed
-  home.packages = [ pkgs.blueman ];
+  home.packages = with pkgs; [
+    blueman # Blueman manager fails if blueman is not installed
+    noto-fonts
+  ];
 
   xsession.windowManager.i3 = {
     enable = true;
@@ -43,6 +45,37 @@ in
         { command = "polybar bar"; notification = false; }
         { command = "${xss-lock} --transfer-sleep-lock -- ${i3lock-color} --no-unlock-indicator --color 000000 --image ~/.background-image --fill"; notification = false; }
       ];
+
+      fonts = {
+        names = [ "Noto Sans" ];
+        size = 9.0;
+      };
+
+      colors = {
+        focused = {
+          background = "#000000";
+          border = "#000000";
+          childBorder = "#000000";
+          indicator = "#000000";
+          text = "#ffffff";
+        };
+
+        unfocused = {
+          background = "#000000";
+          border = "#000000";
+          childBorder = "#000000";
+          indicator = "#000000";
+          text = "#555555";
+        };
+
+        urgent = {
+          background = "#ff0000";
+          border = "#ff0000";
+          childBorder = "#ff0000";
+          indicator = "#ff0000";
+          text = "#ffffff";
+        };
+      };
 
       keybindings =
         with lib;
@@ -121,6 +154,9 @@ in
     };
 
     extraConfig = ''
+      title_align center
+      for_window [all] title_window_icon padding 3px
+
       for_window [class="blueman-manager"] resize set 1200 750, move position center
       for_window [class="pavucontrol"] resize set 1200 750, move position center
     '';
