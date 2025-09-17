@@ -71,6 +71,7 @@ in
           "${modifier}+d" = "exec --no-startup-id ${menu}";
           "${modifier}+Return" = "exec --no-startup-id ${terminal}";
           "${modifier}+e" = "exec --no-startup-id xdg-open ~";
+          "${modifier}+n" = "exec --no-startup-id xdg-open https://";
 
           "${modifier}+m" = "exec --no-startup-id ${tdrop} -y 0 ${terminal} --class dropdown";
 
