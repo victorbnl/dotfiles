@@ -48,34 +48,41 @@ in
 
       fonts = {
         names = [ "Noto Sans" ];
+        style = "Medium";
         size = 9.0;
       };
 
-      colors = {
-        focused = {
-          background = "#000000";
-          border = "#000000";
-          childBorder = "#000000";
-          indicator = "#000000";
-          text = "#ffffff";
-        };
+      colors =
+        let
+          set = (v: {
+            background = v.background;
+            border = v.background;
+            childBorder = v.background;
+            indicator = v.background;
+            text = v.text;
+          });
+        in
+        {
+          focused = set {
+            background = "#000000";
+            text = "#ffffff";
+          };
 
-        unfocused = {
-          background = "#000000";
-          border = "#000000";
-          childBorder = "#000000";
-          indicator = "#000000";
-          text = "#555555";
-        };
+          focusedInactive = set {
+            background = "#000000";
+            text = "#ffffff";
+          };
 
-        urgent = {
-          background = "#ff0000";
-          border = "#ff0000";
-          childBorder = "#ff0000";
-          indicator = "#ff0000";
-          text = "#ffffff";
+          unfocused = set {
+            background = "#000000";
+            text = "#555555";
+          };
+
+          urgent = set {
+            background = "#ff0000";
+            text = "#ffffff";
+          };
         };
-      };
 
       keybindings =
         with lib;
