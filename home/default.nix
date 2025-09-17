@@ -1,4 +1,4 @@
-{ pkgs, config, inputs, ... }:
+{ pkgs, names, config, inputs, ... }:
 
 {
   imports = [
@@ -9,6 +9,9 @@
   ];
 
   home = {
+    username = names.user;
+    homeDirectory = "/home/${names.user}";
+
     packages =
       with pkgs;
       let
