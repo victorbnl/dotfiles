@@ -10,7 +10,7 @@ let
   xss-lock = "${pkgs.xss-lock}/bin/xss-lock";
 in
 {
-  imports = [ ./power-menu ];
+  # imports = [ ./power-menu ];
 
   home.packages = with pkgs; [
     blueman # Blueman manager fails if blueman is not installed
@@ -80,20 +80,7 @@ in
         };
       };
 
-      keybindings =
-        with lib;
-        let
-          pairsForWorkspace = i: [
-            (nameValuePair "${modifier}+${toString (mod i 10)}" "workspace number ${toString i}")
-            (nameValuePair "${modifier}+Shift+${toString (mod i 10)}" "move container to workspace number ${toString i}")
-          ];
-
-          workspaceKeybindings = pipe (range 1 10) [
-            (concatMap pairsForWorkspace)
-            builtins.listToAttrs
-          ];
-        in
-        {
+      keybindings = lib.mkOptionDefault {
           "XF86MonBrightnessDown" = "exec --no-startup-id ${brightnessctl} set 5%-";
           "XF86MonBrightnessUp" = "exec --no-startup-id ${brightnessctl} set 5%+";
 
@@ -105,10 +92,9 @@ in
 
           "${modifier}+b" = "exec --no-startup-id ${blueman-manager}";
 
-          "${modifier}+p" = "exec --no-startup-id ${import ./rofi-vscode { inherit pkgs; }}";
+          "XF86PowerOff" = "exec --no-startup-id ${import ./rofi/power-menu.nix { inherit pkgs lib; }}";
+          "${modifier}+p" = "exec --no-startup-id ${import ./rofi/vscode-recent.nix { inherit pkgs; }}";
 
-          "${modifier}+d" = "exec --no-startup-id ${menu}";
-          "${modifier}+Return" = "exec --no-startup-id ${terminal}";
           "${modifier}+e" = "exec --no-startup-id xdg-open ~";
           "${modifier}+n" = "exec --no-startup-id xdg-open https://";
 
@@ -118,40 +104,9 @@ in
           "${modifier}+Shift+s" = "exec --no-startup-id ${maim} --hidecursor --format png | ${xclip} -selection clipboard -t image/png";
           "${modifier}+Ctrl+s" = "exec --no-startup-id sleep 2 && ${maim} --hidecursor --format png | ${xclip} -selection clipboard -t image/png && dunstify -t 1000 'Screenshot taken'";
 
-          "${modifier}+l" = "exec --no-startup-id loginctl lock-session";
-          "${modifier}+Shift+e" = "exec --no-startup-id i3-msg exit";
-
-          "${modifier}+Shift+q" = "kill";
-
-          "${modifier}+Shift+c" = "reload";
-          "${modifier}+Shift+r" = "restart";
-
-          "${modifier}+h" = "splith";
-          "${modifier}+v" = "splitv";
-
-          "${modifier}+w" = "layout tabbed";
-          "${modifier}+i" = "layout toggle split";
-
-          "${modifier}+f" = "fullscreen";
-
-          "${modifier}+space" = "focus mode_toggle";
-          "${modifier}+Shift+space" = "floating toggle";
-
           "${modifier}+dollar" = "scratchpad show";
           "${modifier}+Shift+dollar" = "move scratchpad";
-
-          "${modifier}+a" = "focus parent";
-
-          "${modifier}+Left" = "focus left";
-          "${modifier}+Down" = "focus down";
-          "${modifier}+Up" = "focus up";
-          "${modifier}+Right" = "focus right";
-
-          "${modifier}+Shift+Left" = "move left";
-          "${modifier}+Shift+Down" = "move down";
-          "${modifier}+Shift+Up" = "move up";
-          "${modifier}+Shift+Right" = "move right";
-        } // workspaceKeybindings;
+        };
 
       bars = [];
     };

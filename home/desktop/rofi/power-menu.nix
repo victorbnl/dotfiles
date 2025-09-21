@@ -1,5 +1,13 @@
-{ pkgs, lib, actions }:
+{ pkgs, lib, ... }:
 let
+  actions = [
+    { key = "p"; icon = ""; cmd = "systemctl poweroff"; }
+    { key = "r"; icon = ""; cmd = "systemctl reboot"; }
+    { key = "s"; icon = "󰤄"; cmd = "systemctl suspend"; }
+    { key = "l"; icon = ""; cmd = "loginctl lock-session"; }
+    { key = "e"; icon = "󰗼"; cmd = "i3-msg exit"; }
+  ];
+
   config = pkgs.writeText "config.rasi" ''
     @import "config.rasi"
 
