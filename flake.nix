@@ -31,7 +31,7 @@
     };
 
     boilerplates = {
-      url = "git+https://github.com/victorbnl/boilerplates";
+      url = "git+https://github.com/marie-bnl/boilerplates";
       flake = false;
     };
   };
