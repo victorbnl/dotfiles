@@ -2,8 +2,8 @@
   programs.git = {
     enable = true;
 
-    userEmail = "victor.bonnelle@protonmail.com";
-    userName = "Victor Bonnelle";
+    userEmail = "marie.bonnelle@proton.me";
+    userName = "Marie Bonnelle";
 
     ignores = [
       ".devenv*"
