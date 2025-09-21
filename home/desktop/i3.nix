@@ -52,37 +52,33 @@ in
         size = 9.0;
       };
 
-      colors =
-        let
-          set = (v: {
-            background = v.background;
-            border = v.background;
-            childBorder = v.background;
-            indicator = v.background;
-            text = v.text;
-          });
-        in
-        {
-          focused = set {
-            background = "#000000";
-            text = "#ffffff";
-          };
-
-          focusedInactive = set {
-            background = "#000000";
-            text = "#ffffff";
-          };
-
-          unfocused = set {
-            background = "#000000";
-            text = "#555555";
-          };
-
-          urgent = set {
-            background = "#ff0000";
-            text = "#ffffff";
-          };
+      colors = builtins.mapAttrs (k: v: {
+        background = v.background;
+        border = v.background;
+        childBorder = v.background;
+        indicator = v.background;
+        text = v.text;
+      }) {
+        focused = {
+          background = "#000000";
+          text = "#ffffff";
         };
+
+        focusedInactive = {
+          background = "#000000";
+          text = "#ffffff";
+        };
+
+        unfocused = {
+          background = "#000000";
+          text = "#555555";
+        };
+
+        urgent = {
+          background = "#ff0000";
+          text = "#ffffff";
+        };
+      };
 
       keybindings =
         with lib;
