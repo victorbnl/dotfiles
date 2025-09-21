@@ -10,8 +10,6 @@ let
   xss-lock = "${pkgs.xss-lock}/bin/xss-lock";
 in
 {
-  # imports = [ ./power-menu ];
-
   home.packages = with pkgs; [
     blueman # Blueman manager fails if blueman is not installed
     noto-fonts
