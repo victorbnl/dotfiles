@@ -1,5 +1,8 @@
 { pkgs ? import <nixpkgs> {}}:
 
 pkgs.mkShell {
-  packages = [ pkgs.git-crypt ];
+  packages = with pkgs; [
+    git-crypt
+    just
+  ];
 }
