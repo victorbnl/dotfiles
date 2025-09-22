@@ -37,6 +37,7 @@
           "window.titleBarStyle" = "custom";
 
           "workbench.colorTheme" = "Dark Modern";
+          "workbench.editor.empty.hint" = "hidden";
           "workbench.iconTheme" = "material-icon-theme";
 
           "editor.rulers" = [ 80 ];
