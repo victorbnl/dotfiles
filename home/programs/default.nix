@@ -1,3 +1,5 @@
+{ secrets, ... }:
+
 {
   imports = [
     ./alacritty.nix
@@ -13,6 +15,12 @@
     direnv = {
       enable = true;
       enableBashIntegration = true;
+    };
+
+    ssh = {
+      enable = true;
+      enableDefaultConfig = false;
+      matchBlocks."*".identityFile = "${secrets.sshKey}";
     };
   };
 }

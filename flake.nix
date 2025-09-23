@@ -57,7 +57,7 @@
 
     root = ./.;
 
-    secrets = import ./secrets.nix { inherit root; };
+    secrets = import ./secrets { inherit root; };
   in
   {
     nixosConfigurations = {
@@ -77,7 +77,7 @@
     homeConfigurations = {
       "${names.user}@${names.host}" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = { inherit inputs names root; };
+        extraSpecialArgs = { inherit inputs secrets names root; };
         modules = [ ./home ];
       };
     };
