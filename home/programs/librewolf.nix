@@ -14,6 +14,36 @@
         name = "default";
         isDefault = true;
 
+        bookmarks = {
+          force = true;
+
+          settings = [
+            {
+              name = "Toolbar";
+              toolbar = true;
+
+              bookmarks =
+                let
+                  entry = name: url: { inherit name url; };
+                  folder = name: bookmarks: { inherit name bookmarks; };
+                in
+                [
+                  (entry "Anime-Sama" "https://anime-sama.fr/")
+                  (entry "YouTube" "https://youtube.com/")
+                  (entry "GitHub" "https://github.com/")
+                  (entry "Proton Mail" "https://account.proton.me/mail")
+                  "separator"
+                  (folder "Nix" [
+                    (entry "Nixpkgs" "https://search.nixos.org/packages")
+                    (entry "NixOS options" "https://search.nixos.org/options")
+                    (entry "Home-Manager options" "https://home-manager-options.extranix.com/")
+                    (entry "Nix functions" "https://teu5us.github.io/nix-lib.html")
+                  ])
+                ];
+            }
+          ];
+        };
+
         userChrome = (builtins.readFile "${inputs.firefox-onebar}/onebar.css") + ''
           #navigator-toolbox {
             border-bottom: none !important;
