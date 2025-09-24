@@ -32,12 +32,12 @@
     mimeApps = {
       enable = true;
 
-      defaultApplications = {
-        "application/pdf" = [ "firefox.desktop" ];
-        "application/zip" = [ "xarchiver.desktop" ];
-        "inode/directory" = [ "pcmanfm.desktop" ];
-        "image/jpeg" = [ "viewnior.desktop" ];
-        "image/png" = [ "viewnior.desktop" ];
+      defaultApplications = builtins.mapAttrs (_: value: ["${value}.desktop"]) {
+        "application/pdf" = "firefox";
+        "application/zip" = "xarchiver";
+        "inode/directory" = "pcmanfm";
+        "image/jpeg" = "viewnior";
+        "image/png" = "viewnior";
       };
     };
 
