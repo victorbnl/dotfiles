@@ -43,20 +43,14 @@
 
     userDirs =
       let
-        homeDir = config.home.homeDirectory;
+        dirs = ["desktop" "documents" "download" "music" "pictures" "templates" "videos"];
+        prefix = dir: "${config.home.homeDirectory}/${dir}";
+        defs = lib.genAttrs dirs prefix;
       in
       {
         enable = true;
-
-        desktop = "${homeDir}/desktop";
-        documents = "${homeDir}/documents";
-        download = "${homeDir}/downloads";
-        music = "${homeDir}/music";
-        pictures = "${homeDir}/pictures";
-        publicShare = "${homeDir}/public";
-        templates = "${homeDir}/templates";
-        videos = "${homeDir}/videos";
-      };
+        publicShare = prefix "public";
+      } // defs;
   };
 
   home.stateVersion = "24.05";
