@@ -5,6 +5,8 @@
     userEmail = "marie.bonnelle@proton.me";
     userName = "Marie Bonnelle";
 
+    signing.signByDefault = true;
+
     ignores = [
       ".devenv*"
       ".vscode"
