@@ -1,9 +1,8 @@
-{ secrets, ... }:
-
 {
   imports = [
     ./alacritty.nix
     ./git.nix
+    ./gpg-ssh.nix
     ./librewolf.nix
     ./vim.nix
     ./vscode.nix
@@ -15,12 +14,6 @@
     direnv = {
       enable = true;
       enableBashIntegration = true;
-    };
-
-    ssh = {
-      enable = true;
-      enableDefaultConfig = false;
-      matchBlocks."*".identityFile = "${secrets.sshKey}";
     };
   };
 }
