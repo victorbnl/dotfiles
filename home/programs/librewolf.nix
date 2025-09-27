@@ -35,6 +35,11 @@
                   (entry "GitHub" "https://github.com/")
                   (entry "Proton Mail" "https://account.proton.me/mail")
                   "separator"
+                  (entry "Portail" "https://www.fil.univ-lille.fr/portail/index.php?dipl=L&sem=S5")
+                  (entry "Moodle" "https://moodle.univ-lille.fr")
+                  (entry "GitLab" "https://gitlab-etu.fil.univ-lille.fr/")
+                  (entry "Zimbra" "https://zimbra.univ-lille.fr")
+                  "separator"
                   (folder "Nix" [
                     (entry "Nixpkgs" "https://search.nixos.org/packages")
                     (entry "NixOS options" "https://search.nixos.org/options")
