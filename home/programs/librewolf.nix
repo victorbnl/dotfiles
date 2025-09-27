@@ -1,4 +1,4 @@
-{ lib, pkgs, inputs, ... }:
+{ root, lib, pkgs, inputs, ... }:
 
 {
   home.sessionVariables = {
@@ -28,6 +28,8 @@
                   folder = name: bookmarks: { inherit name bookmarks; };
                 in
                 [
+                  (entry "YouTube Music" "https://music.youtube.com")
+                  "separator"
                   (entry "Anime-Sama" "https://anime-sama.fr/")
                   (entry "YouTube" "https://youtube.com/")
                   (entry "GitHub" "https://github.com/")
@@ -44,6 +46,21 @@
           ];
         };
 
+        containersForce = true;
+        containers = {
+          "default" = {
+            id = 0;
+            name = "Default";
+            color = "pink";
+          };
+
+          "yt-music" = {
+            id = 1;
+            name = "YouTube Music";
+            color = "red";
+          };
+        };
+
         userChrome = (builtins.readFile "${inputs.firefox-onebar}/onebar.css") + ''
           #navigator-toolbox {
             border-bottom: none !important;
@@ -58,6 +75,7 @@
           bitwarden
           darkreader
           istilldontcareaboutcookies
+          multi-account-containers
           tabliss
           ublock-origin
 
@@ -122,5 +140,11 @@
         };
       };
     };
+  };
+
+  xdg.desktopEntries.ytMusic = {
+    name = "YouTube Music";
+    exec = "librewolf --new-window https://music.youtube.com";
+    icon = root + /assets/icons/yt-music.svg;
   };
 }
