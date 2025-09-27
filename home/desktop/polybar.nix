@@ -53,7 +53,7 @@ in
       "module/i3" = {
         type = "internal/i3";
 
-        label-mode = "%index%%icon%";
+        label-mode = "%mode%";
         label-mode-padding = 1;
 
         label-focused = "%index%%icon%";
