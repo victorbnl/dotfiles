@@ -24,6 +24,6 @@
     lutris prismlauncher protonup-qt steam
 
     # other
-    android-tools discord tor-browser
+    android-tools tor-browser
   ];
 }

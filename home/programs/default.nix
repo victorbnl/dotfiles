@@ -15,5 +15,15 @@
       enable = true;
       enableBashIntegration = true;
     };
+
+    vesktop = {
+      enable = true;
+
+      settings = {
+        discordBranch = "stable";
+        minimizeToTray = false;
+        arRPC = false;
+      };
+    };
   };
 }
