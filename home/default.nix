@@ -32,8 +32,13 @@
     mimeApps = {
       enable = true;
 
+      associations.added = {
+        "application/pdf" = [ "librewolf.desktop" ];
+        "inode/directory" = [ "code.desktop" ];
+      };
+
       defaultApplications = builtins.mapAttrs (_: value: ["${value}.desktop"]) {
-        "application/pdf" = "firefox";
+        "application/pdf" = "librewolf";
         "application/zip" = "xarchiver";
         "inode/directory" = "pcmanfm";
         "image/jpeg" = "viewnior";
