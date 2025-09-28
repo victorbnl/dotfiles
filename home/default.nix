@@ -48,13 +48,14 @@
 
     userDirs =
       let
-        dirs = ["desktop" "documents" "download" "music" "pictures" "templates" "videos"];
+        dirs = ["desktop" "documents" "music" "pictures" "templates" "videos"];
         prefix = dir: "${config.home.homeDirectory}/${dir}";
         defs = lib.genAttrs dirs prefix;
       in
       {
         enable = true;
         publicShare = prefix "public";
+        download = prefix "downloads";
       } // defs;
   };
 
