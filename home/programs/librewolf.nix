@@ -35,6 +35,7 @@
                   (entry "GitHub" "https://github.com/")
                   (entry "Proton Mail" "https://account.proton.me/mail")
                   "separator"
+                  (entry "ENT" "https://ent.univ-lille.fr/")
                   (entry "Portail" "https://www.fil.univ-lille.fr/portail/index.php?dipl=L&sem=S5")
                   (entry "Moodle" "https://moodle.univ-lille.fr")
                   (entry "GitLab" "https://gitlab-etu.fil.univ-lille.fr/")
