@@ -15,6 +15,8 @@
         eamodio.gitlens
         editorconfig.editorconfig
         formulahendry.code-runner
+        haskell.haskell
+        justusadam.language-haskell
         mechatroner.rainbow-csv
         mkhl.direnv
         ms-vsliveshare.vsliveshare
