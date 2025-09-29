@@ -87,22 +87,22 @@
 
           "XF86AudioPlay" = "exec --no-startup-id playerctl play-pause";
 
-          "modifier+b" = "exec --no-startup-id blueman-manager";
+          "${modifier}+b" = "exec --no-startup-id blueman-manager";
 
           "XF86PowerOff" = "exec --no-startup-id ${import ./rofi/power-menu.nix { inherit pkgs lib; }}";
-          "modifier+p" = "exec --no-startup-id ${import ./rofi/vscode-recent.nix { inherit pkgs; }}";
+          "${modifier}+p" = "exec --no-startup-id ${import ./rofi/vscode-recent.nix { inherit pkgs; }}";
 
-          "modifier+e" = "exec --no-startup-id handlr launch inode/directory";
-          "modifier+n" = "exec --no-startup-id handlr launch x-scheme-handler/https";
+          "${modifier}+e" = "exec --no-startup-id handlr launch inode/directory";
+          "${modifier}+n" = "exec --no-startup-id handlr launch x-scheme-handler/https";
 
-          "modifier+m" = "exec --no-startup-id tdrop -y 0 terminal --class dropdown";
+          "${modifier}+m" = "exec --no-startup-id tdrop -y 0 terminal --class dropdown";
 
-          "modifier+s" = "exec --no-startup-id maim --hidecursor --select --format png | xclip -selection clipboard -t image/png";
-          "modifier+Shift+s" = "exec --no-startup-id maim --hidecursor --format png | xclip -selection clipboard -t image/png";
-          "modifier+Ctrl+s" = "exec --no-startup-id sleep 2 && maim --hidecursor --format png | xclip -selection clipboard -t image/png && dunstify -t 1000 'Screenshot taken'";
+          "${modifier}+s" = "exec --no-startup-id maim --hidecursor --select --format png | xclip -selection clipboard -t image/png";
+          "${modifier}+Shift+s" = "exec --no-startup-id maim --hidecursor --format png | xclip -selection clipboard -t image/png";
+          "${modifier}+Ctrl+s" = "exec --no-startup-id sleep 2 && maim --hidecursor --format png | xclip -selection clipboard -t image/png && dunstify -t 1000 'Screenshot taken'";
 
-          "modifier+dollar" = "scratchpad show";
-          "modifier+Shift+dollar" = "move scratchpad";
+          "${modifier}+dollar" = "scratchpad show";
+          "${modifier}+Shift+dollar" = "move scratchpad";
         };
 
       bars = [];
