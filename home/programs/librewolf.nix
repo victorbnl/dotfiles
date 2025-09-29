@@ -36,7 +36,7 @@
                 [
                   (entry "YouTube Music" "https://music.youtube.com")
                   "separator"
-                  (entry "Discord" "https://discord.com/")
+                  (entry "Discord" "https://discord.com/channels/@me")
                   (entry "Instagram" "https://instagram.com/")
                   "separator"
                   (entry "Anime-Sama" "https://anime-sama.fr/")
