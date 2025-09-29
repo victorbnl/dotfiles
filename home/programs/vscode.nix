@@ -16,6 +16,7 @@
         editorconfig.editorconfig
         formulahendry.code-runner
         haskell.haskell
+        jebbs.plantuml
         justusadam.language-haskell
         mechatroner.rainbow-csv
         mkhl.direnv
@@ -56,6 +57,8 @@
           "[nix]" = {
             "editor.tabSize" = 2;
           };
+
+          "plantuml.server" = "https://kroki.io/plantuml/";
         }
         // forLangs [
           "markdown"
