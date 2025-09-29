@@ -7,7 +7,10 @@
     handlr
     i3lock-color
     maim
+    nerd-fonts.ubuntu
     playerctl
+    rofi-power-menu
+    rofi-vscode-recent
     tdrop
     xclip
     xss-lock
@@ -89,8 +92,8 @@
 
           "${modifier}+b" = "exec --no-startup-id blueman-manager";
 
-          "XF86PowerOff" = "exec --no-startup-id ${import ./rofi/power-menu.nix { inherit pkgs lib; }}";
-          "${modifier}+p" = "exec --no-startup-id ${import ./rofi/vscode-recent.nix { inherit pkgs; }}";
+          "XF86PowerOff" = "exec --no-startup-id rofi-power-menu";
+          "${modifier}+p" = "exec --no-startup-id rofi-vscode-recent";
 
           "${modifier}+e" = "exec --no-startup-id handlr launch inode/directory";
           "${modifier}+n" = "exec --no-startup-id handlr launch x-scheme-handler/https";

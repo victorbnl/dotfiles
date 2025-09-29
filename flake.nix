@@ -52,7 +52,11 @@
 
     pkgs = import nixpkgs {
       inherit system;
-      overlays = [ nur.overlays.default ];
+
+      overlays = [
+        nur.overlays.default
+        (import ./overlay)
+      ];
     };
 
     root = ./.;

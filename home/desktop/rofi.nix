@@ -5,10 +5,6 @@
     enable = true;
   };
 
-  home.packages = with pkgs; [
-    nerd-fonts.ubuntu # power menu
-  ];
-
   xdg.configFile = {
     "rofi/config.rasi".text = ''
       configuration {
