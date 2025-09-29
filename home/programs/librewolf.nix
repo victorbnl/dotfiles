@@ -119,6 +119,8 @@
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
           "browser.tabs.inTitlebar" = 0;
 
+          "devtools.debugger.remote-enabled" = true;
+
           "browser.translations.automaticallyPopup" = false;
           "browser.aboutConfig.showWarning" = false;
 
