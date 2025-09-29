@@ -98,7 +98,7 @@
           "${modifier}+e" = "exec --no-startup-id handlr launch inode/directory";
           "${modifier}+n" = "exec --no-startup-id handlr launch x-scheme-handler/https";
 
-          "${modifier}+m" = "exec --no-startup-id tdrop -y 0 terminal --class dropdown";
+          "${modifier}+m" = "exec --no-startup-id tdrop -y 0 ${terminal} --class dropdown";
 
           "${modifier}+s" = "exec --no-startup-id maim --hidecursor --select --format png | xclip -selection clipboard -t image/png";
           "${modifier}+Shift+s" = "exec --no-startup-id maim --hidecursor --format png | xclip -selection clipboard -t image/png";
