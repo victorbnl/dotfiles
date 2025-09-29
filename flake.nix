@@ -43,11 +43,6 @@
     ...
   }@inputs:
   let
-    names = {
-      user = "marie";
-      host = "Marie-ThinkPad";
-    };
-
     system = "x86_64-linux";
 
     pkgs = import nixpkgs {
@@ -59,29 +54,34 @@
       ];
     };
 
+    names = {
+      user = "marie";
+      host = "Marie-ThinkPad";
+    };
+
     root = ./.;
 
     secrets = import ./secrets { inherit root; };
+
+    specialArgs = { inherit inputs names root secrets; };
+    extraSpecialArgs = specialArgs;
   in
   {
     nixosConfigurations = {
       "installer" = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = { inherit inputs names; };
+        inherit system specialArgs;
         modules = [ ./installer ];
       };
 
       "${names.host}" = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = { inherit inputs secrets names root; };
+        inherit system specialArgs;
         modules = [ ./nixos/thinkpad.nix ];
       };
     };
 
     homeConfigurations = {
       "${names.user}@${names.host}" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        extraSpecialArgs = { inherit inputs secrets names root; };
+        inherit pkgs extraSpecialArgs;
         modules = [ ./home ];
       };
     };
