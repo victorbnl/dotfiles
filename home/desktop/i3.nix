@@ -2,6 +2,7 @@
 let
   blueman-manager = "${pkgs.blueman}/bin/blueman-manager";
   brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
+  handlr = "${pkgs.handlr}/bin/handlr";
   i3lock-color = "${pkgs.i3lock-color}/bin/i3lock-color";
   maim = "${pkgs.maim}/bin/maim";
   playerctl = "${pkgs.playerctl}/bin/playerctl";
@@ -93,8 +94,8 @@ in
           "XF86PowerOff" = "exec --no-startup-id ${import ./rofi/power-menu.nix { inherit pkgs lib; }}";
           "${modifier}+p" = "exec --no-startup-id ${import ./rofi/vscode-recent.nix { inherit pkgs; }}";
 
-          "${modifier}+e" = "exec --no-startup-id xdg-open ~";
-          "${modifier}+n" = "exec --no-startup-id xdg-open https://";
+          "${modifier}+e" = "exec --no-startup-id ${handlr} launch inode/directory";
+          "${modifier}+n" = "exec --no-startup-id ${handlr} launch x-scheme-handler/https";
 
           "${modifier}+m" = "exec --no-startup-id ${tdrop} -y 0 ${terminal} --class dropdown";
 

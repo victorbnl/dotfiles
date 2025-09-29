@@ -43,6 +43,8 @@
         "inode/directory" = "pcmanfm";
         "image/jpeg" = "viewnior";
         "image/png" = "viewnior";
+        "x-scheme-handler/http" = "librewolf";
+        "x-scheme-handler/https" = "librewolf";
       };
     };
 

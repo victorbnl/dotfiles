@@ -150,7 +150,7 @@
 
   xdg.desktopEntries.ytMusic = {
     name = "YouTube Music";
-    exec = "librewolf --new-window https://music.youtube.com";
+    exec = "${pkgs.handlr}/bin/handlr launch x-scheme-handler/https -- --new-window https://music.youtube.com";
     icon = root + /assets/icons/yt-music.svg;
   };
 }
