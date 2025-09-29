@@ -1,8 +1,14 @@
 { root, lib, pkgs, inputs, ... }:
 
 {
-  home.sessionVariables = {
-    MOZ_USE_XINPUT2 = 1;
+  home = {
+    packages = with pkgs; [
+      handlr
+    ];
+
+    sessionVariables = {
+      MOZ_USE_XINPUT2 = 1;
+    };
   };
 
   programs.librewolf = {
@@ -150,7 +156,7 @@
 
   xdg.desktopEntries.ytMusic = {
     name = "YouTube Music";
-    exec = "${pkgs.handlr}/bin/handlr launch x-scheme-handler/https -- --new-window https://music.youtube.com";
+    exec = "handlr launch x-scheme-handler/https -- --new-window https://music.youtube.com";
     icon = root + /assets/icons/yt-music.svg;
   };
 }

@@ -1,18 +1,16 @@
 { pkgs, lib, ... }:
-let
-  blueman-manager = "${pkgs.blueman}/bin/blueman-manager";
-  brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
-  handlr = "${pkgs.handlr}/bin/handlr";
-  i3lock-color = "${pkgs.i3lock-color}/bin/i3lock-color";
-  maim = "${pkgs.maim}/bin/maim";
-  playerctl = "${pkgs.playerctl}/bin/playerctl";
-  tdrop = "${pkgs.tdrop}/bin/tdrop";
-  xclip = "${pkgs.xclip}/bin/xclip";
-  xss-lock = "${pkgs.xss-lock}/bin/xss-lock";
-in
+
 {
   home.packages = with pkgs; [
-    blueman # Blueman manager fails if blueman is not installed
+    blueman
+    brightnessctl
+    handlr
+    i3lock-color
+    maim
+    playerctl
+    tdrop
+    xclip
+    xss-lock
     noto-fonts
   ];
 
@@ -42,7 +40,7 @@ in
 
       startup = [
         { command = "polybar bar"; notification = false; }
-        { command = "${xss-lock} --transfer-sleep-lock -- ${i3lock-color} --no-unlock-indicator --color 000000 --image ~/.background-image --fill"; notification = false; }
+        { command = "xss-lock --transfer-sleep-lock -- i3lock-color --no-unlock-indicator --color 000000 --image ~/.background-image --fill"; notification = false; }
       ];
 
       fonts = {
@@ -80,31 +78,31 @@ in
       };
 
       keybindings = lib.mkOptionDefault {
-          "XF86MonBrightnessDown" = "exec --no-startup-id ${brightnessctl} set 5%-";
-          "XF86MonBrightnessUp" = "exec --no-startup-id ${brightnessctl} set 5%+";
+          "XF86MonBrightnessDown" = "exec --no-startup-id brightnessctl set 5%-";
+          "XF86MonBrightnessUp" = "exec --no-startup-id brightnessctl set 5%+";
 
           "XF86AudioMute" = "exec --no-startup-id wpctl set-mute @DEFAULT_SINK@ toggle";
           "XF86AudioLowerVolume" = "exec --no-startup-id wpctl set-volume @DEFAULT_SINK@ 5%-";
           "XF86AudioRaiseVolume" = "exec --no-startup-id wpctl set-volume @DEFAULT_SINK@ 5%+";
 
-          "XF86AudioPlay" = "exec --no-startup-id ${playerctl} play-pause";
+          "XF86AudioPlay" = "exec --no-startup-id playerctl play-pause";
 
-          "${modifier}+b" = "exec --no-startup-id ${blueman-manager}";
+          "modifier+b" = "exec --no-startup-id blueman-manager";
 
           "XF86PowerOff" = "exec --no-startup-id ${import ./rofi/power-menu.nix { inherit pkgs lib; }}";
-          "${modifier}+p" = "exec --no-startup-id ${import ./rofi/vscode-recent.nix { inherit pkgs; }}";
+          "modifier+p" = "exec --no-startup-id ${import ./rofi/vscode-recent.nix { inherit pkgs; }}";
 
-          "${modifier}+e" = "exec --no-startup-id ${handlr} launch inode/directory";
-          "${modifier}+n" = "exec --no-startup-id ${handlr} launch x-scheme-handler/https";
+          "modifier+e" = "exec --no-startup-id handlr launch inode/directory";
+          "modifier+n" = "exec --no-startup-id handlr launch x-scheme-handler/https";
 
-          "${modifier}+m" = "exec --no-startup-id ${tdrop} -y 0 ${terminal} --class dropdown";
+          "modifier+m" = "exec --no-startup-id tdrop -y 0 terminal --class dropdown";
 
-          "${modifier}+s" = "exec --no-startup-id ${maim} --hidecursor --select --format png | ${xclip} -selection clipboard -t image/png";
-          "${modifier}+Shift+s" = "exec --no-startup-id ${maim} --hidecursor --format png | ${xclip} -selection clipboard -t image/png";
-          "${modifier}+Ctrl+s" = "exec --no-startup-id sleep 2 && ${maim} --hidecursor --format png | ${xclip} -selection clipboard -t image/png && dunstify -t 1000 'Screenshot taken'";
+          "modifier+s" = "exec --no-startup-id maim --hidecursor --select --format png | xclip -selection clipboard -t image/png";
+          "modifier+Shift+s" = "exec --no-startup-id maim --hidecursor --format png | xclip -selection clipboard -t image/png";
+          "modifier+Ctrl+s" = "exec --no-startup-id sleep 2 && maim --hidecursor --format png | xclip -selection clipboard -t image/png && dunstify -t 1000 'Screenshot taken'";
 
-          "${modifier}+dollar" = "scratchpad show";
-          "${modifier}+Shift+dollar" = "move scratchpad";
+          "modifier+dollar" = "scratchpad show";
+          "modifier+Shift+dollar" = "move scratchpad";
         };
 
       bars = [];

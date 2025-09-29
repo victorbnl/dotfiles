@@ -12,8 +12,8 @@
   };
 
   home.activation.gpg-script = with secrets.gpg; lib.hm.dag.entryAfter ["writeBoundary"] ''
-      ${pkgs.gnupg}/bin/gpg --import ${key}
-      echo "${fingerprint}:6:" | ${pkgs.gnupg}/bin/gpg --import-ownertrust
+      gpg --import ${key}
+      echo "${fingerprint}:6:" | gpg --import-ownertrust
     '';
 
   services.gpg-agent = {
