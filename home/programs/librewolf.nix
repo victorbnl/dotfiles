@@ -84,6 +84,10 @@
           #nav-bar {
             border-top: none !important;
           }
+
+          .urlbar-background {
+            --toolbar-field-focus-border-color: #333;
+          }
         '';
 
         extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
