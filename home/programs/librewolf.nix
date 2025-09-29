@@ -51,7 +51,7 @@
                     (entry "Nixpkgs" "https://search.nixos.org/packages")
                     (entry "NixOS options" "https://search.nixos.org/options")
                     (entry "Home-Manager options" "https://home-manager-options.extranix.com/")
-                    (entry "Nix functions" "https://teu5us.github.io/nix-lib.html")
+                    (entry "Noogle" "https://noogle.dev/")
                   ])
                 ];
             }
