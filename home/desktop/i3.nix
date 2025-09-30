@@ -3,9 +3,9 @@
 {
   home.packages = with pkgs; [
     blueman
-    brightnessctl
     handlr
     i3lock-color
+    light
     maim
     nerd-fonts.ubuntu
     playerctl
@@ -81,8 +81,8 @@
       };
 
       keybindings = lib.mkOptionDefault {
-          "XF86MonBrightnessDown" = "exec --no-startup-id brightnessctl set 5%-";
-          "XF86MonBrightnessUp" = "exec --no-startup-id brightnessctl set 5%+";
+          "XF86MonBrightnessDown" = "exec --no-startup-id light -U 5";
+          "XF86MonBrightnessUp" = "exec --no-startup-id light -A 5";
 
           "XF86AudioMute" = "exec --no-startup-id wpctl set-mute @DEFAULT_SINK@ toggle";
           "XF86AudioLowerVolume" = "exec --no-startup-id wpctl set-volume @DEFAULT_SINK@ 5%-";

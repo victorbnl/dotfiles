@@ -13,6 +13,7 @@
 
         extraGroups = [
           "libvirtd"
+          "video"
           "wheel"
           "input"
         ];

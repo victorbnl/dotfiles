@@ -121,6 +121,8 @@ in
       "module/backlight" = {
         type = "internal/backlight";
 
+        enable-scroll = true;
+
         format = "[LGT] <label>";
         format-foreground = idle;
         label-foreground = foreground;

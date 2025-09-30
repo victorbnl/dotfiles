@@ -24,4 +24,6 @@
     platformTheme = "qt5ct";
     style = "kvantum";
   };
+
+  programs.light.enable = true;
 }
