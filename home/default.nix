@@ -5,6 +5,7 @@
     ./desktop
     ./programs
 
+    ./cloud.nix
     ./packages.nix
   ];
 
