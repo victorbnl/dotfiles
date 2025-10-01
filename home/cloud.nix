@@ -1,6 +1,12 @@
 { config, secrets, ... }:
-
+let
+  mountPoint = "${config.home.homeDirectory}/.mnt/cloud";
+in
 {
+  gtk.gtk3.bookmarks = [
+    "file://${mountPoint}"
+  ];
+
   programs.rclone = {
     enable = true;
 
@@ -29,8 +35,8 @@
         };
 
         mounts."/" = {
-          enable = false;
-          mountPoint = "${config.home.homeDirectory}/cloud";
+          inherit mountPoint;
+          enable = true;
           options.vfs-cache-mode = "off";
         };
       };
