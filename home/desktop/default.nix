@@ -1,4 +1,4 @@
-{ root, ... }:
+{ pkgs, root, ... }:
 
 {
   imports = [
@@ -16,6 +16,14 @@
   };
 
   services = {
+    batsignal = {
+      enable = true;
+
+      extraArgs = [
+        "-I" "${pkgs.papirus-icon-theme}/share/icons/Papirus-Dark/32x32/symbolic/status/battery-caution-symbolic.svg"
+      ];
+    };
+
     picom = {
       enable = true;
 
