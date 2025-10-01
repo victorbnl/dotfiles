@@ -14,8 +14,8 @@
     devenv gnumake python3 sqlitebrowser ungit
 
     # utils
-    file htop nmap pavucontrol qbittorrent simple-scan unzip virt-manager
-    xarchiver zip
+    file htop krename nmap pavucontrol qbittorrent simple-scan unzip
+    virt-manager xarchiver zip
 
     # art / media
     aseprite gimp mpv viewnior vlc yt-dlp
