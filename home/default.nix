@@ -32,9 +32,9 @@
     mimeApps = {
       enable = true;
 
-      associations.added = {
-        "application/pdf" = [ "librewolf.desktop" ];
-        "inode/directory" = [ "code.desktop" ];
+      associations.added = builtins.mapAttrs (_: (map (value: "${value}.desktop"))) {
+        "application/pdf" = [ "librewolf" ];
+        "inode/directory" = [ "code" ];
       };
 
       defaultApplications = builtins.mapAttrs (_: value: ["${value}.desktop"]) {
