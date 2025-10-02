@@ -13,6 +13,7 @@
     rofi-vscode-recent
     tdrop
     xclip
+    xkill
     xss-lock
     noto-fonts
   ];
@@ -103,6 +104,9 @@
           "${modifier}+s" = "exec --no-startup-id maim --hidecursor --select --format png | xclip -selection clipboard -t image/png";
           "${modifier}+Shift+s" = "exec --no-startup-id maim --hidecursor --format png | xclip -selection clipboard -t image/png";
           "${modifier}+Ctrl+s" = "exec --no-startup-id sleep 2 && maim --hidecursor --format png | xclip -selection clipboard -t image/png && dunstify -t 1000 'Screenshot taken'";
+
+          "${modifier}+q" = "kill";
+          "${modifier}+x" = "exec --no-startup-id xkill";
 
           "${modifier}+dollar" = "scratchpad show";
           "${modifier}+Shift+dollar" = "move scratchpad";
