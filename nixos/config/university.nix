@@ -1,10 +1,9 @@
-{ root, secrets, ... }:
+{ pkgs, root, secrets, ... }:
 
 {
-  environment.shellAliases = {
-    "vpn-start" = "systemctl start openvpn-uni";
-    "vpn-stop" = "systemctl stop openvpn-uni";
-  };
+  environment.systemPackages = [(pkgs.writeShellScriptBin "vpn" ''
+    systemctl $1 openvpn-$2
+  '')];
 
   services.openvpn.servers.uni = {
     inherit (secrets.uni.vpn) authUserPass;
