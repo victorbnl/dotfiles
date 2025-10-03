@@ -7,7 +7,7 @@
 }:
 
 writeShellApplication {
-  name = "rofi-vscode-recent";
+  name = "vscode-menu";
 
   runtimeInputs = [
     rofi

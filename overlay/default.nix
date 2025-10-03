@@ -3,8 +3,8 @@ let
   inherit (final) callPackage;
 in
 builtins.mapAttrs (_: v: callPackage v {}) {
-  rofi-power-menu = ./rofi-power-menu.nix;
-  rofi-vscode-recent = ./rofi-vscode-recent.nix;
+  power-menu = ./power-menu.nix;
+  vscode-menu = ./vscode-menu.nix;
   vpn-helper = ./vpn-helper.nix;
   vscode-recent = ./vscode-recent.nix;
 }

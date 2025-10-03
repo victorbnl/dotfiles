@@ -10,9 +10,9 @@
     nerd-fonts.ubuntu
     noto-fonts
     playerctl
-    rofi-power-menu
-    rofi-vscode-recent
+    power-menu
     tdrop
+    vscode-menu
     xclip
     xkill
     xss-lock
@@ -93,8 +93,8 @@
 
           "${modifier}+b" = "exec --no-startup-id blueman-manager";
 
-          "XF86PowerOff" = "exec --no-startup-id rofi-power-menu";
-          "${modifier}+p" = "exec --no-startup-id rofi-vscode-recent";
+          "XF86PowerOff" = "exec --no-startup-id power-menu";
+          "${modifier}+p" = "exec --no-startup-id vscode-menu";
 
           "${modifier}+e" = "exec --no-startup-id handlr launch inode/directory";
           "${modifier}+n" = "exec --no-startup-id handlr launch x-scheme-handler/https";

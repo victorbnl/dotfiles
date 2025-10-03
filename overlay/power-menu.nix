@@ -55,7 +55,7 @@ let
     '';
 in
 writeShellApplication {
-  name = "rofi-power-menu";
+  name = "power-menu";
   runtimeInputs = [ rofi ];
 
   text =
