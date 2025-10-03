@@ -17,12 +17,7 @@
       pcmanfm
     ];
 
-    # Session variables are set through the shell. This means that they are not
-    # available to any other app by default. This loads them as X starts,
-    # granted the display manager sources `~/.xprofile`.
-    file.".xprofile".text = ''
-      . "${config.home.profileDirectory}/etc/profile.d/hm-session-vars.sh"
-    '';
+    sessionVariablesInXorg = true;
   };
 
   xdg = {

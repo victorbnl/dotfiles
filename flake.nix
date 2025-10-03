@@ -77,7 +77,7 @@
     homeConfigurations = {
       "${names.user}@${names.host}" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs extraSpecialArgs;
-        modules = [ ./home ];
+        modules = [ ./modules/home.nix ./home ];
       };
     };
   };

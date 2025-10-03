@@ -9,7 +9,7 @@
     ./rofi.nix
   ];
 
-  home.file.".background-image".source = root + /assets/wallpapers/desktop.jpg;
+  home.backgroundImage = root + /assets/wallpapers/desktop.jpg;
 
   xresources.properties = {
     "Xft.dpi" = 134;
