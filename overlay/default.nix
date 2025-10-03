@@ -1,10 +1,10 @@
 final: prev:
 let
-  inherit (final) callPackage;
+  call = name: final.callPackage (./pkgs + "/${name}.nix") {};
 in
-builtins.mapAttrs (_: v: callPackage v {}) {
-  power-menu = ./power-menu.nix;
-  vscode-menu = ./vscode-menu.nix;
-  vpn-helper = ./vpn-helper.nix;
-  vscode-recent = ./vscode-recent.nix;
-}
+prev.lib.genAttrs [
+  "power-menu"
+  "vscode-menu"
+  "vpn-helper"
+  "vscode-recent"
+] call
