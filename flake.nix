@@ -29,11 +29,6 @@
       url = "https://github.com/OneDeadKey/arsenik/releases/download/0.2.0/arsenik-0.2.0.zip";
       flake = false;
     };
-
-    boilerplates = {
-      url = "git+https://github.com/marie-bnl/boilerplates";
-      flake = false;
-    };
   };
 
   outputs = {
@@ -69,12 +64,12 @@
   {
     nixosConfigurations = {
       "installer" = nixpkgs.lib.nixosSystem {
-        inherit system specialArgs;
+        inherit pkgs system specialArgs;
         modules = [ ./installer ];
       };
 
       "${names.host}" = nixpkgs.lib.nixosSystem {
-        inherit system specialArgs;
+        inherit pkgs system specialArgs;
         modules = [ ./nixos/thinkpad.nix ];
       };
     };

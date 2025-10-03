@@ -13,16 +13,9 @@
     username = names.user;
     homeDirectory = "/home/${names.user}";
 
-    packages =
-      with pkgs;
-      let
-        init-script = pkgs.writeShellScriptBin "init" ''
-          cp --no-preserve=mode,ownership --recursive ${inputs.boilerplates}/$1/. .
-        '';
-      in [
-        init-script
-        pcmanfm
-      ];
+    packages = with pkgs;[
+      pcmanfm
+    ];
 
     file.".xprofile".text = ''
       . "${config.home.profileDirectory}/etc/profile.d/hm-session-vars.sh"

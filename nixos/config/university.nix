@@ -1,9 +1,9 @@
 { pkgs, root, secrets, ... }:
 
 {
-  environment.systemPackages = [(pkgs.writeShellScriptBin "vpn" ''
-    systemctl $1 openvpn-$2
-  '')];
+  environment.systemPackages = with pkgs; [
+    vpn-helper
+  ];
 
   services.openvpn.servers.uni = {
     inherit (secrets.uni.vpn) authUserPass;
