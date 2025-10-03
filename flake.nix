@@ -25,10 +25,10 @@
       flake = false;
     };
 
-    arsenik = {
-      url = "https://github.com/OneDeadKey/arsenik/releases/download/0.2.0/arsenik-0.2.0.zip";
-      flake = false;
-    };
+    # arsenik = {
+    #   url = "https://github.com/OneDeadKey/arsenik/releases/download/0.2.0/arsenik-0.2.0.zip";
+    #   flake = false;
+    # };
   };
 
   outputs = {
