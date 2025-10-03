@@ -7,7 +7,7 @@
 
   services.openvpn.servers.uni = {
     inherit (secrets.uni.vpn) authUserPass;
-    config = "config ${root + /assets/uni/vpn.ovpn}";
+    config = "config ${root + /assets/university/vpn.ovpn}";
 
     autoStart = false;
     updateResolvConf = true;
@@ -21,7 +21,7 @@
     pairwise=CCMP
     group=CCMP TKIP
     eap=PEAP
-    ca_cert="${root + /assets/uni/ca.pem}"
+    ca_cert="${root + /assets/university/ca.pem}"
     identity="${secrets.uni.eduroam.identity}"
     altsubject_match="DNS:radius-test.univ-lille.fr;DNS:radius.univ-lille.fr;DNS:radius1.univ-lille.fr;DNS:radius2.univ-lille.fr"
     phase2="auth=MSCHAPV2"
