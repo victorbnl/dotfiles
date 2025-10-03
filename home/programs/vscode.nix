@@ -1,4 +1,4 @@
-{ pkgs, lib, inputs, ... }:
+{ inputs, lib, pkgs, ... }:
 
 {
   programs.vscode = {

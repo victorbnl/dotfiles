@@ -1,4 +1,4 @@
-{ pkgs, disko, flake, names }:
+{ disko, flake, names, pkgs }:
 let
   inherit (names) host user;
 in

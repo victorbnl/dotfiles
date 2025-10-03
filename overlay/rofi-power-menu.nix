@@ -2,7 +2,7 @@
   lib,
   rofi,
   writeShellApplication,
-  writeText
+  writeText,
 }:
 let
   actions = [

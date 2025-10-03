@@ -1,9 +1,9 @@
 {
   callPackage,
   rofi,
-  writeShellApplication,
   vscode,
-  vscode-recent
+  vscode-recent,
+  writeShellApplication,
 }:
 
 writeShellApplication {

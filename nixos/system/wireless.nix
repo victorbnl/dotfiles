@@ -1,4 +1,4 @@
-{ secrets, names, ... }:
+{ names, secrets, ... }:
 
 {
   hardware.bluetooth = {

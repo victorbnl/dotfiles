@@ -1,4 +1,4 @@
-{ lib, pkgs, names, config, inputs, ... }:
+{ config, inputs, lib, names, pkgs, ... }:
 
 {
   imports = [
@@ -57,9 +57,10 @@
       in
       {
         enable = true;
-        publicShare = prefix "public";
-        download = prefix "downloads";
+
         desktop = prefix ".desktop";
+        download = prefix "downloads";
+        publicShare = prefix "public";
       } // defs;
   };
 

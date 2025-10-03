@@ -1,4 +1,4 @@
-{ pkgs, inputs, modulesPath, names, ... }:
+{ inputs, modulesPath, names, pkgs, ... }:
 
 {
   imports = [
@@ -8,7 +8,7 @@
   users.motd = "Run `i` to install the system.";
 
   environment.shellAliases.i = "sudo " + (import ./script.nix {
-    inherit pkgs names;
+    inherit names pkgs;
     inherit (inputs) disko;
     flake = ../.;
   });

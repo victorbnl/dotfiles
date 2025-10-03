@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ lib, pkgs, ... }:
 
 {
   home.packages = with pkgs; [
@@ -8,6 +8,7 @@
     light
     maim
     nerd-fonts.ubuntu
+    noto-fonts
     playerctl
     rofi-power-menu
     rofi-vscode-recent
@@ -15,7 +16,6 @@
     xclip
     xkill
     xss-lock
-    noto-fonts
   ];
 
   xsession.windowManager.i3 = {
