@@ -4,8 +4,6 @@ let
   qtFont = "${font},10";
 in
 {
-  home.packages = [ pkgs.dconf ];
-
   programs.kvantum = {
     enable = true;
     theme = "KvAdaptaDark";
