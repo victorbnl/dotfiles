@@ -6,12 +6,12 @@ in
 {
   home.packages = [ pkgs.dconf ];
 
-  xdg.configFile = {
-    "Kvantum/kvantum.kvconfig".text = ''
-      [General]
-      theme=KvAdaptaDark
-    '';
+  programs.kvantum = {
+    enable = true;
+    theme = "KvAdaptaDark";
+  };
 
+  xdg.configFile = {
     "qt5ct/qt5ct.conf".text = ''
       [Fonts]
       fixed="${qtFont},-1,5,50,0,0,0,0,0,Regular"
