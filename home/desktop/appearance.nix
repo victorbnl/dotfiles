@@ -4,12 +4,6 @@ let
   qtFont = "${font},10";
 in
 {
-  # Needed because `gtk.enable` is set to `true`.
-  # Fixes https://github.com/nix-community/home-manager/issues/3113
-  home.packages = with pkgs; [
-    dconf
-  ];
-
   programs.kvantum = {
     enable = true;
     theme = "KvAdaptaDark";

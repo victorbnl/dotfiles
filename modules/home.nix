@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 with lib;
 {
   options ={
@@ -30,13 +30,18 @@ with lib;
   };
 
   config = {
-    home.file = {
-      ".background-image".source =
-        mkIf (config.home.backgroundImage != null) config.home.backgroundImage;
+    home = {
+      # https://github.com/nix-community/home-manager/issues/3113
+      packages = mkIf (config.gtk.enable) [ pkgs.dconf ];
 
-      ".xprofile".text = mkIf config.home.sessionVariablesInXorg ''
-        . "${config.home.profileDirectory}/etc/profile.d/hm-session-vars.sh"
-      '';
+      file = {
+        ".background-image".source =
+          mkIf (config.home.backgroundImage != null) config.home.backgroundImage;
+
+        ".xprofile".text = mkIf config.home.sessionVariablesInXorg ''
+          . "${config.home.profileDirectory}/etc/profile.d/hm-session-vars.sh"
+        '';
+      };
     };
 
     xdg.configFile."Kvantum/kvantum.kvconfig".text =
