@@ -1,5 +1,6 @@
 {
-  # For Steam
+  # Needed for Steam.
+  # Fix https://github.com/NixOS/nixpkgs/issues/47932
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
