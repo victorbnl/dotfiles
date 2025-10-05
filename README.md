@@ -17,5 +17,5 @@
 
 ## Wallpapers
 
-- `desktop`: "Untitled" by [Yomu Yakadashi](https://yakadashi.art/)
+- `desktop`: ["Cozy Lo-Fi Treehouse" by Vikky on WallD](https://explore.walld.app/post/AuPGzI6UMaxOjpGN5pzLU)
 - `display-manager`: ["Rocky mountain valley" by Peter Pryharski](https://unsplash.com/photos/green-tree-covered-mountain-uPo1OAlOZrs)
