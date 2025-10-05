@@ -127,6 +127,8 @@
 
         "browser.toolbars.bookmarks.visibility" = "newtab";
 
+        "browser.sessionstore.resume_from_crash" = false;
+
         "browser.uiCustomization.state" = ''
           {
             "placements": {
