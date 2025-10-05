@@ -38,6 +38,7 @@ with lib;
         ".background-image".source =
           mkIf (config.home.backgroundImage != null) config.home.backgroundImage;
 
+        # https://github.com/nix-community/home-manager/issues/1011
         ".xprofile".text = mkIf config.home.sessionVariablesInXorg ''
           . "${config.home.profileDirectory}/etc/profile.d/hm-session-vars.sh"
         '';
