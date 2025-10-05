@@ -1,4 +1,10 @@
 {
+  # For Steam
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
   services = {
     udisks2.enable = true;
     gvfs.enable = true;
