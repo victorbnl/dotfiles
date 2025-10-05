@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 with lib;
 {
-  options ={
+  options = {
     home = {
       backgroundImage = mkOption {
         default = null;
